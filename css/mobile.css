@@ -1,0 +1,80 @@
+.menu {
+  height: 62px;
+  padding: 5px; }
+  .menu .header {
+    position: absolute; }
+    .menu .header h1 {
+      padding: 5px;
+      font-size: 18px;
+      font-weight: bold; }
+    .menu .header h3 {
+      display: none; }
+    .menu .header .contact {
+      display: none; }
+  .menu .links {
+    position: absolute;
+    right: 0; }
+    .menu .links ul li {
+      width: 50px;
+      padding: 10px; }
+      .menu .links ul li img {
+        width: 32px;
+        height: 32px; }
+      .menu .links ul li .text {
+        display: none; }
+    @media (max-width: 400px) {
+      .menu .links {
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/menu_small.png);
+        background-repeat: no-repeat;
+        background-position: 9px 9px;
+        cursor: pointer; }
+        .menu .links.hover {
+          background-color: #00aedb; }
+        .menu .links ul {
+          display: none;
+          margin-top: 62px;
+          background-color: rgba(0, 0, 0, 0.5); } }
+
+.container {
+  margin-top: 62px; }
+  .container .arrow.big {
+    display: none; }
+  .container ul.group {
+    width: 100%%;
+    padding: 2em 0; }
+    .container ul.group h2 {
+      margin: 10px 0; }
+    .container ul.group .arrow.small {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      margin-top: 5px;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      cursor: pointer; }
+      .container ul.group .arrow.small:hover {
+        opacity: 1; }
+      .container ul.group .arrow.small.up {
+        right: 68px;
+        background-image: url(../img/up-small.png); }
+      .container ul.group .arrow.small.down {
+        right: 10px;
+        background-image: url(../img/down-small.png); }
+    .container ul.group li {
+      width: 100%;
+      height: 5em;
+      margin: 0;
+      font-size: 170%; }
+      .container ul.group li .icon {
+        width: 30%; }
+        .container ul.group li .icon img {
+          width: 3em;
+          height: 3em; }
+      .container ul.group li .title {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle; }
+      .container ul.group li .text {
+        font-size: 80%; }

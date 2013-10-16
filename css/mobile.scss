@@ -1,0 +1,136 @@
+@import "colors";
+@import "helper";
+
+// Menu
+$imgSize: 32px;
+$linkWidth: 50px;
+$linkPadding: 10px;
+$menuPadding: 5px;
+$menuHeight: $imgSize + 2*$linkPadding + 2*$menuPadding;
+
+.menu {
+	
+	height: $menuHeight;
+	padding: $menuPadding;
+
+	.header {
+		position: absolute;
+		h1 { 
+			padding: 5px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		h3 { display: none }
+
+		.contact {
+			display: none;
+		}
+	}
+
+	.links {
+		position: absolute;
+		right: 0;
+
+		ul {
+			li {
+				width: $linkWidth;
+				padding: $linkPadding;
+				img {
+					@include size($imgSize);
+				}
+
+				.text {
+					display: none;
+				}
+			}
+		}
+
+		@media (max-width: 400px) {
+
+			$offset: ($linkWidth - $imgSize) / 2;
+			
+			@include size($linkWidth);
+			
+			background-image: url(../img/menu_small.png);
+			background-repeat: no-repeat;
+			background-position: $offset $offset;
+			cursor: pointer; // Used in js. Do not remove.
+
+			&.hover {
+				background-color: $blue;
+			}
+			
+			ul {
+				display: none;
+				margin-top: $menuHeight;
+				background-color: rgba(0,0,0,0.5);
+			}
+		}
+	}
+}
+
+.container {
+
+	margin-top: $menuHeight;
+	
+	.arrow.big {
+		display: none;
+	}
+
+	ul.group {
+		width: 100%%;
+		padding: 2em 0;
+
+		h2 { margin: 10px 0 }
+
+		.arrow.small {
+			$size: 48px;
+			position: absolute;
+			width: $size;
+			height: $size;
+			margin-top: 5px;
+			background-repeat: no-repeat;
+			opacity: 0.2;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.up {
+				right: $size + 20px;
+				background-image: url(../img/up-small.png);
+			}
+
+			&.down {
+				right: 10px;
+				background-image: url(../img/down-small.png);
+			}
+		}
+
+		li {
+			width: 100%;
+			height: 5em;
+			margin: 0;
+			font-size: 170%;
+
+			.icon {
+				width: 30%;
+
+				img {
+					@include size(3em);
+				}
+			}
+
+			.title {
+				position: relative;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.text {
+				font-size: 80%;
+			}
+		}
+	}
+}
