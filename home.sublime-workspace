@@ -1,0 +1,581 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"menu",
+				"menuHeight"
+			],
+			[
+				"img",
+				"imgSize"
+			],
+			[
+				"link",
+				"linkPadding"
+			],
+			[
+				"head",
+				"headerHeight"
+			],
+			[
+				"li",
+				"linkPadding"
+			],
+			[
+				"text",
+				"textTopPadding"
+			],
+			[
+				"active",
+				"activeGroup"
+			],
+			[
+				"acti",
+				"activeGroup"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"men",
+				"menuHeight"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"vars",
+				"varsTemplate"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"album",
+				"albumTemplate"
+			],
+			[
+				"picasa",
+				"picasaUrls"
+			],
+			[
+				"durex",
+				"durExpWidth"
+			],
+			[
+				"exp",
+				"expBars"
+			],
+			[
+				"dure",
+				"durExpWidth"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"date",
+				"dateData"
+			],
+			[
+				"getdat",
+				"getDateString"
+			],
+			[
+				"select",
+				"selectors"
+			],
+			[
+				"week",
+				"week_arr"
+			],
+			[
+				"word",
+				"wordDates_nested"
+			],
+			[
+				"get",
+				"getInsidePos"
+			],
+			[
+				"create",
+				"createTooltip"
+			],
+			[
+				"sea",
+				"searchField"
+			],
+			[
+				"search",
+				"searchText"
+			],
+			[
+				"sear",
+				"searchText"
+			],
+			[
+				"enab",
+				"enableVis"
+			],
+			[
+				"border-top",
+				"border-top-left-radius"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"extra",
+				"extractWords"
+			],
+			[
+				"load",
+				"loadWords"
+			],
+			[
+				"res",
+				"resizeTimer"
+			],
+			[
+				"wordco",
+				"wordCount1"
+			],
+			[
+				"WORD",
+				"WORD_COUNT"
+			],
+			[
+				"worker",
+				"workerCount"
+			],
+			[
+				"worke",
+				"workerCount"
+			],
+			[
+				"batc",
+				"batchN"
+			],
+			[
+				"debug",
+				"logDebug"
+			],
+			[
+				"store",
+				"storeAndRun"
+			],
+			[
+				"friend",
+				"friendCount"
+			],
+			[
+				"frie",
+				"friendCount"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/base.scss",
+			"settings":
+			{
+				"buffer_size": 2043,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 3449,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/visualisation/home/css/_colors.scss",
+		"/D/visualisation/home/css/_helper.scss",
+		"/D/visualisation/home/css/mobile.scss",
+		"/D/visualisation/home/css/desktop.scss",
+		"/D/visualisation/home/css/base.scss",
+		"/D/visualisation/home/js/app.js",
+		"/D/visualisation/home/index.html",
+		"/D/visualisation/home/css/base.css",
+		"/D/visualisation/facebook/css/styles.scss",
+		"/D/visualisation/facebook/css/styles.css",
+		"/D/visualisation/facebook/css/base.css",
+		"/D/visualisation/home/css/test.css",
+		"/D/visualisation/home/css/test.scss",
+		"/D/visualisation/home/base.css",
+		"/D/visualisation/home/mobile.css",
+		"/D/visualisation/home/desktop.css",
+		"/D/visualisation/facebook/settings.html",
+		"/D/visualisation/facebook/js/settings.js",
+		"/D/visualisation/facebook/js/cards.js",
+		"/D/visualisation/facebook/index.html",
+		"/D/visualisation/facebook/js/logger.js",
+		"/D/visualisation/facebook/js/words.js",
+		"/D/visualisation/facebook/js/store.js",
+		"/D/visualisation/facebook/js/app.js",
+		"/D/visualisation/picasa/index.html",
+		"/D/visualisation/surf/breaks.htm",
+		"/D/visualisation/surf/maps.htm",
+		"/D/visualisation/surf/index.htm",
+		"/D/temp/index.htm",
+		"/D/temp/shadow.html",
+		"/C/Users/OLOF/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/D/visualisation/facebook/test.html",
+		"/D/visualisation/facebook/css/wordcloud.css",
+		"/D/visualisation/facebook/sass/styles.scss",
+		"/D/visualisation/facebook/sass/styles.css",
+		"/D/visualisation/facebook/js/test.js",
+		"/D/visualisation/facebook/js/wordcloud.js",
+		"/D/visualisation/google/test.html",
+		"/D/temp/scripts.html",
+		"/D/visualisation/d3-cloud-master/d3-cloud-master/examples/simple.html",
+		"/D/visualisation/facebook/test.js",
+		"/D/visualisation/facebook/test_workersynch.js",
+		"/D/visualisation/facebook/resize.js",
+		"/D/visualisation/facebook/styles.css",
+		"/D/visualisation/facebook/app.js",
+		"/D/visualisation/facebook/facebook.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"setActiveLink",
+			"activeGroup",
+			"z-index",
+			"small",
+			"imageh",
+			"menuHeight",
+			"setIndex",
+			"\"",
+			"px",
+			"<div class='text'>",
+			" $timing",
+			"-property",
+			", margin-left, margin-top",
+			"<div class='content'>",
+			"\"",
+			"render:",
+			"parent",
+			"cards",
+			"Cards",
+			" el:",
+			"el:",
+			"InfoView",
+			"Facebook",
+			"init(",
+			"init",
+			"WORDS",
+			"26authkey",
+			"host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fap",
+			"loader",
+			"1deg",
+			"initEventHandlers",
+			"removeActive",
+			"width",
+			"getWord",
+			"resetVis",
+			"reset",
+			"resetVis",
+			"TODO",
+			"getData",
+			"durRate",
+			"play",
+			"getDateString",
+			"update(",
+			"stop()",
+			"step.",
+			"getData",
+			"jump",
+			"update",
+			"first",
+			"update",
+			"update(",
+			"height",
+			"getDateString",
+			"topmargin",
+			"attr",
+			"height",
+			"topMargin",
+			"leftMargin",
+			"left-nav",
+			"logDebug",
+			"isUpdating",
+			"id",
+			".bar",
+			".bar.id",
+			"maxcount",
+			"getWordX",
+			"getData",
+			"update(",
+			"update",
+			"barUnit",
+			"20",
+			"render",
+			"cloud",
+			"enableVis",
+			"startNewMonth",
+			"month_ms",
+			"key",
+			"WORD_DATES",
+			"tryEnabledVis",
+			"FB.api",
+			"handleLoginStatus",
+			"limit",
+			"toggleSearchField",
+			"update",
+			"searchfield",
+			"search_field",
+			"showSearchField",
+			"searchfield",
+			"top-n-limiter",
+			"cloud",
+			"sel",
+			"wordcloud",
+			"limit",
+			"cloud.limit",
+			"cloud.limit_arrow",
+			"limit_arrow",
+			"ids",
+			"createWordCloud",
+			"enableVis",
+			"createWordCloud",
+			"50",
+			"#",
+			"center",
+			"maxSize",
+			"limit",
+			"cloud",
+			"resize",
+			"enabled_link",
+			".js",
+			"size =",
+			"size",
+			"svg",
+			".content-item",
+			"enabled",
+			"hidden",
+			"#",
+			"clearfix",
+			"150,150,255",
+			"120,120,230",
+			"100,130,190",
+			"120,120,250",
+			"70,70,200",
+			"70,100,160",
+			"50,80,140",
+			"display: none;",
+			"initProgress",
+			"$",
+			"adjustsize"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"<h3>",
+			"",
+			"'",
+			"2deg",
+			"startNewWeek",
+			"week_ms",
+			"toggleSearchField",
+			".content-link",
+			"20,50,110",
+			"40,70,130",
+			"120,150,210",
+			"100,130,190",
+			"80,110,170",
+			"40,70,130"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/base.scss",
+					"settings":
+					{
+						"buffer_size": 2043,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/app.js",
+					"settings":
+					{
+						"buffer_size": 3449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1932,
+								1932
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1096.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

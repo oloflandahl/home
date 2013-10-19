@@ -3,6 +3,8 @@ METRO
 Olof Landahl
 A digital CV/Portfolio
 
+lazy loading
+
 Home?
 Portfolio
  Development
