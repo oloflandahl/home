@@ -2,18 +2,26 @@ $(document).ready(function() {
 
 	var activeGroup = (function() {
 
-		var index = 0, 
+		var	offset,
+			index = 0, 
+			win = $(window),
+			body = $('body'),
 			menu = $('.menu'),
 			groups = $('.group'),
 			arrow = $('.arrow'),
 			arrowUp = arrow.filter('.up'),
 			arrowDown = arrow.filter('.down'),
-			bounds = { min: 0, max: groups.length-1 },
-			offset = menu.outerHeight(); // TODO This height will change between desktop and mobile widths
+			bounds = { min: 0, max: groups.length-1 };
+
+		setOffset();
+
+		function setOffset() {
+			offset = menu.outerHeight();
+		};
 
 		var scrollToActiveGroup = function() {
 			var pos = groups.eq(index).offset().top;
-			$(window).scrollTop(pos-offset);
+			$('body').animate({scrollTop:pos-offset}, 600, 'swing');
 		};
 
 		var setActiveLink = function() {
@@ -57,7 +65,7 @@ $(document).ready(function() {
 			var i = 0;
 			groups.each(function() {
 				var groupPos = $(this).offset().top,
-					scrollPos = $(window).scrollTop();
+					scrollPos = win.scrollTop();
 				if (groupPos + offset > scrollPos) { return false }
 				else { i++ }
 			});
@@ -68,11 +76,19 @@ $(document).ready(function() {
 		arrowDown.click(function() { activeGroup.moveDown() });
 
 		var scrolling;
-		$(window).scroll(function() {
+		win.scroll(function() {
 			if (scrolling) {
 				clearTimeout(scrolling);
 			}
 			scrolling = setTimeout(updateActive, 200);
+		});
+
+		var resizing;
+		win.resize(function() {
+			if (resizing) {
+				clearTimeout(resizing);
+			}
+			resizing = setTimeout(setOffset, 200);
 		});
 
 		return {
@@ -85,7 +101,9 @@ $(document).ready(function() {
 
 	var linksMenu = (function() {
 
-		var menu = $('.menu'),
+		var doc = $(document),
+			win = $(window),
+			menu = $('.menu'),
 			links = menu.find('.links'),
 			linksList = links.find('ul'); 
 
@@ -108,7 +126,7 @@ $(document).ready(function() {
 			return false;
 		});
 
-		$(document).click(function(e) {
+		doc.click(function(e) {
 
 			if (!links.is('.on')) {
 				return true;
@@ -142,7 +160,7 @@ $(document).ready(function() {
 		});
 
 		var resizing;
-		$(window).resize(function() {
+		win.resize(function() {
 			if (resizing) {
 				clearTimeout(resizing);
 			}
