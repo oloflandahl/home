@@ -132,6 +132,10 @@ $menuHeight: $imgSize + 2*$linkPadding + 2*$menuPadding;
 			.text {
 				font-size: 80%;
 			}
+
+			&.image-content {
+				.content.alt { top: 70% }
+			}
 		}
 	}
 }

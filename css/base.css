@@ -96,7 +96,6 @@ img {
     box-sizing: border-box;
     float: left;
     position: relative;
-    margin: 0.5em;
     list-style: none;
     font-size: 100%;
     color: #fff;
@@ -124,7 +123,7 @@ img {
       .container ul.group li.text-content .content .text {
         display: table-cell;
         vertical-align: middle;
-        padding: 0.1em; }
+        padding: 0.2em; }
       .container ul.group li.text-content .content .title {
         text-transform: capitalize; }
     .container ul.group li.text-content:hover .main {

@@ -79,3 +79,5 @@
         vertical-align: middle; }
       .container ul.group li .text {
         font-size: 80%; }
+      .container ul.group li.image-content .content.alt {
+        top: 70%; }

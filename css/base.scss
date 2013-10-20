@@ -102,7 +102,6 @@ img {
 			@include border-box-sizing();
 			float: left;
 			position: relative;
-			margin: 0.5em;
 
 			list-style: none;
 			font-size: 100%;
@@ -138,7 +137,7 @@ img {
 					.text {
 						display: table-cell;
 						vertical-align: middle;
-						padding: 0.1em;
+						padding: 0.2em;
 					}
 
 					.title {

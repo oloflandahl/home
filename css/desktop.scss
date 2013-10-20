@@ -125,10 +125,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 			.icon {
 				text-align: center;
-				img {
-					width: 5em;
-					height: 5em;
-				}
+				img { @include size(5em) }
 			}
 
 			.title {
