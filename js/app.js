@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	'use strict';
+
 	var activeGroup = (function() {
 
 		var	offset,
