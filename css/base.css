@@ -10,6 +10,9 @@ body {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   color: #fff; }
 
+img {
+  border: none; }
+
 .color-red {
   background-color: #d11141; }
 
@@ -98,32 +101,59 @@ body {
     font-size: 100%;
     color: #fff;
     overflow: hidden; }
+    .container ul.group li:hover {
+      border: 1px solid white; }
     .container ul.group li .content {
       display: table;
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 100%; }
+      .container ul.group li .content .text {
+        text-align: center; }
+    .container ul.group li.text-content .content {
       -webkit-transition: left 0.5s;
       -moztransition: left 0.5s;
       -o-transition: left 0.5s;
       -ms-transition: left 0.5s;
       transition: left 0.5s; }
-      .container ul.group li .content.main {
+      .container ul.group li.text-content .content.main {
         left: 0; }
-      .container ul.group li .content.alt {
+      .container ul.group li.text-content .content.alt {
         left: 100%; }
-      .container ul.group li .content .icon,
-      .container ul.group li .content .text {
+      .container ul.group li.text-content .content .icon,
+      .container ul.group li.text-content .content .text {
         display: table-cell;
         vertical-align: middle;
         padding: 0.1em; }
-      .container ul.group li .content .title {
+      .container ul.group li.text-content .content .title {
         text-transform: capitalize; }
-      .container ul.group li .content .text {
-        text-align: center; }
-    .container ul.group li:hover {
-      border: 1px solid white; }
-      .container ul.group li:hover .main {
-        left: -100%; }
-      .container ul.group li:hover .alt {
-        left: 0; }
+    .container ul.group li.text-content:hover .main {
+      left: -100%; }
+    .container ul.group li.text-content:hover .alt {
+      left: 0; }
+    .container ul.group li.image-content .content {
+      -webkit-transition: top 0.5s;
+      -moztransition: top 0.5s;
+      -o-transition: top 0.5s;
+      -ms-transition: top 0.5s;
+      transition: top 0.5s; }
+      .container ul.group li.image-content .content.main {
+        top: 0; }
+      .container ul.group li.image-content .content.alt {
+        top: 100%; }
+      .container ul.group li.image-content .content .text {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0.1em;
+        background-color: rgba(0, 0, 0, 0.5); }
+      .container ul.group li.image-content .content .image {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: #000; }
+        .container ul.group li.image-content .content .image img {
+          width: 100%;
+          max-width: 640px;
+          max-height: 320px; }
+    .container ul.group li.image-content:hover .alt {
+      top: 70%; }

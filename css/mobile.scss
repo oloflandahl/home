@@ -112,6 +112,7 @@ $menuHeight: $imgSize + 2*$linkPadding + 2*$menuPadding;
 			width: 100%;
 			height: 5em;
 			margin: 0;
+			border-bottom: 1px solid #ccc;
 			font-size: 170%;
 
 			.icon {
