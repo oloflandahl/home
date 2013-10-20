@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 		var scrollToActiveGroup = function() {
 			var pos = groups.eq(index).offset().top;
-			$('body').animate({scrollTop:pos-offset}, 600, 'swing');
+			$('body, html').animate({scrollTop: (pos - offset) }, 600, 'swing');			
 		};
 
 		var setActiveLink = function() {
