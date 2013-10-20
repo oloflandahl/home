@@ -203,7 +203,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 3449,
+				"buffer_size": 3524,
 				"line_ending": "Windows"
 			}
 		}
@@ -296,6 +296,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"window",
+			"document",
 			"setActiveLink",
 			"activeGroup",
 			"z-index",
@@ -421,9 +423,7 @@
 			"70,100,160",
 			"50,80,140",
 			"display: none;",
-			"initProgress",
-			"$",
-			"adjustsize"
+			"initProgress"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -491,15 +491,15 @@
 					"file": "js/app.js",
 					"settings":
 					{
-						"buffer_size": 3449,
+						"buffer_size": 3524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1932,
-								1932
+								0,
+								0
 							]
 						],
 						"settings":
@@ -508,7 +508,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1096.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
