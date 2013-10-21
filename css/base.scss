@@ -62,7 +62,8 @@ img {
 
 				@include transition(background-color, 0.4s);
 
-				&:hover {
+				&:hover,
+				&.touching {
 					background-color: $blue;
 				}
 
@@ -109,7 +110,8 @@ img {
 
 			overflow: hidden;
 
-			&:hover {
+			&:hover,
+			&.touching {
 				border: 1px solid #fff;
 			}
 
@@ -146,8 +148,8 @@ img {
 				}
 
 				&:hover {
-					.main { left: -100% }
-					.alt { left: 0 }
+					.content.main { left: -100% }
+					.content.alt { left: 0 }
 				}
 			}
 

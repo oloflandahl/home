@@ -64,7 +64,7 @@ img {
       -o-transition: background-color 0.4s;
       -ms-transition: background-color 0.4s;
       transition: background-color 0.4s; }
-      .menu .links ul li:hover {
+      .menu .links ul li:hover, .menu .links ul li.touching {
         background-color: #00aedb; }
       .menu .links ul li.active {
         background-color: #00aedb; }
@@ -100,7 +100,7 @@ img {
     font-size: 100%;
     color: #fff;
     overflow: hidden; }
-    .container ul.group li:hover {
+    .container ul.group li:hover, .container ul.group li.touching {
       border: 1px solid white; }
     .container ul.group li .content {
       display: table;
@@ -126,9 +126,9 @@ img {
         padding: 0.2em; }
       .container ul.group li.text-content .content .title {
         text-transform: capitalize; }
-    .container ul.group li.text-content:hover .main {
+    .container ul.group li.text-content:hover .content.main {
       left: -100%; }
-    .container ul.group li.text-content:hover .alt {
+    .container ul.group li.text-content:hover .content.alt {
       left: 0; }
     .container ul.group li.image-content .content {
       -webkit-transition: top 0.5s;

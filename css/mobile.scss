@@ -56,7 +56,8 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 			background-position: $offset $offset;
 			cursor: pointer; // Used in js. Do not remove.
 
-			&.hover {
+			&.hover,
+			&.touching {
 				background-color: $blue;
 			}
 			
@@ -93,7 +94,8 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 			opacity: 0.2;
 			cursor: pointer;
 
-			&:hover {
+			&:hover,
+			&.touching {
 				opacity: 1;
 			}
 

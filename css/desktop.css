@@ -21,7 +21,7 @@
         width: 20px;
         height: 20px;
         opacity: 0.5; }
-        .menu .header .contact img:hover {
+        .menu .header .contact img:hover, .menu .header .contact img.touching {
           opacity: 1; }
     @media (max-width: 700px) {
       .menu .header {
@@ -69,7 +69,7 @@
     background-repeat: no-repeat;
     opacity: 0.2;
     cursor: pointer; }
-    .container .arrow.big:hover {
+    .container .arrow.big:hover, .container .arrow.big.touching {
       opacity: 1; }
     .container .arrow.big.up {
       top: 170px;
@@ -93,7 +93,7 @@
       -o-transition: box-shadow 0.5s;
       -ms-transition: box-shadow 0.5s;
       transition: box-shadow 0.5s; }
-      .container ul.group li:hover {
+      .container ul.group li:hover, .container ul.group li.touching {
         -moz-box-shadow: 0 0 10px 2px white;
         -webkit-box-shadow: 0 0 10px 2px white;
         box-shadow: 0 0 10px 2px white; }

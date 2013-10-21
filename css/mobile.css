@@ -29,7 +29,7 @@
         background-repeat: no-repeat;
         background-position: 10px 10px;
         cursor: pointer; }
-        .menu .links.hover {
+        .menu .links.hover, .menu .links.touching {
           background-color: #00aedb; }
         .menu .links ul {
           display: none;
@@ -53,7 +53,7 @@
       background-repeat: no-repeat;
       opacity: 0.2;
       cursor: pointer; }
-      .container ul.group .arrow.small:hover {
+      .container ul.group .arrow.small:hover, .container ul.group .arrow.small.touching {
         opacity: 1; }
       .container ul.group .arrow.small.up {
         right: 68px;

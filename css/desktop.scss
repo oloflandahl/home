@@ -36,7 +36,10 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 				opacity: 0.5;
 
-				&:hover { opacity: 1 }
+				&:hover,
+				&.touching { 
+					opacity: 1; 
+				}
 			}
 		}
 
@@ -94,7 +97,10 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 		opacity: 0.2;
 		cursor: pointer;
 
-		&:hover { opacity: 1 }
+		&:hover,
+		&.touching { 
+			opacity: 1; 
+		}
 
 		&.up {
 			top: $menuHeight + 50px;
@@ -121,7 +127,11 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			margin: 10px;
 
 			@include transition(box-shadow, 0.5s);
-			&:hover { @include box-shadow(10px, 2px, #fff) }
+			
+			&:hover,
+			&.touching { 
+				@include box-shadow(10px, 2px, #fff); 
+			}
 
 			.icon {
 				text-align: center;
