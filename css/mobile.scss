@@ -3,10 +3,10 @@
 
 // Menu
 $imgSize: 32px;
-$linkWidth: 50px;
 $linkPadding: 10px;
+$linkWidth: $imgSize + 2*$linkPadding;
 $menuPadding: 5px;
-$menuHeight: $imgSize + 2*$linkPadding + 2*$menuPadding;
+$menuHeight: $linkWidth + 2*$menuPadding;
 
 .menu {
 	
@@ -33,7 +33,6 @@ $menuHeight: $imgSize + 2*$linkPadding + 2*$menuPadding;
 
 		ul {
 			li {
-				width: $linkWidth;
 				padding: $linkPadding;
 				img {
 					@include size($imgSize);
@@ -45,6 +44,7 @@ $menuHeight: $imgSize + 2*$linkPadding + 2*$menuPadding;
 			}
 		}
 
+		// Create dropdown menu to the right of the header
 		@media (max-width: 400px) {
 
 			$offset: ($linkWidth - $imgSize) / 2;
