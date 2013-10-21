@@ -103,15 +103,21 @@ $(document).ready(function() {
 
 	var linksMenu = (function() {
 
+		var SEL = {
+			menu: '.menu',
+			links: '.links',
+			navLink: '.nav-link'
+		};
+
 		var doc = $(document),
 			win = $(window),
-			menu = $('.menu'),
-			links = menu.find('.links'),
+			menu = $(SEL.menu),
+			links = menu.find(SEL.links),
 			linksList = links.find('ul'); 
 
-		menu.on('click', '.nav-link', function() { activeGroup.moveTo($(this).index()) });
+		menu.on('click', SEL.navLink, function() { activeGroup.moveTo($(this).index()) });
 
-		menu.on('click', '.links', function(e) {
+		menu.on('click', SEL.links, function(e) {
 			if (this !== e.target) {
 				return true;
 			}
@@ -134,8 +140,8 @@ $(document).ready(function() {
 				return true;
 			}
 
-			var clickedLink = $(e.target).filter('.nav-link')
-				.add($(e.target).closest('.nav-link'));
+			var clickedLink = $(e.target).filter(SEL.navLink)
+				.add($(e.target).closest(SEL.navLink));
 
 			if (clickedLink.length === 0) {
 				linksList.removeClass('on');
