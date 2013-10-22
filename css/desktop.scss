@@ -32,7 +32,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			padding: 5px 10px;
 
 			img { 
-				@include size(20px);
+				// @include size(20px);
 
 				opacity: 0.5;
 

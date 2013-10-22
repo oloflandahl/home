@@ -195,7 +195,7 @@
 			"file": "css/base.scss",
 			"settings":
 			{
-				"buffer_size": 2767,
+				"buffer_size": 2814,
 				"line_ending": "Windows"
 			}
 		},
@@ -203,7 +203,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 3555,
+				"buffer_size": 4188,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "css/mobile.scss",
 			"settings":
 			{
-				"buffer_size": 1973,
+				"buffer_size": 2039,
 				"line_ending": "Windows"
 			}
 		},
@@ -227,7 +227,7 @@
 			"file": "css/desktop.scss",
 			"settings":
 			{
-				"buffer_size": 2072,
+				"buffer_size": 2151,
 				"line_ending": "Windows"
 			}
 		},
@@ -337,6 +337,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hover",
+			"cursor",
+			"linkWidth",
+			"50px",
 			"handheld",
 			"em",
 			"10px",
@@ -460,11 +464,7 @@
 			"hidden",
 			"#",
 			"clearfix",
-			"150,150,255",
-			"120,120,230",
-			"100,130,190",
-			"120,120,250",
-			"70,70,200"
+			"150,150,255"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -497,7 +497,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -505,15 +505,15 @@
 					"file": "css/base.scss",
 					"settings":
 					{
-						"buffer_size": 2767,
+						"buffer_size": 2814,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								1010,
+								1015
 							]
 						],
 						"settings":
@@ -522,7 +522,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 714.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -532,15 +532,15 @@
 					"file": "js/app.js",
 					"settings":
 					{
-						"buffer_size": 3555,
+						"buffer_size": 4188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46,
-								46
+								283,
+								283
 							]
 						],
 						"settings":
@@ -586,15 +586,15 @@
 					"file": "css/mobile.scss",
 					"settings":
 					{
-						"buffer_size": 1973,
+						"buffer_size": 2039,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								174,
-								174
+								1437,
+								1442
 							]
 						],
 						"settings":
@@ -603,7 +603,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1194.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -613,15 +613,15 @@
 					"file": "css/desktop.scss",
 					"settings":
 					{
-						"buffer_size": 2072,
+						"buffer_size": 2151,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								871,
-								871
+								584,
+								589
 							]
 						],
 						"settings":
@@ -630,7 +630,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 801.0,
+						"translation.y": 324.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -8,6 +8,7 @@
 
 	$(document).ready(function() {
 
+		// TODO Create jquery function instead
 		addTouchHandler($('.group li'));
 		addTouchHandler($('.links li'));
 		addTouchHandler($('.contact'));
