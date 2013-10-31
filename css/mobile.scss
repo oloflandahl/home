@@ -55,11 +55,6 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 			background-repeat: no-repeat;
 			background-position: $offset $offset;
 			cursor: pointer; // Used in js. Do not remove.
-
-			&.hover,
-			&.touching {
-				background-color: $blue;
-			}
 			
 			ul {
 				display: none;

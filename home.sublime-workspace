@@ -227,7 +227,7 @@
 			"file": "css/desktop.scss",
 			"settings":
 			{
-				"buffer_size": 2151,
+				"buffer_size": 2154,
 				"line_ending": "Windows"
 			}
 		},
@@ -243,7 +243,7 @@
 			"file": "css/desktop.css",
 			"settings":
 			{
-				"buffer_size": 2949,
+				"buffer_size": 3008,
 				"line_ending": "Windows"
 			}
 		}
@@ -272,6 +272,8 @@
 	},
 	"file_history":
 	[
+		"/D/visualisation/facebook/js/bars.js",
+		"/D/visualisation/facebook/js/wordcloud.js",
 		"/D/visualisation/home/css/mobile.css",
 		"/D/visualisation/home/css/_colors.scss",
 		"/D/visualisation/home/css/_helper.scss",
@@ -309,7 +311,6 @@
 		"/D/visualisation/facebook/sass/styles.scss",
 		"/D/visualisation/facebook/sass/styles.css",
 		"/D/visualisation/facebook/js/test.js",
-		"/D/visualisation/facebook/js/wordcloud.js",
 		"/D/visualisation/google/test.html",
 		"/D/temp/scripts.html",
 		"/D/visualisation/d3-cloud-master/d3-cloud-master/examples/simple.html",
@@ -337,6 +338,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"update(",
 			"hover",
 			"cursor",
 			"linkWidth",
@@ -463,8 +465,7 @@
 			"enabled",
 			"hidden",
 			"#",
-			"clearfix",
-			"150,150,255"
+			"clearfix"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -497,7 +498,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -522,7 +523,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 714.0,
+						"translation.y": 390.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -539,8 +540,8 @@
 						"selection":
 						[
 							[
-								283,
-								283
+								455,
+								455
 							]
 						],
 						"settings":
@@ -566,8 +567,8 @@
 						"selection":
 						[
 							[
-								650,
-								650
+								848,
+								848
 							]
 						],
 						"settings":
@@ -576,7 +577,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 194.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -613,15 +614,15 @@
 					"file": "css/desktop.scss",
 					"settings":
 					{
-						"buffer_size": 2151,
+						"buffer_size": 2154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								584,
-								589
+								560,
+								560
 							]
 						],
 						"settings":
@@ -630,7 +631,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.y": 293.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -666,15 +667,15 @@
 					"file": "css/desktop.css",
 					"settings":
 					{
-						"buffer_size": 2949,
+						"buffer_size": 3008,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								579,
-								770
+								0,
+								0
 							]
 						],
 						"settings":

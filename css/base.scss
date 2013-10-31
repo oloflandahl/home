@@ -10,20 +10,11 @@ html, body {
 
 body {
 	min-width: 270px;
-	background-color: $green;
 	font-family: 'Segoe UI', 'Noto Sans', sans-serif;
 	color: #fff;
 }
 
-img {
-	border: none;
-}
-
-.color-red { background-color: $red }
-.color-green { background-color: $green }
-.color-blue { background-color: $blue }
-.color-orange { background-color: $orange }
-.color-yellow { background-color: $yellow }
+img { border: none }
 
 .menu {
 	position: fixed;
@@ -31,7 +22,6 @@ img {
 	z-index: 100;
 	width: 100%;
 	border-bottom: 1px solid #fff;
-	background-color: $green;
 
 	@include border-box-sizing();
 
@@ -61,15 +51,6 @@ img {
 				@include border-box-sizing();
 
 				@include transition(background-color, 0.4s);
-
-				&:hover,
-				&.touching {
-					background-color: $blue;
-				}
-
-				&.active {
-					background-color: $blue;
-				}
 			}
 		}
 	}
@@ -79,10 +60,7 @@ img {
 
 	.arrow {
 		@include transition(opacity, 1s);
-
-		&.hide {
-			display: none;
-		}
+		&.hide { display: none }
 	}
 
 	ul.group {
@@ -121,9 +99,7 @@ img {
 				width: 100%;
 				height: 100%;
 
-				.text {
-					text-align: center;
-				}
+				.text { text-align: center }
 			}
 
 			// Title & Icon, Alt text coming in from the right
@@ -142,9 +118,7 @@ img {
 						padding: 0.2em;
 					}
 
-					.title {
-						text-transform: capitalize;
-					}
+					.title { text-transform: capitalize }
 				}
 
 				&:hover {
@@ -191,3 +165,68 @@ img {
 	}
 }
 
+// Color theme: Metro
+body.theme-metro {
+	background-color: $metro_lightblue;
+	.menu { 
+		background-color: $metro_lightblue;
+		.links {
+			li {
+				&:hover,
+				&.touching,
+				&.active {
+					background-color: $metro_purple;
+				}
+			}
+			@media (max-width: 400px) {
+				// Dropdown menu
+				&.hover,
+				&.touching {
+					background-color: $metro_purple;
+				}
+			}
+		}
+	}
+	.container {
+		li {
+			&.tile-color1 { background-color: $metro_orange }
+			&.tile-color2 { background-color: $metro_yellow }
+			&.tile-color3 { background-color: $metro_red }
+			&.tile-color4 { background-color: $metro_pink }
+		}
+	}
+}
+
+// Color theme: Black & White
+body.theme-bw {
+	background-color: #000;
+	.menu { 
+		background-color: #000;
+		.links {
+			li {
+				&:hover,
+				&.touching,
+				&.active {
+					background-color: #999;
+				}
+			}
+			@media (max-width: 400px) {
+				// Dropdown menu
+				&.hover,
+				&.touching {
+					background-color: #999;
+				}
+			}
+		}
+	}
+	.container {
+		li {
+			&.tile-color1, 
+			&.tile-color2,
+			&.tile-color3,
+			&.tile-color4 { 
+				background-color: #333; 
+			}
+		}
+	}
+}

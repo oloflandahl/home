@@ -29,8 +29,6 @@
         background-repeat: no-repeat;
         background-position: 10px 10px;
         cursor: pointer; }
-        .menu .links.hover, .menu .links.touching {
-          background-color: #00aedb; }
         .menu .links ul {
           display: none;
           margin-top: 62px;

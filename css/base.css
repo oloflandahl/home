@@ -6,27 +6,11 @@ html, body {
 
 body {
   min-width: 270px;
-  background-color: #00b159;
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   color: #fff; }
 
 img {
   border: none; }
-
-.color-red {
-  background-color: #d11141; }
-
-.color-green {
-  background-color: #00b159; }
-
-.color-blue {
-  background-color: #00aedb; }
-
-.color-orange {
-  background-color: #f37735; }
-
-.color-yellow {
-  background-color: #ffc425; }
 
 .menu {
   position: fixed;
@@ -34,7 +18,6 @@ img {
   z-index: 100;
   width: 100%;
   border-bottom: 1px solid white;
-  background-color: #00b159;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -64,10 +47,6 @@ img {
       -o-transition: background-color 0.4s;
       -ms-transition: background-color 0.4s;
       transition: background-color 0.4s; }
-      .menu .links ul li:hover, .menu .links ul li.touching {
-        background-color: #00aedb; }
-      .menu .links ul li.active {
-        background-color: #00aedb; }
 
 .container .arrow {
   -webkit-transition: opacity 1s;
@@ -156,3 +135,33 @@ img {
           max-height: 320px; }
     .container ul.group li.image-content:hover .alt {
       top: 70%; }
+
+body.theme-metro {
+  background-color: #00889e; }
+  body.theme-metro .menu {
+    background-color: #00889e; }
+    body.theme-metro .menu .links li:hover, body.theme-metro .menu .links li.touching, body.theme-metro .menu .links li.active {
+      background-color: #603cba; }
+    @media (max-width: 400px) {
+      body.theme-metro .menu .links.hover, body.theme-metro .menu .links.touching {
+        background-color: #603cba; } }
+  body.theme-metro .container li.tile-color1 {
+    background-color: #d44b28; }
+  body.theme-metro .container li.tile-color2 {
+    background-color: #fdd115; }
+  body.theme-metro .container li.tile-color3 {
+    background-color: #9a1616; }
+  body.theme-metro .container li.tile-color4 {
+    background-color: #b01a40; }
+
+body.theme-bw {
+  background-color: #000; }
+  body.theme-bw .menu {
+    background-color: #000; }
+    body.theme-bw .menu .links li:hover, body.theme-bw .menu .links li.touching, body.theme-bw .menu .links li.active {
+      background-color: #999; }
+    @media (max-width: 400px) {
+      body.theme-bw .menu .links.hover, body.theme-bw .menu .links.touching {
+        background-color: #999; } }
+  body.theme-bw .container li.tile-color1, body.theme-bw .container li.tile-color2, body.theme-bw .container li.tile-color3, body.theme-bw .container li.tile-color4 {
+    background-color: #333; }
