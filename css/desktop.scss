@@ -43,7 +43,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			}
 		}
 
-		@media (max-width: 700px) {
+		@media (max-width: 710px) {
 			width: 150px;
 			h3 { display: none }
 			.contact { padding-left: 0 }
@@ -56,6 +56,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 		ul li {
 			width: 120px;
+			margin: 0 1px;
 			padding: $linkPadding;
 
 			img { @include size($imgSize) }
@@ -66,19 +67,19 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				padding-top: $textTopPadding;
 			}
 
-			@media (max-width: 950px) {
+			@media (max-width: 960px) {
 				width: 110px;
 			}
-			@media (max-width: 880px) {
+			@media (max-width: 890px) {
 				padding: $linkPadding - 5px;
 			}
-			@media (max-width: 850px) {
+			@media (max-width: 860px) {
 				width: 80px;
 				.text { font-size: 12px }	
 			}
 		}
 
-		@media (max-width: 880px) {
+		@media (max-width: 890px) {
 			margin: 0;
 		}
 	}

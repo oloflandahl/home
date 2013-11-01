@@ -1,11 +1,27 @@
 @import "colors";
 @import "helper";
 
+// Reset
 html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
+	h1, h2, h3, h4 {
+		margin: 0;
+		font-weight: 100;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
+
+	img { border: none }
 }
 
 body {
@@ -13,8 +29,6 @@ body {
 	font-family: 'Segoe UI', 'Noto Sans', sans-serif;
 	color: #fff;
 }
-
-img { border: none }
 
 .menu {
 	position: fixed;
@@ -25,18 +39,9 @@ img { border: none }
 
 	@include border-box-sizing();
 
-	.header {
-		h1, h3 {
-			margin: 0;
-			font-weight: 100;
-		}
-	}
-
 	.links {
 		ul {
 			display: table;
-			margin: 0;
-			padding: 0;
 
 			@include clearfix();
 
@@ -45,7 +50,6 @@ img { border: none }
 				display: table-cell;
 				vertical-align: middle;
 				text-align: center;
-				list-style: none;
 				cursor: pointer;
 
 				@include border-box-sizing();
@@ -65,13 +69,9 @@ img { border: none }
 
 	ul.group {
 		width: 100%;
-		margin: 0;
-		padding: 0;
 
 		h2 {
-			margin: 0;
 			font-size: 200%;
-			font-weight: 100;
 			text-transform: capitalize;
 		}
 
@@ -82,7 +82,6 @@ img { border: none }
 			float: left;
 			position: relative;
 
-			list-style: none;
 			font-size: 100%;
 			color: #fff;
 

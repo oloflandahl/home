@@ -3,14 +3,21 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0; }
+  html h1, html h2, html h3, html h4, body h1, body h2, body h3, body h4 {
+    margin: 0;
+    font-weight: 100; }
+  html ul, body ul {
+    margin: 0;
+    padding: 0; }
+    html ul li, body ul li {
+      list-style: none; }
+  html img, body img {
+    border: none; }
 
 body {
   min-width: 270px;
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   color: #fff; }
-
-img {
-  border: none; }
 
 .menu {
   position: fixed;
@@ -21,13 +28,8 @@ img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .menu .header h1, .menu .header h3 {
-    margin: 0;
-    font-weight: 100; }
   .menu .links ul {
-    display: table;
-    margin: 0;
-    padding: 0; }
+    display: table; }
     .menu .links ul:after {
       content: "";
       display: table;
@@ -37,7 +39,6 @@ img {
       display: table-cell;
       vertical-align: middle;
       text-align: center;
-      list-style: none;
       cursor: pointer;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -57,13 +58,9 @@ img {
   .container .arrow.hide {
     display: none; }
 .container ul.group {
-  width: 100%;
-  margin: 0;
-  padding: 0; }
+  width: 100%; }
   .container ul.group h2 {
-    margin: 0;
     font-size: 200%;
-    font-weight: 100;
     text-transform: capitalize; }
   .container ul.group:after {
     content: "";
@@ -75,7 +72,6 @@ img {
     box-sizing: border-box;
     float: left;
     position: relative;
-    list-style: none;
     font-size: 100%;
     color: #fff;
     overflow: hidden; }
