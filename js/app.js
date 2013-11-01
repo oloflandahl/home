@@ -76,13 +76,14 @@
 			};
 
 			var updateActive = function() {
-				var i = 0;
+				var i = -1;
 				groups.each(function() {
 					var groupPos = $(this).offset().top,
 						scrollPos = win.scrollTop();
-					if (groupPos + offset > scrollPos) { return false }
+					if (groupPos > scrollPos + offset) { return false }
 					else { i++ }
 				});
+				i = Math.max(i, 0);
 				setIndex(i, false);
 			};
 

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"active",
+				"active_color"
+			],
+			[
 				"menu",
 				"menuHeight"
 			],
@@ -26,10 +30,6 @@
 			[
 				"text",
 				"textTopPadding"
-			],
-			[
-				"active",
-				"activeGroup"
 			],
 			[
 				"acti",
@@ -192,10 +192,10 @@
 	"buffers":
 	[
 		{
-			"file": "css/base.scss",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2814,
+				"buffer_size": 5433,
 				"line_ending": "Windows"
 			}
 		},
@@ -208,10 +208,10 @@
 			}
 		},
 		{
-			"file": "index.html",
+			"file": "css/base.scss",
 			"settings":
 			{
-				"buffer_size": 5413,
+				"buffer_size": 3492,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "css/mobile.scss",
 			"settings":
 			{
-				"buffer_size": 2039,
+				"buffer_size": 1976,
 				"line_ending": "Windows"
 			}
 		},
@@ -232,18 +232,18 @@
 			}
 		},
 		{
-			"file": "css/ie8.css",
+			"file": "css/_colors.scss",
 			"settings":
 			{
-				"buffer_size": 114,
+				"buffer_size": 203,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/desktop.css",
+			"file": "css/ie8.css",
 			"settings":
 			{
-				"buffer_size": 3008,
+				"buffer_size": 114,
 				"line_ending": "Windows"
 			}
 		}
@@ -272,6 +272,7 @@
 	},
 	"file_history":
 	[
+		"/D/visualisation/home/css/desktop.css",
 		"/D/visualisation/facebook/js/bars.js",
 		"/D/visualisation/facebook/js/wordcloud.js",
 		"/D/visualisation/home/css/mobile.css",
@@ -498,32 +499,32 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "css/base.scss",
+					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 2814,
+						"buffer_size": 5433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1010,
-								1015
+								697,
+								697
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 390.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -557,27 +558,27 @@
 				},
 				{
 					"buffer": 2,
-					"file": "index.html",
+					"file": "css/base.scss",
 					"settings":
 					{
-						"buffer_size": 5413,
+						"buffer_size": 3492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								848,
-								848
+								3276,
+								3276
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 194.0,
+						"translation.y": 2977.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -587,15 +588,15 @@
 					"file": "css/mobile.scss",
 					"settings":
 					{
-						"buffer_size": 2039,
+						"buffer_size": 1976,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1437,
-								1442
+								923,
+								923
 							]
 						],
 						"settings":
@@ -604,7 +605,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1194.0,
+						"translation.y": 610.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -621,8 +622,8 @@
 						"selection":
 						[
 							[
-								560,
-								560
+								240,
+								240
 							]
 						],
 						"settings":
@@ -631,13 +632,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 293.0,
+						"translation.y": 1997.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
+					"file": "css/_colors.scss",
+					"settings":
+					{
+						"buffer_size": 203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "css/ie8.css",
 					"settings":
 					{
@@ -658,34 +685,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "css/desktop.css",
-					"settings":
-					{
-						"buffer_size": 3008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 307.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
