@@ -122,8 +122,8 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 		h2 { padding: 20px 0 10px 0 }
 
 		li {
-			width: 300px;
-			height: 150px;
+			width: 360px;
+			height: 180px;
 			margin: 10px;
 
 			@include transition(box-shadow, 0.5s);
