@@ -2,7 +2,7 @@
 @import "helper";
 
 @mixin smooth-background-transition() {
-	@include transition(background-color, 0.4s);
+	@include transition(background-color, 1s);
 }
 
 // Reset
@@ -24,8 +24,6 @@ html, body {
 			list-style: none;
 		}
 	}
-
-	img { border: none }
 }
 
 body {
@@ -34,6 +32,12 @@ body {
 	color: #fff;
 
 	@include smooth-background-transition();
+	@include transition(color, 1s);
+
+	img { 
+		border: none;
+		@include transition(-webkit-filter, 1s);
+	}
 }
 
 .menu {
@@ -61,7 +65,7 @@ body {
 				&.nav-link { cursor: pointer }
 				
 				@include border-box-sizing();
-				@include smooth-background-transition();
+				@include transition(background-color, 0.4s);
 			}
 		}
 	}
@@ -252,6 +256,74 @@ body.theme-bw {
 			&.tile-color3,
 			&.tile-color4 { 
 				background-color: #333; 
+			}
+		}
+	}
+}
+
+// Color theme: Light
+$other_bg: #fff;
+$other_text: #333;
+$other_invert: 0.8;
+body.theme-light {
+	background-color: $other_bg;
+	color: $other_text;
+
+	.menu { 
+		background-color: $other_bg;
+		// border-bottom-color: $other_text;
+
+		.header img {
+			-webkit-filter: invert($other_invert);
+		}
+
+		.links {
+			.nav-link 
+				img {
+					-webkit-filter: invert($other_invert);
+					-moz-filter: invert($other_invert);
+			}
+
+			li.nav-link {
+				&:hover,
+				&.touching,
+				&.active {
+					background-color: $metro_light_blue;
+				}
+			}
+			.theme-selector li.theme {
+				border: 1px solid $other_bg;
+				&:hover,
+				&.touching,
+				&.active { 
+					border: 1px solid $metro_light_blue;
+				}
+			}
+			@media (max-width: 400px) {
+				// Dropdown menu
+				&.hover,
+				&.touching {
+					background-color: $metro_light_blue;
+				}
+			}
+		}
+	}
+	.container {
+		.arrow {
+			-webkit-filter: invert($other_invert);
+		}
+		.group li.text-content {
+			
+			@include transition(color, 1s);
+			color: $other_text;
+
+			&.tile-color1 { background-color: $metro_light_orange }
+			&.tile-color2 { background-color: $metro_light_yellow }
+			&.tile-color3 { background-color: $metro_light_red }
+			&.tile-color4 { background-color: $metro_light_pink }
+
+			img {
+				-webkit-filter: invert($other_invert);
 			}
 		}
 	}

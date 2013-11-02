@@ -11,18 +11,28 @@ html, body {
     padding: 0; }
     html ul li, body ul li {
       list-style: none; }
-  html img, body img {
-    border: none; }
 
 body {
   min-width: 270px;
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   color: #fff;
-  -webkit-transition: background-color 0.4s;
-  -moztransition: background-color 0.4s;
-  -o-transition: background-color 0.4s;
-  -ms-transition: background-color 0.4s;
-  transition: background-color 0.4s; }
+  -webkit-transition: background-color 1s;
+  -moztransition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s;
+  -webkit-transition: color 1s;
+  -moztransition: color 1s;
+  -o-transition: color 1s;
+  -ms-transition: color 1s;
+  transition: color 1s; }
+  body img {
+    border: none;
+    -webkit-transition: -webkit-filter 1s;
+    -moztransition: -webkit-filter 1s;
+    -o-transition: -webkit-filter 1s;
+    -ms-transition: -webkit-filter 1s;
+    transition: -webkit-filter 1s; }
 
 .menu {
   position: fixed;
@@ -33,11 +43,11 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: background-color 0.4s;
-  -moztransition: background-color 0.4s;
-  -o-transition: background-color 0.4s;
-  -ms-transition: background-color 0.4s;
-  transition: background-color 0.4s; }
+  -webkit-transition: background-color 1s;
+  -moztransition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s; }
   .menu .links ul {
     display: table; }
     .menu .links ul:after {
@@ -86,11 +96,11 @@ body {
     font-size: 100%;
     color: #fff;
     overflow: hidden;
-    -webkit-transition: background-color 0.4s;
-    -moztransition: background-color 0.4s;
-    -o-transition: background-color 0.4s;
-    -ms-transition: background-color 0.4s;
-    transition: background-color 0.4s; }
+    -webkit-transition: background-color 1s;
+    -moztransition: background-color 1s;
+    -o-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    transition: background-color 1s; }
     .container ul.group li:hover, .container ul.group li.touching {
       border: 1px solid white; }
     .container ul.group li .content {
@@ -185,3 +195,43 @@ body.theme-bw {
         background-color: #999999; } }
   body.theme-bw .container .group li.tile-color1, body.theme-bw .container .group li.tile-color2, body.theme-bw .container .group li.tile-color3, body.theme-bw .container .group li.tile-color4 {
     background-color: #333; }
+
+body.theme-light {
+  background-color: white;
+  color: #333333; }
+  body.theme-light .menu {
+    background-color: white; }
+    body.theme-light .menu .header img {
+      -webkit-filter: invert(0.8); }
+    body.theme-light .menu .links .nav-link
+    img {
+      -webkit-filter: invert(0.8);
+      -moz-filter: invert(0.8); }
+    body.theme-light .menu .links li.nav-link:hover, body.theme-light .menu .links li.nav-link.touching, body.theme-light .menu .links li.nav-link.active {
+      background-color: #96c8e6; }
+    body.theme-light .menu .links .theme-selector li.theme {
+      border: 1px solid white; }
+      body.theme-light .menu .links .theme-selector li.theme:hover, body.theme-light .menu .links .theme-selector li.theme.touching, body.theme-light .menu .links .theme-selector li.theme.active {
+        border: 1px solid #96c8e6; }
+    @media (max-width: 400px) {
+      body.theme-light .menu .links.hover, body.theme-light .menu .links.touching {
+        background-color: #96c8e6; } }
+  body.theme-light .container .arrow {
+    -webkit-filter: invert(0.8); }
+  body.theme-light .container .group li.text-content {
+    -webkit-transition: color 1s;
+    -moztransition: color 1s;
+    -o-transition: color 1s;
+    -ms-transition: color 1s;
+    transition: color 1s;
+    color: #333333; }
+    body.theme-light .container .group li.text-content.tile-color1 {
+      background-color: #ffaf8c; }
+    body.theme-light .container .group li.text-content.tile-color2 {
+      background-color: #ffff79; }
+    body.theme-light .container .group li.text-content.tile-color3 {
+      background-color: #fe7a7a; }
+    body.theme-light .container .group li.text-content.tile-color4 {
+      background-color: #ff7ea4; }
+    body.theme-light .container .group li.text-content img {
+      -webkit-filter: invert(0.8); }
