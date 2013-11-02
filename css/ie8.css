@@ -4,3 +4,6 @@
 	display: none; }
 .menu .header .contact {
 	padding-left: 0; }
+.menu .theme-selector {
+	display: none;
+}
