@@ -34,7 +34,7 @@
 			};
 
 			var scrollToActiveGroup = function() {
-				var pos = groups.eq(index).offset().top;
+				var pos = groups.eq(index).offset().top + 1;
 				$('body, html').animate({scrollTop: (pos - offset) }, 600, 'swing');			
 			};
 
