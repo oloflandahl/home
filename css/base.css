@@ -17,7 +17,12 @@ html, body {
 body {
   min-width: 270px;
   font-family: "Segoe UI", "Noto Sans", sans-serif;
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: background-color 0.4s;
+  -moztransition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  transition: background-color 0.4s; }
 
 .menu {
   position: fixed;
@@ -27,19 +32,23 @@ body {
   border-bottom: 1px solid white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.4s;
+  -moztransition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  transition: background-color 0.4s; }
   .menu .links ul {
     display: table; }
     .menu .links ul:after {
       content: "";
       display: table;
       clear: both; }
-    .menu .links ul li {
+    .menu .links ul li.menu-item {
       float: left;
       display: table-cell;
       vertical-align: middle;
       text-align: center;
-      cursor: pointer;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -48,6 +57,8 @@ body {
       -o-transition: background-color 0.4s;
       -ms-transition: background-color 0.4s;
       transition: background-color 0.4s; }
+      .menu .links ul li.menu-item.nav-link {
+        cursor: pointer; }
 
 .container .arrow {
   -webkit-transition: opacity 1s;
@@ -74,7 +85,12 @@ body {
     position: relative;
     font-size: 100%;
     color: #fff;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: background-color 0.4s;
+    -moztransition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    -ms-transition: background-color 0.4s;
+    transition: background-color 0.4s; }
     .container ul.group li:hover, .container ul.group li.touching {
       border: 1px solid white; }
     .container ul.group li .content {
@@ -136,28 +152,36 @@ body.theme-metro {
   background-color: #00889e; }
   body.theme-metro .menu {
     background-color: #00889e; }
-    body.theme-metro .menu .links li:hover, body.theme-metro .menu .links li.touching, body.theme-metro .menu .links li.active {
+    body.theme-metro .menu .links li.nav-link:hover, body.theme-metro .menu .links li.nav-link.touching, body.theme-metro .menu .links li.nav-link.active {
       background-color: #603cba; }
+    body.theme-metro .menu .links .theme-selector li.theme {
+      border: 1px solid #00889e; }
+      body.theme-metro .menu .links .theme-selector li.theme:hover, body.theme-metro .menu .links .theme-selector li.theme.touching, body.theme-metro .menu .links .theme-selector li.theme.active {
+        border: 1px solid #603cba; }
     @media (max-width: 400px) {
       body.theme-metro .menu .links.hover, body.theme-metro .menu .links.touching {
         background-color: #603cba; } }
-  body.theme-metro .container li.tile-color1 {
+  body.theme-metro .container .group li.tile-color1 {
     background-color: #d44b28; }
-  body.theme-metro .container li.tile-color2 {
+  body.theme-metro .container .group li.tile-color2 {
     background-color: #fdd115; }
-  body.theme-metro .container li.tile-color3 {
+  body.theme-metro .container .group li.tile-color3 {
     background-color: #9a1616; }
-  body.theme-metro .container li.tile-color4 {
+  body.theme-metro .container .group li.tile-color4 {
     background-color: #b01a40; }
 
 body.theme-bw {
-  background-color: #000; }
+  background-color: black; }
   body.theme-bw .menu {
-    background-color: #000; }
-    body.theme-bw .menu .links li:hover, body.theme-bw .menu .links li.touching, body.theme-bw .menu .links li.active {
-      background-color: #999; }
+    background-color: black; }
+    body.theme-bw .menu .links li.nav-link:hover, body.theme-bw .menu .links li.nav-link.touching, body.theme-bw .menu .links li.nav-link.active {
+      background-color: #999999; }
+    body.theme-bw .menu .links .theme-selector li.theme {
+      border: 1px solid black; }
+      body.theme-bw .menu .links .theme-selector li.theme:hover, body.theme-bw .menu .links .theme-selector li.theme.touching, body.theme-bw .menu .links .theme-selector li.theme.active {
+        border: 1px solid #999999; }
     @media (max-width: 400px) {
       body.theme-bw .menu .links.hover, body.theme-bw .menu .links.touching {
-        background-color: #999; } }
-  body.theme-bw .container li.tile-color1, body.theme-bw .container li.tile-color2, body.theme-bw .container li.tile-color3, body.theme-bw .container li.tile-color4 {
+        background-color: #999999; } }
+  body.theme-bw .container .group li.tile-color1, body.theme-bw .container .group li.tile-color2, body.theme-bw .container .group li.tile-color3, body.theme-bw .container .group li.tile-color4 {
     background-color: #333; }

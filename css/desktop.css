@@ -21,7 +21,7 @@
         opacity: 0.5; }
         .menu .header .contact img:hover, .menu .header .contact img.touching {
           opacity: 1; }
-    @media (max-width: 710px) {
+    @media (max-width: 740px) {
       .menu .header {
         width: 150px; }
         .menu .header h3 {
@@ -31,29 +31,48 @@
   .menu .links {
     float: right;
     margin: 0 15px; }
-    .menu .links ul li {
+    .menu .links li.nav-link {
       width: 120px;
       margin: 0 1px;
       padding: 10px; }
-      .menu .links ul li img {
+      .menu .links li.nav-link img {
         width: 48px;
         height: 48px; }
-      .menu .links ul li .text {
+      .menu .links li.nav-link .text {
         font-size: 16px;
         line-height: 20px;
         padding-top: 2px; }
-      @media (max-width: 960px) {
-        .menu .links ul li {
+      @media (max-width: 1010px) {
+        .menu .links li.nav-link {
           width: 110px; } }
-      @media (max-width: 890px) {
-        .menu .links ul li {
+      @media (max-width: 940px) {
+        .menu .links li.nav-link {
           padding: 5px; } }
-      @media (max-width: 860px) {
-        .menu .links ul li {
+      @media (max-width: 910px) {
+        .menu .links li.nav-link {
           width: 80px; }
-          .menu .links ul li .text {
+          .menu .links li.nav-link .text {
             font-size: 12px; } }
-    @media (max-width: 890px) {
+    @media (max-width: 910px) {
+      .menu .links li.extra {
+        display: none !important; } }
+    .menu .links li.extra .theme-selector {
+      margin-left: 5px; }
+      .menu .links li.extra .theme-selector ul li.theme {
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        padding: 2px;
+        cursor: pointer;
+        -webkit-transition: border-color 0.4s;
+        -moztransition: border-color 0.4s;
+        -o-transition: border-color 0.4s;
+        -ms-transition: border-color 0.4s;
+        transition: border-color 0.4s; }
+        .menu .links li.extra .theme-selector ul li.theme img {
+          width: 12px;
+          height: 12px; }
+    @media (max-width: 940px) {
       .menu .links {
         margin: 0; } }
 

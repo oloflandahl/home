@@ -32,7 +32,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 		right: 0;
 
 		ul {
-			li {
+			li.nav-link {
 				padding: $linkPadding;
 				img {
 					@include size($imgSize);
@@ -41,6 +41,9 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 				.text {
 					display: none;
 				}
+			}
+			li.extra {
+				display: none;
 			}
 		}
 

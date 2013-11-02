@@ -190,6 +190,24 @@
 			});
 		}());
 
+		var themeMenu = (function() {
+
+			var SEL = {
+				themes: '.theme-selector',
+				theme: '.theme'
+			};
+
+			var body = $('body'),
+				themes = $(SEL.themes); 
+
+			themes.on('click', SEL.theme, function() {
+				var theme = $(this);
+				themes.find(SEL.theme).filter('.active').removeClass('active');
+				theme.addClass('active');
+				body.removeClass().addClass(theme.data('theme'));
+			});
+		}());
+
 	});
 
 }());

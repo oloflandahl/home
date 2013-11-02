@@ -1,6 +1,12 @@
 @import "colors";
 @import "helper";
 
+// Media width
+$xsmall: 740px;
+$small: $xsmall + 170px;
+$medium: $small + 30px;
+$large: $medium + 70px;
+
 // Menu
 $imgSize: 48px;
 $textHeight: 20px;
@@ -43,7 +49,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			}
 		}
 
-		@media (max-width: 710px) {
+		@media (max-width: $xsmall) {
 			width: 150px;
 			h3 { display: none }
 			.contact { padding-left: 0 }
@@ -54,7 +60,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 		float: right;
 		margin: 0 15px;
 
-		ul li {
+		li.nav-link {
 			width: 120px;
 			margin: 0 1px;
 			padding: $linkPadding;
@@ -67,19 +73,42 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				padding-top: $textTopPadding;
 			}
 
-			@media (max-width: 960px) {
+			@media (max-width: $large) {
 				width: 110px;
 			}
-			@media (max-width: 890px) {
+			@media (max-width: $medium) {
 				padding: $linkPadding - 5px;
 			}
-			@media (max-width: 860px) {
+			@media (max-width: $small) {
 				width: 80px;
 				.text { font-size: 12px }	
 			}
 		}
 
-		@media (max-width: 890px) {
+		li.extra {
+			@media (max-width: $small) {
+				display: none !important;
+			}
+			.theme-selector {
+				margin-left: 5px;
+				$themeMP: 2px;
+				$themeImg: 12px;
+				ul li.theme {
+					@include size($themeImg + 4*$themeMP);
+					margin: $themeMP;
+					padding: $themeMP;
+					cursor: pointer;
+
+					@include transition(border-color, 0.4s);
+
+					img {
+						@include size($themeImg);
+					}
+				}
+			}
+		}
+
+		@media (max-width: $medium) {
 			margin: 0;
 		}
 	}

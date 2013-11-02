@@ -14,13 +14,15 @@
   .menu .links {
     position: absolute;
     right: 0; }
-    .menu .links ul li {
+    .menu .links ul li.nav-link {
       padding: 10px; }
-      .menu .links ul li img {
+      .menu .links ul li.nav-link img {
         width: 32px;
         height: 32px; }
-      .menu .links ul li .text {
+      .menu .links ul li.nav-link .text {
         display: none; }
+    .menu .links ul li.extra {
+      display: none; }
     @media (max-width: 400px) {
       .menu .links {
         width: 52px;

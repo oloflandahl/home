@@ -1,6 +1,10 @@
 @import "colors";
 @import "helper";
 
+@mixin smooth-background-transition() {
+	@include transition(background-color, 0.4s);
+}
+
 // Reset
 html, body {
 	width: 100%;
@@ -28,6 +32,8 @@ body {
 	min-width: 270px;
 	font-family: 'Segoe UI', 'Noto Sans', sans-serif;
 	color: #fff;
+
+	@include smooth-background-transition();
 }
 
 .menu {
@@ -38,6 +44,7 @@ body {
 	border-bottom: 1px solid #fff;
 
 	@include border-box-sizing();
+	@include smooth-background-transition();
 
 	.links {
 		ul {
@@ -45,16 +52,16 @@ body {
 
 			@include clearfix();
 
-			li {
+			li.menu-item {
 				float: left;
 				display: table-cell;
 				vertical-align: middle;
 				text-align: center;
-				cursor: pointer;
 
+				&.nav-link { cursor: pointer }
+				
 				@include border-box-sizing();
-
-				@include transition(background-color, 0.4s);
+				@include smooth-background-transition();
 			}
 		}
 	}
@@ -86,6 +93,8 @@ body {
 			color: #fff;
 
 			overflow: hidden;
+
+			@include smooth-background-transition();
 
 			&:hover,
 			&.touching {
@@ -170,12 +179,20 @@ body.theme-metro {
 	.menu { 
 		background-color: $metro_lightblue;
 		.links {
-			li {
+			li.nav-link {
 				&:hover,
 				&.touching,
 				&.active {
 					background-color: $metro_purple;
 				}
+			}
+			.theme-selector li.theme {
+				border: 1px solid $metro_lightblue;
+				&:hover,
+				&.touching,
+				&.active { 
+					border: 1px solid $metro_purple;
+				}	
 			}
 			@media (max-width: 400px) {
 				// Dropdown menu
@@ -187,7 +204,7 @@ body.theme-metro {
 		}
 	}
 	.container {
-		li {
+		.group li {
 			&.tile-color1 { background-color: $metro_orange }
 			&.tile-color2 { background-color: $metro_yellow }
 			&.tile-color3 { background-color: $metro_red }
@@ -197,29 +214,39 @@ body.theme-metro {
 }
 
 // Color theme: Black & White
+$bw_active: #999;
+$bw_bg: #000;
 body.theme-bw {
-	background-color: #000;
+	background-color: $bw_bg;
 	.menu { 
-		background-color: #000;
+		background-color: $bw_bg;
 		.links {
-			li {
+			li.nav-link {
 				&:hover,
 				&.touching,
 				&.active {
-					background-color: #999;
+					background-color: $bw_active;
 				}
+			}
+			.theme-selector li.theme {
+				border: 1px solid $bw_bg;
+				&:hover,
+				&.touching,
+				&.active { 
+					border: 1px solid $bw_active;
+				}	
 			}
 			@media (max-width: 400px) {
 				// Dropdown menu
 				&.hover,
 				&.touching {
-					background-color: #999;
+					background-color: $bw_active;
 				}
 			}
 		}
 	}
 	.container {
-		li {
+		.group li {
 			&.tile-color1, 
 			&.tile-color2,
 			&.tile-color3,
