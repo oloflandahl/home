@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"other",
+				"other_text"
+			],
+			[
+				"them",
+				"themeSelHeight"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
 				"active",
 				"active_color"
 			],
@@ -195,7 +207,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5433,
+				"buffer_size": 5864,
 				"line_ending": "Windows"
 			}
 		},
@@ -203,7 +215,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 4188,
+				"buffer_size": 4617,
 				"line_ending": "Windows"
 			}
 		},
@@ -211,7 +223,7 @@
 			"file": "css/base.scss",
 			"settings":
 			{
-				"buffer_size": 3492,
+				"buffer_size": 5446,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +231,7 @@
 			"file": "css/mobile.scss",
 			"settings":
 			{
-				"buffer_size": 1976,
+				"buffer_size": 2023,
 				"line_ending": "Windows"
 			}
 		},
@@ -227,7 +239,7 @@
 			"file": "css/desktop.scss",
 			"settings":
 			{
-				"buffer_size": 2154,
+				"buffer_size": 2699,
 				"line_ending": "Windows"
 			}
 		},
@@ -235,7 +247,7 @@
 			"file": "css/_colors.scss",
 			"settings":
 			{
-				"buffer_size": 203,
+				"buffer_size": 405,
 				"line_ending": "Windows"
 			}
 		},
@@ -243,7 +255,15 @@
 			"file": "css/ie8.css",
 			"settings":
 			{
-				"buffer_size": 114,
+				"buffer_size": 156,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/_helper.scss",
+			"settings":
+			{
+				"buffer_size": 710,
 				"line_ending": "Windows"
 			}
 		}
@@ -272,6 +292,7 @@
 	},
 	"file_history":
 	[
+		"/D/visualisation/home/home.sublime-workspace",
 		"/D/visualisation/home/css/desktop.css",
 		"/D/visualisation/facebook/js/bars.js",
 		"/D/visualisation/facebook/js/wordcloud.js",
@@ -339,6 +360,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"scrollToActiveGroup",
+			"setIndex",
+			"moveUp",
+			"metro_",
+			"transition(-webkit-filter",
+			"smooth-background-transition",
+			"header",
+			"theme",
+			"menu-item",
+			"themeSelector",
+			"hover",
+			"themes",
+			"list-style",
+			"updateActive",
 			"update(",
 			"hover",
 			"cursor",
@@ -452,21 +487,7 @@
 			"createWordCloud",
 			"50",
 			"#",
-			"center",
-			"maxSize",
-			"limit",
-			"cloud",
-			"resize",
-			"enabled_link",
-			".js",
-			"size =",
-			"size",
-			"svg",
-			".content-item",
-			"enabled",
-			"hidden",
-			"#",
-			"clearfix"
+			"center"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -474,6 +495,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"metro_light_",
+			"metro_lihgt",
+			"theme-selector",
 			"'",
 			"<h3>",
 			"",
@@ -499,7 +523,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -507,15 +531,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 5433,
+						"buffer_size": 5864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								697,
-								697
+								2188,
+								2188
 							]
 						],
 						"settings":
@@ -524,7 +548,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 711.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -534,15 +558,15 @@
 					"file": "js/app.js",
 					"settings":
 					{
-						"buffer_size": 4188,
+						"buffer_size": 4617,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								455,
-								455
+								898,
+								898
 							]
 						],
 						"settings":
@@ -551,7 +575,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 279.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -561,15 +585,15 @@
 					"file": "css/base.scss",
 					"settings":
 					{
-						"buffer_size": 3492,
+						"buffer_size": 5446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3276,
-								3276
+								2347,
+								2347
 							]
 						],
 						"settings":
@@ -578,7 +602,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2977.0,
+						"translation.y": 1938.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -588,15 +612,15 @@
 					"file": "css/mobile.scss",
 					"settings":
 					{
-						"buffer_size": 1976,
+						"buffer_size": 2023,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								923,
-								923
+								793,
+								793
 							]
 						],
 						"settings":
@@ -605,7 +629,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 610.0,
+						"translation.y": 506.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -615,15 +639,15 @@
 					"file": "css/desktop.scss",
 					"settings":
 					{
-						"buffer_size": 2154,
+						"buffer_size": 2699,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								240,
-								240
+								2057,
+								2057
 							]
 						],
 						"settings":
@@ -632,7 +656,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1997.0,
+						"translation.y": 1781.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -642,15 +666,15 @@
 					"file": "css/_colors.scss",
 					"settings":
 					{
-						"buffer_size": 203,
+						"buffer_size": 405,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								202,
-								202
+								368,
+								374
 							]
 						],
 						"settings":
@@ -668,20 +692,47 @@
 					"file": "css/ie8.css",
 					"settings":
 					{
-						"buffer_size": 114,
+						"buffer_size": 156,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								114,
-								114
+								154,
+								154
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "css/_helper.scss",
+					"settings":
+					{
+						"buffer_size": 710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -8,7 +8,7 @@ $linkWidth: $imgSize + 2*$linkPadding;
 $menuPadding: 5px;
 $menuHeight: $linkWidth + 2*$menuPadding;
 
-.menu {
+#menu {
 	
 	height: $menuHeight;
 	padding: $menuPadding;
@@ -68,7 +68,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 	}
 }
 
-.container {
+#container {
 
 	margin: $menuHeight 10px 0 10px;
 	

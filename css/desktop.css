@@ -1,64 +1,64 @@
-.menu {
+#menu {
   height: 120px;
   padding: 15px; }
-  .menu:after {
+  #menu:after {
     content: "";
     display: table;
     clear: both; }
-  .menu .header {
+  #menu .header {
     float: left;
     margin: 15px; }
-    .menu .header h1 {
+    #menu .header h1 {
       display: inline-block;
       font-size: 24px;
       font-weight: bold; }
-    .menu .header h3 {
+    #menu .header h3 {
       font-size: 16px; }
-    .menu .header .contact {
+    #menu .header .contact {
       display: inline-block;
       padding: 5px 10px; }
-      .menu .header .contact img {
+      #menu .header .contact img {
         opacity: 0.5; }
-        .menu .header .contact img:hover, .menu .header .contact img.touching {
+        #menu .header .contact img:hover, #menu .header .contact img.touching {
           opacity: 1; }
     @media (max-width: 740px) {
-      .menu .header {
+      #menu .header {
         width: 150px; }
-        .menu .header h3 {
+        #menu .header h3 {
           display: none; }
-        .menu .header .contact {
+        #menu .header .contact {
           padding-left: 0; } }
-  .menu .links {
+  #menu .links {
     float: right;
     margin: 0 15px; }
-    .menu .links li.nav-link {
+    #menu .links li.nav-link {
       width: 120px;
       margin: 0 1px;
       padding: 10px; }
-      .menu .links li.nav-link img {
+      #menu .links li.nav-link img {
         width: 48px;
         height: 48px; }
-      .menu .links li.nav-link .text {
+      #menu .links li.nav-link .text {
         font-size: 16px;
         line-height: 20px;
         padding-top: 2px; }
       @media (max-width: 1010px) {
-        .menu .links li.nav-link {
+        #menu .links li.nav-link {
           width: 110px; } }
       @media (max-width: 940px) {
-        .menu .links li.nav-link {
+        #menu .links li.nav-link {
           padding: 5px; } }
       @media (max-width: 910px) {
-        .menu .links li.nav-link {
+        #menu .links li.nav-link {
           width: 80px; }
-          .menu .links li.nav-link .text {
+          #menu .links li.nav-link .text {
             font-size: 12px; } }
     @media (max-width: 910px) {
-      .menu .links li.extra {
+      #menu .links li.extra {
         display: none !important; } }
-    .menu .links li.extra .theme-selector {
+    #menu .links li.extra .theme-selector {
       margin-left: 5px; }
-      .menu .links li.extra .theme-selector ul li.theme {
+      #menu .links li.extra .theme-selector ul li.theme {
         width: 20px;
         height: 20px;
         margin: 2px;
@@ -69,16 +69,16 @@
         -o-transition: border-color 0.4s;
         -ms-transition: border-color 0.4s;
         transition: border-color 0.4s; }
-        .menu .links li.extra .theme-selector ul li.theme img {
+        #menu .links li.extra .theme-selector ul li.theme img {
           width: 12px;
           height: 12px; }
     @media (max-width: 940px) {
-      .menu .links {
+      #menu .links {
         margin: 0; } }
 
-.container {
+#container {
   margin-top: 120px; }
-  .container .arrow.big {
+  #container .arrow.big {
     position: fixed;
     z-index: 10;
     width: 64px;
@@ -87,22 +87,22 @@
     background-repeat: no-repeat;
     opacity: 0.2;
     cursor: pointer; }
-    .container .arrow.big:hover, .container .arrow.big.touching {
+    #container .arrow.big:hover, #container .arrow.big.touching {
       opacity: 1; }
-    .container .arrow.big.up {
+    #container .arrow.big.up {
       top: 170px;
       background-image: url(../img/up.png); }
-    .container .arrow.big.down {
+    #container .arrow.big.down {
       bottom: 2em;
       background-image: url(../img/down.png); }
-  .container ul.group {
+  #container ul.group {
     width: 70%;
     margin: 0 5%; }
-    .container ul.group .arrow.small {
+    #container ul.group .arrow.small {
       display: none; }
-    .container ul.group h2 {
+    #container ul.group h2 {
       padding: 20px 0 10px 0; }
-    .container ul.group li {
+    #container ul.group li {
       width: 360px;
       height: 180px;
       margin: 10px;
@@ -111,18 +111,18 @@
       -o-transition: box-shadow 0.5s;
       -ms-transition: box-shadow 0.5s;
       transition: box-shadow 0.5s; }
-      .container ul.group li:hover, .container ul.group li.touching {
+      #container ul.group li:hover, #container ul.group li.touching {
         -moz-box-shadow: 0 0 10px 2px white;
         -webkit-box-shadow: 0 0 10px 2px white;
         box-shadow: 0 0 10px 2px white; }
-      .container ul.group li .icon {
+      #container ul.group li .icon {
         text-align: center; }
-        .container ul.group li .icon img {
+        #container ul.group li .icon img {
           width: 5em;
           height: 5em; }
-      .container ul.group li .title {
+      #container ul.group li .title {
         position: absolute;
         left: 15px;
         bottom: 10px; }
-      .container ul.group li .text {
+      #container ul.group li .text {
         font-size: 150%; }

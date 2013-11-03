@@ -34,7 +34,7 @@ body {
     -ms-transition: -webkit-filter 1s;
     transition: -webkit-filter 1s; }
 
-.menu {
+#menu {
   position: fixed;
   top: 0;
   z-index: 100;
@@ -48,13 +48,13 @@ body {
   -o-transition: background-color 1s;
   -ms-transition: background-color 1s;
   transition: background-color 1s; }
-  .menu .links ul {
+  #menu .links ul {
     display: table; }
-    .menu .links ul:after {
+    #menu .links ul:after {
       content: "";
       display: table;
       clear: both; }
-    .menu .links ul li.menu-item {
+    #menu .links ul li.menu-item {
       float: left;
       display: table-cell;
       vertical-align: middle;
@@ -67,27 +67,27 @@ body {
       -o-transition: background-color 0.4s;
       -ms-transition: background-color 0.4s;
       transition: background-color 0.4s; }
-      .menu .links ul li.menu-item.nav-link {
+      #menu .links ul li.menu-item.nav-link {
         cursor: pointer; }
 
-.container .arrow {
+#container .arrow {
   -webkit-transition: opacity 1s;
   -moztransition: opacity 1s;
   -o-transition: opacity 1s;
   -ms-transition: opacity 1s;
   transition: opacity 1s; }
-  .container .arrow.hide {
+  #container .arrow.hide {
     display: none; }
-.container ul.group {
+#container ul.group {
   width: 100%; }
-  .container ul.group h2 {
+  #container ul.group h2 {
     font-size: 200%;
     text-transform: capitalize; }
-  .container ul.group:after {
+  #container ul.group:after {
     content: "";
     display: table;
     clear: both; }
-  .container ul.group li {
+  #container ul.group li {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -101,62 +101,89 @@ body {
     -o-transition: background-color 1s;
     -ms-transition: background-color 1s;
     transition: background-color 1s; }
-    .container ul.group li:hover, .container ul.group li.touching {
+    #container ul.group li:hover, #container ul.group li.touching {
       border: 1px solid white; }
-    .container ul.group li .content {
+    #container ul.group li .content {
       display: table;
       position: absolute;
       width: 100%;
       height: 100%; }
-      .container ul.group li .content .text {
+      #container ul.group li .content .text {
         text-align: center; }
-    .container ul.group li.text-content .content {
+    #container ul.group li.text-content .content {
       -webkit-transition: left 0.5s;
       -moztransition: left 0.5s;
       -o-transition: left 0.5s;
       -ms-transition: left 0.5s;
       transition: left 0.5s; }
-      .container ul.group li.text-content .content.main {
+      #container ul.group li.text-content .content.main {
         left: 0; }
-      .container ul.group li.text-content .content.alt {
+      #container ul.group li.text-content .content.alt {
         left: 100%; }
-      .container ul.group li.text-content .content .icon,
-      .container ul.group li.text-content .content .text {
+      #container ul.group li.text-content .content .icon,
+      #container ul.group li.text-content .content .text {
         display: table-cell;
         vertical-align: middle;
         padding: 0.2em; }
-      .container ul.group li.text-content .content .title {
+      #container ul.group li.text-content .content .title {
         text-transform: capitalize; }
-    .container ul.group li.text-content:hover .content.main {
+    #container ul.group li.text-content:hover .content.main {
       left: -100%; }
-    .container ul.group li.text-content:hover .content.alt {
+    #container ul.group li.text-content:hover .content.alt {
       left: 0; }
-    .container ul.group li.image-content .content {
+    #container ul.group li.image-content .content {
       -webkit-transition: top 0.5s;
       -moztransition: top 0.5s;
       -o-transition: top 0.5s;
       -ms-transition: top 0.5s;
       transition: top 0.5s; }
-      .container ul.group li.image-content .content.main {
+      #container ul.group li.image-content .content.main {
         top: 0; }
-      .container ul.group li.image-content .content.alt {
+      #container ul.group li.image-content .content.alt {
         top: 100%; }
-      .container ul.group li.image-content .content .text {
+      #container ul.group li.image-content .content .text {
         display: table-cell;
         vertical-align: top;
         padding: 0.4em;
         background-color: rgba(0, 0, 0, 0.5); }
-      .container ul.group li.image-content .content .image {
+      #container ul.group li.image-content .content .image {
         width: 100%;
         height: 100%;
         text-align: center;
         background-color: #000; }
-        .container ul.group li.image-content .content .image img {
+        #container ul.group li.image-content .content .image img {
           width: 100%;
           max-width: 640px;
           max-height: 320px; }
-    .container ul.group li.image-content:hover .alt {
+    #container ul.group li.image-content:hover .alt {
       top: 70%; }
+
+#overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500; }
+  #overlay .mask {
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+    z-index: 501;
+    border-radius: 3px;
+    background-color: #000;
+    opacity: 0.8; }
+  #overlay .content {
+    width: 96%;
+    height: 96%;
+    margin: 2%;
+    z-index: 502; }
+    #overlay .content .close-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 503;
+      cursor: pointer; }
 
 body.theme-metro {
   background-color: #00889e; }

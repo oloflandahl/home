@@ -15,7 +15,7 @@ $linkPadding: 10px;
 $menuPadding: 15px;
 $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menuPadding;
 
-.menu {
+#menu {
 
 	height: $menuHeight;
 	padding: $menuPadding;
@@ -114,7 +114,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 	}
 }
 
-.container {
+#container {
 	
 	margin-top: $menuHeight;
 
