@@ -1,5 +1,6 @@
 @import "colors";
 @import "helper";
+@import "font-icons";
 
 @mixin smooth-background-transition() {
 	@include transition(background-color, 1s);
@@ -186,28 +187,49 @@ body {
 	height: 100%;
 	z-index: 500;
 
-	.mask {
+	.mask,
+	.close-btn-container {
+		position: absolute;
 		width: 98%;
 		height: 98%;
 		margin: 1%;
+	}
+	.mask {
 		z-index: 501;
 		border-radius: 3px;
 		background-color: #000;
 		opacity: 0.8;
 	}
+	.close-btn-container {
+		.close-btn {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			z-index: 503;
+			font-size: 48px;
+			line-height: 40px;
+			color: #999;
+			cursor: pointer;
+
+			@include close-icon;
+
+			&:hover {
+				color: #fff;
+				border-color: #fff;
+			}
+
+			&:active {
+				color: #555;
+				border-color: #555;
+			}
+		}
+	}
 	.content {
+		position: absolute;
 		width: 96%;
 		height: 96%;
 		margin: 2%;
 		z-index: 502;
-
-		.close-btn {
-			position: absolute;
-			right: 0;
-			top: 0;
-			z-index: 503;
-			cursor: pointer;
-		}
 	}
 }
 
