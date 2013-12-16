@@ -1,3 +1,9 @@
+TODO
+In SCSS, change .container to #container and .menu to #menu
+Implement close overlay functionality
+Add font icons
+
+
 METRO
 
 Olof Landahl
