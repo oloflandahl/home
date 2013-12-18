@@ -219,15 +219,15 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 4617,
-				"line_ending": "Windows"
+				"buffer_size": 5816,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/base.scss",
 			"settings":
 			{
-				"buffer_size": 6203,
+				"buffer_size": 6219,
 				"line_ending": "Windows"
 			}
 		},
@@ -240,10 +240,7 @@
 			}
 		},
 		{
-			"contents": "\n$metrize-yen: \"\\e000\";\n\n$metrize-world: \"\\e001\";\n\n$metrize-wireframe-globe: \"\\e002\";\n\n$metrize-wind: \"\\e003\";\n\n$metrize-wifi: \"\\e004\";\n\n$metrize-waves: \"\\e005\";\n\n$metrize-viewport: \"\\e006\";\n\n$metrize-viewport-video: \"\\e007\";\n\n$metrize-user: \"\\e008\";\n\n$metrize-user-remove: \"\\e009\";\n\n$metrize-user-ban: \"\\e00a\";\n\n$metrize-user-add: \"\\e00b\";\n\n$metrize-upload: \"\\e00c\";\n\n$metrize-upload-selection: \"\\e00d\";\n\n$metrize-upload-selection-circle: \"\\e00e\";\n\n$metrize-underline: \"\\e00f\";\n\n$metrize-triple-points: \"\\e010\";\n\n$metrize-top-bottom: \"\\e011\";\n\n$metrize-three-points: \"\\e012\";\n\n$metrize-three-points-top: \"\\e013\";\n\n$metrize-three-points-bottom: \"\\e014\";\n\n$metrize-text-width: \"\\e015\";\n\n$metrize-text-size-upper: \"\\e016\";\n\n$metrize-text-size-reduce: \"\\e017\";\n\n$metrize-text-paragraph: \"\\e018\";\n\n$metrize-text-normal: \"\\e019\";\n\n$metrize-text-justify-right: \"\\e01a\";\n\n$metrize-text-justify-left: \"\\e01b\";\n\n$metrize-text-justify-center: \"\\e01c\";\n\n$metrize-text-height: \"\\e01d\";\n\n$metrize-text-center: \"\\e01e\";\n\n$metrize-text-bold: \"\\e01f\";\n\n$metrize-text-align-right: \"\\e020\";\n\n$metrize-text-align-left: \"\\e021\";\n\n$metrize-telephone: \"\\e022\";\n\n$metrize-sunshine: \"\\e023\";\n\n$metrize-sun: \"\\e024\";\n\n$metrize-stop: \"\\e025\";\n\n$metrize-star: \"\\e026\";\n\n$metrize-speed: \"\\e027\";\n\n$metrize-sound-on: \"\\e028\";\n\n$metrize-sound-off: \"\\e029\";\n\n$metrize-sos: \"\\e02a\";\n\n$metrize-social-zerply: \"\\e02b\";\n\n$metrize-social-youtube: \"\\e02c\";\n\n$metrize-social-yelp: \"\\e02d\";\n\n$metrize-social-yahoo: \"\\e02e\";\n\n$metrize-social-wordpress: \"\\e02f\";\n\n$metrize-social-virb: \"\\e030\";\n\n$metrize-social-vimeo: \"\\e031\";\n\n$metrize-social-viddler: \"\\e032\";\n\n$metrize-social-twitter: \"\\e033\";\n\n$metrize-social-tumblr: \"\\e034\";\n\n$metrize-social-stumbleupon: \"\\e035\";\n\n$metrize-social-soundcloud: \"\\e036\";\n\n$metrize-social-skype: \"\\e037\";\n\n$metrize-social-sharethis: \"\\e038\";\n\n$metrize-social-quora: \"\\e039\";\n\n$metrize-social-pinterest: \"\\e03a\";\n\n$metrize-social-photobucket: \"\\e03b\";\n\n$metrize-social-paypal: \"\\e03c\";\n\n$metrize-social-myspace: \"\\e03d\";\n\n$metrize-social-linkedin: \"\\e03e\";\n\n$metrize-social-last-fm: \"\\e03f\";\n\n$metrize-social-grooveshark: \"\\e040\";\n\n$metrize-social-google-plus: \"\\e041\";\n\n$metrize-social-github: \"\\e042\";\n\n$metrize-social-forrst: \"\\e043\";\n\n$metrize-social-flickr: \"\\e044\";\n\n$metrize-social-facebook: \"\\e045\";\n\n$metrize-social-evernote: \"\\e046\";\n\n$metrize-social-envato: \"\\e047\";\n\n$metrize-social-email: \"\\e048\";\n\n$metrize-social-dribbble: \"\\e049\";\n\n$metrize-social-digg: \"\\e04a\";\n\n$metrize-social-deviantart: \"\\e04b\";\n\n$metrize-social-blogger: \"\\e04c\";\n\n$metrize-social-behance: \"\\e04d\";\n\n$metrize-social-bebo: \"\\e04e\";\n\n$metrize-social-addthis: \"\\e04f\";\n\n$metrize-social-500px: \"\\e050\";\n\n$metrize-snow: \"\\e051\";\n\n$metrize-sliders: \"\\e052\";\n\n$metrize-sliders-vertical: \"\\e053\";\n\n$metrize-sign-male: \"\\e054\";\n\n$metrize-sign-female: \"\\e055\";\n\n$metrize-shield: \"\\e056\";\n\n$metrize-settings: \"\\e057\";\n\n$metrize-setting: \"\\e058\";\n\n$metrize-select-square: \"\\e059\";\n\n$metrize-select-circle: \"\\e05a\";\n\n$metrize-search: \"\\e05b\";\n\n$metrize-scale: \"\\e05c\";\n\n$metrize-rules: \"\\e05d\";\n\n$metrize-rss: \"\\e05e\";\n\n$metrize-retweet: \"\\e05f\";\n\n$metrize-report-comment: \"\\e060\";\n\n$metrize-refresh: \"\\e061\";\n\n$metrize-rec: \"\\e062\";\n\n$metrize-random: \"\\e063\";\n\n$metrize-quote: \"\\e064\";\n\n$metrize-question: \"\\e065\";\n\n$metrize-previous-fast-step: \"\\e066\";\n\n$metrize-prev-step: \"\\e067\";\n\n$metrize-pounds: \"\\e068\";\n\n$metrize-podcast: \"\\e069\";\n\n$metrize-plus: \"\\e06a\";\n\n$metrize-play: \"\\e06b\";\n\n$metrize-pin: \"\\e06c\";\n\n$metrize-pin-map: \"\\e06d\";\n\n$metrize-pig-money: \"\\e06e\";\n\n$metrize-pause: \"\\e06f\";\n\n$metrize-paperclip: \"\\e070\";\n\n$metrize-paperclip-oblique: \"\\e071\";\n\n$metrize-options-settings: \"\\e072\";\n\n$metrize-officine: \"\\e073\";\n\n$metrize-officine-2: \"\\e074\";\n\n$metrize-off: \"\\e075\";\n\n$metrize-number-zero: \"\\e076\";\n\n$metrize-number-two: \"\\e077\";\n\n$metrize-number-three: \"\\e078\";\n\n$metrize-number-six: \"\\e079\";\n\n$metrize-number-seven: \"\\e07a\";\n\n$metrize-number-one: \"\\e07b\";\n\n$metrize-number-nine: \"\\e07c\";\n\n$metrize-number-four: \"\\e07d\";\n\n$metrize-number-five: \"\\e07e\";\n\n$metrize-number-eight: \"\\e07f\";\n\n$metrize-next-step: \"\\e080\";\n\n$metrize-next-fast-step: \"\\e081\";\n\n$metrize-music: \"\\e082\";\n\n$metrize-multi-borders: \"\\e083\";\n\n$metrize-minus: \"\\e084\";\n\n$metrize-marker: \"\\e085\";\n\n$metrize-marker-points: \"\\e086\";\n\n$metrize-marker-minus: \"\\e087\";\n\n$metrize-marker-add: \"\\e088\";\n\n$metrize-map: \"\\e089\";\n\n$metrize-male-symbol: \"\\e08a\";\n\n$metrize-mailbox: \"\\e08b\";\n\n$metrize-mail: \"\\e08c\";\n\n$metrize-magnet: \"\\e08d\";\n\n$metrize-magic-wand: \"\\e08e\";\n\n$metrize-login-lock-refresh: \"\\e08f\";\n\n$metrize-locked: \"\\e090\";\n\n$metrize-location: \"\\e091\";\n\n$metrize-location-maps: \"\\e092\";\n\n$metrize-list-square: \"\\e093\";\n\n$metrize-list-circle: \"\\e094\";\n\n$metrize-link-url: \"\\e095\";\n\n$metrize-line-through: \"\\e096\";\n\n$metrize-limit-directions: \"\\e097\";\n\n$metrize-like-upload: \"\\e098\";\n\n$metrize-like-remove: \"\\e099\";\n\n$metrize-like-download: \"\\e09a\";\n\n$metrize-like-close: \"\\e09b\";\n\n$metrize-like-ban: \"\\e09c\";\n\n$metrize-like-add: \"\\e09d\";\n\n$metrize-left-right: \"\\e09e\";\n\n$metrize-leaf: \"\\e09f\";\n\n$metrize-layers: \"\\e0a0\";\n\n$metrize-landscape: \"\\e0a1\";\n\n$metrize-key: \"\\e0a2\";\n\n$metrize-italic: \"\\e0a3\";\n\n$metrize-info: \"\\e0a4\";\n\n$metrize-idea: \"\\e0a5\";\n\n$metrize-home-wifi: \"\\e0a6\";\n\n$metrize-heart: \"\\e0a7\";\n\n$metrize-hdd: \"\\e0a8\";\n\n$metrize-hdd-raid: \"\\e0a9\";\n\n$metrize-hdd-net: \"\\e0aa\";\n\n$metrize-grids: \"\\e0ab\";\n\n$metrize-grid-big: \"\\e0ac\";\n\n$metrize-graphs: \"\\e0ad\";\n\n$metrize-forward: \"\\e0ae\";\n\n$metrize-fire: \"\\e0af\";\n\n$metrize-female-symbol: \"\\e0b0\";\n\n$metrize-eye: \"\\e0b1\";\n\n$metrize-eye-disabled: \"\\e0b2\";\n\n$metrize-expand: \"\\e0b3\";\n\n$metrize-expand-vertical: \"\\e0b4\";\n\n$metrize-expand-horizontal: \"\\e0b5\";\n\n$metrize-expand-directions: \"\\e0b6\";\n\n$metrize-exclamation: \"\\e0b7\";\n\n$metrize-euro: \"\\e0b8\";\n\n$metrize-email-upload: \"\\e0b9\";\n\n$metrize-email-spam: \"\\e0ba\";\n\n$metrize-email-remove: \"\\e0bb\";\n\n$metrize-email-luminosity: \"\\e0bc\";\n\n$metrize-email-download: \"\\e0bd\";\n\n$metrize-email-close: \"\\e0be\";\n\n$metrize-email-add: \"\\e0bf\";\n\n$metrize-eject: \"\\e0c0\";\n\n$metrize-drops: \"\\e0c1\";\n\n$metrize-drop: \"\\e0c2\";\n\n$metrize-download: \"\\e0c3\";\n\n$metrize-download-selection: \"\\e0c4\";\n\n$metrize-download-selection-circle: \"\\e0c5\";\n\n$metrize-double-diamonds: \"\\e0c6\";\n\n$metrize-dot-square: \"\\e0c7\";\n\n$metrize-dot-line: \"\\e0c8\";\n\n$metrize-dot-circle: \"\\e0c9\";\n\n$metrize-dollar: \"\\e0ca\";\n\n$metrize-documents: \"\\e0cb\";\n\n$metrize-document: \"\\e0cc\";\n\n$metrize-document-fill: \"\\e0cd\";\n\n$metrize-directions: \"\\e0ce\";\n\n$metrize-cross: \"\\e0cf\";\n\n$metrize-credit-card: \"\\e0d0\";\n\n$metrize-copy-paste-document: \"\\e0d1\";\n\n$metrize-copy-document: \"\\e0d2\";\n\n$metrize-contract-vertical: \"\\e0d3\";\n\n$metrize-contract-horizontal: \"\\e0d4\";\n\n$metrize-contract-directions: \"\\e0d5\";\n\n$metrize-compass: \"\\e0d6\";\n\n$metrize-compass-2: \"\\e0d7\";\n\n$metrize-comments: \"\\e0d8\";\n\n$metrize-comment: \"\\e0d9\";\n\n$metrize-coins: \"\\e0da\";\n\n$metrize-cloud: \"\\e0db\";\n\n$metrize-cloud-upload: \"\\e0dc\";\n\n$metrize-cloud-remove: \"\\e0dd\";\n\n$metrize-cloud-download: \"\\e0de\";\n\n$metrize-cloud-add: \"\\e0df\";\n\n$metrize-clock: \"\\e0e0\";\n\n$metrize-circles: \"\\e0e1\";\n\n$metrize-check: \"\\e0e2\";\n\n$metrize-chat: \"\\e0e3\";\n\n$metrize-chart-down: \"\\e0e4\";\n\n$metrize-cd-dvd-rom: \"\\e0e5\";\n\n$metrize-camera: \"\\e0e6\";\n\n$metrize-button-question: \"\\e0e7\";\n\n$metrize-button-minus: \"\\e0e8\";\n\n$metrize-button-exclamation: \"\\e0e9\";\n\n$metrize-button-email: \"\\e0ea\";\n\n$metrize-button-close: \"\\e0eb\";\n\n$metrize-button-check: \"\\e0ec\";\n\n$metrize-button-add: \"\\e0ed\";\n\n$metrize-brush: \"\\e0ee\";\n\n$metrize-browser-sizes: \"\\e0ef\";\n\n$metrize-box-remove: \"\\e0f0\";\n\n$metrize-box-close: \"\\e0f1\";\n\n$metrize-box-blank: \"\\e0f2\";\n\n$metrize-box-add: \"\\e0f3\";\n\n$metrize-bolt: \"\\e0f4\";\n\n$metrize-block-menu: \"\\e0f5\";\n\n$metrize-blank: \"\\e0f6\";\n\n$metrize-bezier: \"\\e0f7\";\n\n$metrize-bars: \"\\e0f8\";\n\n$metrize-ban-circle: \"\\e0f9\";\n\n$metrize-bag: \"\\e0fa\";\n\n$metrize-backward: \"\\e0fb\";\n\n$metrize-axis-rules: \"\\e0fc\";\n\n$metrize-atom: \"\\e0fd\";\n\n$metrize-arrow-up: \"\\e0fe\";\n\n$metrize-arrow-up-thin: \"\\e0ff\";\n\n$metrize-arrow-up-light: \"\\e100\";\n\n$metrize-arrow-up-bold: \"\\e101\";\n\n$metrize-arrow-up-bold-round: \"\\e102\";\n\n$metrize-arrow-up-big: \"\\e103\";\n\n$metrize-arrow-right: \"\\e104\";\n\n$metrize-arrow-right-thin: \"\\e105\";\n\n$metrize-arrow-right-light: \"\\e106\";\n\n$metrize-arrow-right-bold: \"\\e107\";\n\n$metrize-arrow-right-bold-round: \"\\e108\";\n\n$metrize-arrow-right-big: \"\\e109\";\n\n$metrize-arrow-oblique-expand: \"\\e10a\";\n\n$metrize-arrow-oblique-expand-directions: \"\\e10b\";\n\n$metrize-arrow-oblique-contract: \"\\e10c\";\n\n$metrize-arrow-oblique-contract-directions: \"\\e10d\";\n\n$metrize-arrow-multi-line-up: \"\\e10e\";\n\n$metrize-arrow-multi-line-right: \"\\e10f\";\n\n$metrize-arrow-multi-line-left: \"\\e110\";\n\n$metrize-arrow-multi-line-down: \"\\e111\";\n\n$metrize-arrow-left: \"\\e112\";\n\n$metrize-arrow-left-thin: \"\\e113\";\n\n$metrize-arrow-left-light: \"\\e114\";\n\n$metrize-arrow-left-bold: \"\\e115\";\n\n$metrize-arrow-left-bold-round: \"\\e116\";\n\n$metrize-arrow-left-big: \"\\e117\";\n\n$metrize-arrow-fill-up: \"\\e118\";\n\n$metrize-arrow-fill-right: \"\\e119\";\n\n$metrize-arrow-fill-left: \"\\e11a\";\n\n$metrize-arrow-fill-down: \"\\e11b\";\n\n$metrize-arrow-down: \"\\e11c\";\n\n$metrize-arrow-down-thin: \"\\e11d\";\n\n$metrize-arrow-down-light: \"\\e11e\";\n\n$metrize-arrow-down-bold: \"\\e11f\";\n\n$metrize-arrow-down-bold-round: \"\\e120\";\n\n$metrize-arrow-down-big: \"\\e121\";\n\n$metrize-arrow-cycling: \"\\e122\";\n\n$metrize-arrow-cycle: \"\\e123\";\n\n$metrize-arrow-curve-right: \"\\e124\";\n\n$metrize-arrow-curve-recycle: \"\\e125\";\n\n$metrize-arrow-curve-left: \"\\e126\";\n\n$metrize-animal-footprint: \"\\e127\";\n\n$metrize-alarm-clock: \"\\e128\";\n\n$metrize-air-plane: \"\\e129\";\n\n$metrize-adjust: \"\\e12a\";\n\n$metrize-cube: \"\\e12b\";\n\n",
 			"file": "/D/visualisation/libraries/Metrize_Icons/Font-Face/style.css",
-			"file_size": 9595,
-			"file_write_time": 130284433330292473,
 			"settings":
 			{
 				"buffer_size": 9600,
@@ -373,7 +370,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			""
@@ -384,6 +381,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#container",
+			".container ",
+			".menu ",
 			"cross",
 			"close",
 			"\\n\\$metrize",
@@ -508,10 +508,7 @@
 			"render",
 			"cloud",
 			"enableVis",
-			"startNewMonth",
-			"month_ms",
-			"key",
-			"WORD_DATES"
+			"startNewMonth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -519,6 +516,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"#container ",
+			"#menu ",
 			"$metrize",
 			"",
 			";",
@@ -594,15 +593,15 @@
 					"file": "js/app.js",
 					"settings":
 					{
-						"buffer_size": 4617,
+						"buffer_size": 5816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								898,
-								898
+								0,
+								0
 							]
 						],
 						"settings":
@@ -621,15 +620,15 @@
 					"file": "css/base.scss",
 					"settings":
 					{
-						"buffer_size": 6203,
+						"buffer_size": 6219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3003,
-								3003
+								2721,
+								2721
 							]
 						],
 						"settings":
@@ -638,7 +637,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3017.0,
+						"translation.y": 2471.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -661,7 +660,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

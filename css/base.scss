@@ -180,6 +180,7 @@ body {
 
 // Overlay
 #overlay {
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -236,7 +237,7 @@ body {
 // Color theme: Metro
 body.theme-metro {
 	background-color: $metro_lightblue;
-	.menu { 
+	#menu { 
 		background-color: $metro_lightblue;
 		.links {
 			li.nav-link {
@@ -263,7 +264,7 @@ body.theme-metro {
 			}
 		}
 	}
-	.container {
+	#container {
 		.group li {
 			&.tile-color1 { background-color: $metro_orange }
 			&.tile-color2 { background-color: $metro_yellow }
@@ -278,7 +279,7 @@ $bw_active: #999;
 $bw_bg: #000;
 body.theme-bw {
 	background-color: $bw_bg;
-	.menu { 
+	#menu { 
 		background-color: $bw_bg;
 		.links {
 			li.nav-link {
@@ -305,7 +306,7 @@ body.theme-bw {
 			}
 		}
 	}
-	.container {
+	#container {
 		.group li {
 			&.tile-color1, 
 			&.tile-color2,
@@ -325,7 +326,7 @@ body.theme-light {
 	background-color: $other_bg;
 	color: $other_text;
 
-	.menu { 
+	#menu { 
 		background-color: $other_bg;
 		// border-bottom-color: $other_text;
 
@@ -364,7 +365,7 @@ body.theme-light {
 			}
 		}
 	}
-	.container {
+	#container {
 		.arrow {
 			-webkit-filter: invert($other_invert);
 		}

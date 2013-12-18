@@ -173,6 +173,7 @@ body {
       top: 70%; }
 
 #overlay {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -223,78 +224,78 @@ body {
 
 body.theme-metro {
   background-color: #00889e; }
-  body.theme-metro .menu {
+  body.theme-metro #menu {
     background-color: #00889e; }
-    body.theme-metro .menu .links li.nav-link:hover, body.theme-metro .menu .links li.nav-link.touching, body.theme-metro .menu .links li.nav-link.active {
+    body.theme-metro #menu .links li.nav-link:hover, body.theme-metro #menu .links li.nav-link.touching, body.theme-metro #menu .links li.nav-link.active {
       background-color: #603cba; }
-    body.theme-metro .menu .links .theme-selector li.theme {
+    body.theme-metro #menu .links .theme-selector li.theme {
       border: 1px solid #00889e; }
-      body.theme-metro .menu .links .theme-selector li.theme:hover, body.theme-metro .menu .links .theme-selector li.theme.touching, body.theme-metro .menu .links .theme-selector li.theme.active {
+      body.theme-metro #menu .links .theme-selector li.theme:hover, body.theme-metro #menu .links .theme-selector li.theme.touching, body.theme-metro #menu .links .theme-selector li.theme.active {
         border: 1px solid #603cba; }
     @media (max-width: 400px) {
-      body.theme-metro .menu .links.hover, body.theme-metro .menu .links.touching {
+      body.theme-metro #menu .links.hover, body.theme-metro #menu .links.touching {
         background-color: #603cba; } }
-  body.theme-metro .container .group li.tile-color1 {
+  body.theme-metro #container .group li.tile-color1 {
     background-color: #d44b28; }
-  body.theme-metro .container .group li.tile-color2 {
+  body.theme-metro #container .group li.tile-color2 {
     background-color: #fdd115; }
-  body.theme-metro .container .group li.tile-color3 {
+  body.theme-metro #container .group li.tile-color3 {
     background-color: #9a1616; }
-  body.theme-metro .container .group li.tile-color4 {
+  body.theme-metro #container .group li.tile-color4 {
     background-color: #b01a40; }
 
 body.theme-bw {
   background-color: black; }
-  body.theme-bw .menu {
+  body.theme-bw #menu {
     background-color: black; }
-    body.theme-bw .menu .links li.nav-link:hover, body.theme-bw .menu .links li.nav-link.touching, body.theme-bw .menu .links li.nav-link.active {
+    body.theme-bw #menu .links li.nav-link:hover, body.theme-bw #menu .links li.nav-link.touching, body.theme-bw #menu .links li.nav-link.active {
       background-color: #999999; }
-    body.theme-bw .menu .links .theme-selector li.theme {
+    body.theme-bw #menu .links .theme-selector li.theme {
       border: 1px solid black; }
-      body.theme-bw .menu .links .theme-selector li.theme:hover, body.theme-bw .menu .links .theme-selector li.theme.touching, body.theme-bw .menu .links .theme-selector li.theme.active {
+      body.theme-bw #menu .links .theme-selector li.theme:hover, body.theme-bw #menu .links .theme-selector li.theme.touching, body.theme-bw #menu .links .theme-selector li.theme.active {
         border: 1px solid #999999; }
     @media (max-width: 400px) {
-      body.theme-bw .menu .links.hover, body.theme-bw .menu .links.touching {
+      body.theme-bw #menu .links.hover, body.theme-bw #menu .links.touching {
         background-color: #999999; } }
-  body.theme-bw .container .group li.tile-color1, body.theme-bw .container .group li.tile-color2, body.theme-bw .container .group li.tile-color3, body.theme-bw .container .group li.tile-color4 {
+  body.theme-bw #container .group li.tile-color1, body.theme-bw #container .group li.tile-color2, body.theme-bw #container .group li.tile-color3, body.theme-bw #container .group li.tile-color4 {
     background-color: #333; }
 
 body.theme-light {
   background-color: white;
   color: #333333; }
-  body.theme-light .menu {
+  body.theme-light #menu {
     background-color: white; }
-    body.theme-light .menu .header img {
+    body.theme-light #menu .header img {
       -webkit-filter: invert(0.8); }
-    body.theme-light .menu .links .nav-link
+    body.theme-light #menu .links .nav-link
     img {
       -webkit-filter: invert(0.8);
       -moz-filter: invert(0.8); }
-    body.theme-light .menu .links li.nav-link:hover, body.theme-light .menu .links li.nav-link.touching, body.theme-light .menu .links li.nav-link.active {
+    body.theme-light #menu .links li.nav-link:hover, body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
       background-color: #96c8e6; }
-    body.theme-light .menu .links .theme-selector li.theme {
+    body.theme-light #menu .links .theme-selector li.theme {
       border: 1px solid white; }
-      body.theme-light .menu .links .theme-selector li.theme:hover, body.theme-light .menu .links .theme-selector li.theme.touching, body.theme-light .menu .links .theme-selector li.theme.active {
+      body.theme-light #menu .links .theme-selector li.theme:hover, body.theme-light #menu .links .theme-selector li.theme.touching, body.theme-light #menu .links .theme-selector li.theme.active {
         border: 1px solid #96c8e6; }
     @media (max-width: 400px) {
-      body.theme-light .menu .links.hover, body.theme-light .menu .links.touching {
+      body.theme-light #menu .links.hover, body.theme-light #menu .links.touching {
         background-color: #96c8e6; } }
-  body.theme-light .container .arrow {
+  body.theme-light #container .arrow {
     -webkit-filter: invert(0.8); }
-  body.theme-light .container .group li.text-content {
+  body.theme-light #container .group li.text-content {
     -webkit-transition: color 1s;
     -moztransition: color 1s;
     -o-transition: color 1s;
     -ms-transition: color 1s;
     transition: color 1s;
     color: #333333; }
-    body.theme-light .container .group li.text-content.tile-color1 {
+    body.theme-light #container .group li.text-content.tile-color1 {
       background-color: #ffaf8c; }
-    body.theme-light .container .group li.text-content.tile-color2 {
+    body.theme-light #container .group li.text-content.tile-color2 {
       background-color: #ffff79; }
-    body.theme-light .container .group li.text-content.tile-color3 {
+    body.theme-light #container .group li.text-content.tile-color3 {
       background-color: #fe7a7a; }
-    body.theme-light .container .group li.text-content.tile-color4 {
+    body.theme-light #container .group li.text-content.tile-color4 {
       background-color: #ff7ea4; }
-    body.theme-light .container .group li.text-content img {
+    body.theme-light #container .group li.text-content img {
       -webkit-filter: invert(0.8); }

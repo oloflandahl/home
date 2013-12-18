@@ -1,18 +1,16 @@
 (function() {
 	'use strict';
 
-	var addTouchHandler = function(el) {
+	// JQuery function for adding touch effects on mobile.
+	$.fn.addTouchHandler = function() {
+		var el = $(this);
 		el.on('touchstart', function() { $(this).addClass('touching') });
 		el.on('touchend', function() { $(this).removeClass('touching') });
 	};
 
 	$(document).ready(function() {
 
-		// TODO Create jquery function instead
-		addTouchHandler($('.group li'));
-		addTouchHandler($('.links li'));
-		addTouchHandler($('.contact'));
-		addTouchHandler($('.arrow'));
+		$('.group li, .links li, .contact, .arrow, .close-btn').addTouchHandler();
 
 		var activeGroup = (function() {
 
@@ -20,7 +18,7 @@
 				index = 0, 
 				win = $(window),
 				body = $('body'),
-				menu = $('.menu'),
+				menu = $('#menu'),
 				groups = $('.group'),
 				arrow = $('.arrow'),
 				arrowUp = arrow.filter('.up'),
@@ -117,7 +115,7 @@
 		var linksMenu = (function() {
 
 			var SEL = {
-				menu: '.menu',
+				menu: '#menu',
 				links: '.links',
 				navLink: '.nav-link'
 			};
@@ -206,6 +204,70 @@
 				theme.addClass('active');
 				body.removeClass().addClass(theme.data('theme'));
 			});
+		}());
+
+		var overlay = (function () {
+
+			var FADE_DUR = 400;
+			
+			var SEL =  {
+				overlay: '#overlay',
+				content: '.content',
+				close: '.close-btn'
+			};
+
+			var overlay = $(SEL.overlay),
+				content = overlay.find(SEL.content),
+				closeButton = overlay.find(SEL.close);
+
+			var show = function(markup) {
+				content.html('');
+				$.when( $(SEL.overlay).fadeIn(FADE_DUR) )
+					.then(function() {
+						content.html(markup);
+					});
+			};
+
+			var hide = function() {
+				$(SEL.overlay).fadeOut(FADE_DUR);
+			};
+
+			closeButton.click(hide);
+
+			return {
+				show: show,
+				hide: hide
+			};
+
+		}());
+
+		var content = (function() {
+
+			var BASE_PATH = 'js/content';
+			
+			var SEL = {
+				container: '#container',
+				group: '.group',
+				groupItem: '.group li'
+			};
+
+			var TEMPLATE = {
+				text: "<h2><%= title %></h2><p><%= description %></p>"
+			};
+
+			var container = $(SEL.container);
+
+			container.on('click', SEL.groupItem, function() {
+				var item = $(this),
+					itemId = item.attr('id'),
+					groupId = item.closest(SEL.group).attr('id'),
+					url = [BASE_PATH, groupId, itemId].join('/')+'.js';
+
+				$.getJSON(url, function(data) {
+					overlay.show(_.template(TEMPLATE.text, data));
+				});
+			});
+
 		}());
 
 	});
