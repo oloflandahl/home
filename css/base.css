@@ -12,6 +12,16 @@
   font-weight: normal;
   font-style: normal; }
 
+.testing:before {
+  font-family: "FontAwesome";
+  content: "\f001";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -82,6 +92,51 @@ body {
       transition: background-color 0.4s; }
       #menu .links ul li.menu-item.nav-link {
         cursor: pointer; }
+  #menu .icon-computer:before {
+    font-family: "FontAwesome";
+    content: "\f109";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+  #menu .icon-photos:before {
+    font-family: "FontAwesome";
+    content: "\f03e";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+  #menu .icon-music:before {
+    font-family: "FontAwesome";
+    content: "\f001";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+  #menu .icon-docs:before {
+    font-family: "FontAwesome";
+    content: "\f0f6";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+  #menu .icon-links:before {
+    font-family: "FontAwesome";
+    content: "\f0c6";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
 
 #container .arrow {
   -webkit-transition: opacity 1s;

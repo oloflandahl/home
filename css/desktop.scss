@@ -65,7 +65,10 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			margin: 0 1px;
 			padding: $linkPadding;
 
-			img { @include size($imgSize) }
+			.icon {
+				font-size: $imgSize;
+				line-height: $imgSize;
+			}
 
 			.text {
 				font-size: 16px;

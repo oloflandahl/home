@@ -74,6 +74,22 @@ body {
 			}
 		}
 	}
+
+	.icon-computer {
+		@include fa-icon($fa-laptop);
+	}
+	.icon-photos {
+		@include fa-icon($fa-picture-o);
+	}
+	.icon-music {
+		@include fa-icon($fa-music);
+	}
+	.icon-docs {
+		@include fa-icon($fa-file-text-o);
+	}
+	.icon-links {
+		@include fa-icon($fa-paperclip);
+	}
 }
 
 #container {
