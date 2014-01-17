@@ -17,6 +17,14 @@
 	transition: $property $duration;
 }
 
+@mixin transition-double($trans1, $trans2) {
+	-webkit-transition: $trans1, $trans2;
+	-moztransition: $trans1, $trans2;
+	-o-transition: $trans1, $trans2;
+	-ms-transition: $trans1, $trans2;
+	transition: $trans1, $trans2;
+}
+
 @mixin box-shadow($blur, $spread, $color, $left:0, $top:0) {
 	-moz-box-shadow: $left $top $blur $spread $color;
 	-webkit-box-shadow: $left $top $blur $spread $color;

@@ -38,8 +38,7 @@ body {
 	font-family: 'Segoe UI', 'Noto Sans', sans-serif;
 	color: #fff;
 
-	@include smooth-background-transition();
-	@include transition(color, 1s);
+	@include transition-double(background-color 1s, color 1s);
 
 	img { 
 		border: none;
@@ -352,18 +351,8 @@ body.theme-light {
 
 	#menu { 
 		background-color: $other_bg;
-		// border-bottom-color: $other_text;
-
-		.header .icon {
-			-webkit-filter: invert($other_invert);
-		}
 
 		.links {
-			.nav-link 
-				.icon {
-					-webkit-filter: invert($other_invert);
-					-moz-filter: invert($other_invert);
-			}
 
 			li.nav-link {
 				&:hover,
@@ -386,6 +375,13 @@ body.theme-light {
 				&.touching {
 					background-color: $metro_light_blue;
 				}
+			}
+		}
+
+		.contact {
+			.icon {
+				@include transition(color, 1s);
+				color: $other_text;
 			}
 		}
 	}

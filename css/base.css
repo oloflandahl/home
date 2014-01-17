@@ -34,16 +34,11 @@ body {
   min-width: 270px;
   font-family: 'Segoe UI', 'Noto Sans', sans-serif;
   color: #fff;
-  -webkit-transition: background-color 1s;
-  -moztransition: background-color 1s;
-  -o-transition: background-color 1s;
-  -ms-transition: background-color 1s;
-  transition: background-color 1s;
-  -webkit-transition: color 1s;
-  -moztransition: color 1s;
-  -o-transition: color 1s;
-  -ms-transition: color 1s;
-  transition: color 1s; }
+  -webkit-transition: background-color 1s, color 1s;
+  -moztransition: background-color 1s, color 1s;
+  -o-transition: background-color 1s, color 1s;
+  -ms-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s; }
   body img {
     border: none;
     -webkit-transition: -webkit-filter 1s;
@@ -317,12 +312,6 @@ body.theme-light {
   color: #333333; }
   body.theme-light #menu {
     background-color: white; }
-    body.theme-light #menu .header .icon {
-      -webkit-filter: invert(0.8); }
-    body.theme-light #menu .links .nav-link
-    .icon {
-      -webkit-filter: invert(0.8);
-      -moz-filter: invert(0.8); }
     body.theme-light #menu .links li.nav-link:hover, body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
       background-color: #96c8e6; }
     body.theme-light #menu .links .theme-selector li.theme {
@@ -332,6 +321,13 @@ body.theme-light {
     @media (max-width: 400px) {
       body.theme-light #menu .links.hover, body.theme-light #menu .links.touching {
         background-color: #96c8e6; } }
+    body.theme-light #menu .contact .icon {
+      -webkit-transition: color 1s;
+      -moztransition: color 1s;
+      -o-transition: color 1s;
+      -ms-transition: color 1s;
+      transition: color 1s;
+      color: #333333; }
   body.theme-light #container .arrow {
     -webkit-filter: invert(0.8); }
   body.theme-light #container .group li.text-content {
