@@ -278,7 +278,7 @@ body {
     cursor: pointer; }
     #overlay .close-btn-container .close-btn:before {
       font-family: "FontAwesome";
-      content: "\f05c";
+      content: "\f00d";
       speak: none;
       font-weight: normal;
       font-variant: normal;

@@ -75,19 +75,19 @@ body {
 	}
 
 	.icon-computer {
-		@include icon($laptop);
+		@include icon($icon-laptop);
 	}
 	.icon-photos {
-		@include icon($picture-o);
+		@include icon($icon-picture-o);
 	}
 	.icon-music {
-		@include icon($music);
+		@include icon($icon-music);
 	}
 	.icon-docs {
-		@include icon($file-text-o);
+		@include icon($icon-file-text-o);
 	}
 	.icon-links {
-		@include icon($link);
+		@include icon($icon-link);
 	}
 }
 
@@ -154,19 +154,19 @@ body {
 					}
 
 					.icon-example {
-						@include icon($check);
+						@include icon($icon-check);
 					}
 					.icon-fb {
-						@include icon($facebook-square);
+						@include icon($icon-facebook-square);
 					}
 					.icon-marker {
-						@include icon($map-marker);
+						@include icon($icon-map-marker);
 					}
 					.icon-music {
-						@include icon($music);
+						@include icon($icon-music);
 					}
 					.icon-graph {
-						@include icon($bar-chart-o);
+						@include icon($icon-bar-chart-o);
 					}
 
 					.title { text-transform: capitalize }
@@ -250,7 +250,7 @@ body {
 			color: #999;
 			cursor: pointer;
 
-			@include icon($times-circle-o);
+			@include icon($icon-times);
 
 			&:hover {
 				color: #fff;
