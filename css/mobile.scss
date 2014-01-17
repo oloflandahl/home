@@ -56,7 +56,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 			
 			@include size($linkWidth);
 			@include font-size($linkWidth - 4px);
-			@include fa-icon($fa-bars);
+			@include icon($bars);
 			cursor: pointer; // Used in js. Do not remove.
 
 			&:before {
@@ -103,12 +103,12 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 
 			&.up {
 				right: $size + 20px;
-				@include fa-icon($fa-caret-up);
+				@include icon($caret-up);
 			}
 
 			&.down {
 				right: 10px;
-				@include fa-icon($fa-caret-down);
+				@include icon($caret-down);
 			}
 		}
 

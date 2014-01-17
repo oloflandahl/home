@@ -56,11 +56,11 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			}
 
 			.icon-mail {
-				@include fa-icon($fa-envelope);
+				@include icon($envelope);
 			}
 
 			.icon-linkedin {
-				@include fa-icon($fa-linkedin-square);
+				@include icon($linkedin-square);
 			}
 		}
 
@@ -150,12 +150,12 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 		&.up {
 			top: $menuHeight + 50px;
-			@include fa-icon($fa-arrow-circle-up);
+			@include icon($arrow-circle-up);
 		}
 
 		&.down {
 			bottom: 1em;
-			@include fa-icon($fa-arrow-circle-down);
+			@include icon($arrow-circle-down);
 		}
 	}
 
