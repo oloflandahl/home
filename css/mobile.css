@@ -108,9 +108,6 @@
       font-size: 170%; }
       #container ul.group li .icon {
         width: 30%; }
-        #container ul.group li .icon img {
-          width: 3em;
-          height: 3em; }
       #container ul.group li .title {
         position: relative;
         display: table-cell;

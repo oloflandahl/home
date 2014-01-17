@@ -120,10 +120,6 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 
 			.icon {
 				width: 30%;
-
-				img {
-					@include size(3em);
-				}
 			}
 
 			.title {
@@ -140,5 +136,6 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 				.content.alt { top: 70% }
 			}
 		}
+
 	}
 }

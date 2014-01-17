@@ -149,9 +149,24 @@ body {
 						padding: 0.2em;
 					}
 
+					.icon {
+						@include font-size(80px);
+					}
+
 					.icon-example {
 						@include fa-icon($fa-check);
-						@include font-size(50px);
+					}
+					.icon-fb {
+						@include fa-icon($fa-facebook-square);
+					}
+					.icon-marker {
+						@include fa-icon($fa-map-marker);
+					}
+					.icon-music {
+						@include fa-icon($fa-music);
+					}
+					.icon-graph {
+						@include fa-icon($fa-bar-chart-o);
 					}
 
 					.title { text-transform: capitalize }

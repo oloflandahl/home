@@ -174,18 +174,54 @@ body {
         display: table-cell;
         vertical-align: middle;
         padding: 0.2em; }
-      #container ul.group li.text-content .content .icon-example {
-        font-size: 50px;
-        line-height: 50px; }
-        #container ul.group li.text-content .content .icon-example:before {
-          font-family: "FontAwesome";
-          content: "\f00c";
-          speak: none;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          -webkit-font-smoothing: antialiased; }
+      #container ul.group li.text-content .content .icon {
+        font-size: 80px;
+        line-height: 80px; }
+      #container ul.group li.text-content .content .icon-example:before {
+        font-family: "FontAwesome";
+        content: "\f00c";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
+      #container ul.group li.text-content .content .icon-fb:before {
+        font-family: "FontAwesome";
+        content: "\f082";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
+      #container ul.group li.text-content .content .icon-marker:before {
+        font-family: "FontAwesome";
+        content: "\f041";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
+      #container ul.group li.text-content .content .icon-music:before {
+        font-family: "FontAwesome";
+        content: "\f001";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
+      #container ul.group li.text-content .content .icon-graph:before {
+        font-family: "FontAwesome";
+        content: "\f080";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
       #container ul.group li.text-content .content .title {
         text-transform: capitalize; }
     #container ul.group li.text-content:hover .content.main {
