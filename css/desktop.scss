@@ -97,9 +97,8 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				$themeMP: 2px;
 				$themeImg: 12px;
 				ul li.theme {
-					@include size($themeImg + 4*$themeMP);
-					margin: $themeMP;
-					padding: $themeMP;
+					@include size($themeImg + 7*$themeMP);
+					margin: $themeMP 0;
 					cursor: pointer;
 
 					@include transition(border-color, 0.4s);

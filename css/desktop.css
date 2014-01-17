@@ -59,10 +59,9 @@
     #menu .links li.extra .theme-selector {
       margin-left: 5px; }
       #menu .links li.extra .theme-selector ul li.theme {
-        width: 20px;
-        height: 20px;
-        margin: 2px;
-        padding: 2px;
+        width: 26px;
+        height: 26px;
+        margin: 2px 0;
         cursor: pointer;
         -webkit-transition: border-color 0.4s;
         -moztransition: border-color 0.4s;
