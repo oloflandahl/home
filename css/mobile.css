@@ -16,9 +16,9 @@
     right: 0; }
     #menu .links ul li.nav-link {
       padding: 10px; }
-      #menu .links ul li.nav-link img {
-        width: 32px;
-        height: 32px; }
+      #menu .links ul li.nav-link .icon {
+        font-size: 32px;
+        line-height: 32px; }
       #menu .links ul li.nav-link .text {
         display: none; }
     #menu .links ul li.extra {
@@ -37,14 +37,14 @@
           background-color: rgba(0, 0, 0, 0.5); } }
 
 #container {
-  margin: 62px 10px 0 10px; }
+  margin-top: 62px; }
   #container .arrow.big {
     display: none; }
   #container ul.group {
     width: 100%%;
     padding: 2em 0; }
     #container ul.group h2 {
-      margin: 10px 0; }
+      margin: 10px; }
     #container ul.group .arrow.small {
       position: absolute;
       width: 48px;

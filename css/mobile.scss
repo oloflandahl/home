@@ -34,8 +34,9 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 		ul {
 			li.nav-link {
 				padding: $linkPadding;
-				img {
-					@include size($imgSize);
+				.icon {
+					font-size: $imgSize;
+					line-height: $imgSize;
 				}
 
 				.text {
@@ -70,7 +71,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 
 #container {
 
-	margin: $menuHeight 10px 0 10px;
+	margin-top: $menuHeight;
 	
 	.arrow.big {
 		display: none;
@@ -80,7 +81,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 		width: 100%%;
 		padding: 2em 0;
 
-		h2 { margin: 10px 0 }
+		h2 { margin: 10px }
 
 		.arrow.small {
 			$size: 48px;
