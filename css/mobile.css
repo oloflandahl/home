@@ -41,13 +41,23 @@
       #menu .links {
         width: 52px;
         height: 52px;
-        background-image: url(../img/menu_small.png);
-        background-repeat: no-repeat;
-        background-position: 10px 10px;
+        font-size: 48px;
+        line-height: 48px;
         cursor: pointer; }
+        #menu .links:before {
+          font-family: "FontAwesome";
+          content: "\f0c9";
+          speak: none;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased; }
+        #menu .links:before {
+          margin-left: 5px; }
         #menu .links ul {
           display: none;
-          margin-top: 62px;
+          margin-top: 5px;
           background-color: rgba(0, 0, 0, 0.5); } }
 
 #container {

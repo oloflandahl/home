@@ -55,15 +55,17 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 			$offset: ($linkWidth - $imgSize) / 2;
 			
 			@include size($linkWidth);
-			
-			background-image: url(../img/menu_small.png);
-			background-repeat: no-repeat;
-			background-position: $offset $offset;
+			@include font-size($linkWidth - 4px);
+			@include fa-icon($fa-bars);
 			cursor: pointer; // Used in js. Do not remove.
+
+			&:before {
+				margin-left: 5px;
+			}
 			
 			ul {
 				display: none;
-				margin-top: $menuHeight;
+				margin-top: 5px;
 				background-color: rgba(0,0,0,0.5);
 			}
 		}
