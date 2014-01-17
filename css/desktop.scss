@@ -1,5 +1,6 @@
 @import "colors";
 @import "helper";
+@import "font-icons";
 
 // Media width
 $xsmall: 740px;
@@ -37,8 +38,14 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			display: inline-block;
 			padding: 5px 10px;
 
-			img { 
-				// @include size(20px);
+			a {
+				display: inline-block;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.icon { 
+				@include font-size(20px);
 
 				opacity: 0.5;
 
@@ -46,6 +53,14 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				&.touching { 
 					opacity: 1; 
 				}
+			}
+
+			.icon-mail {
+				@include fa-icon($fa-envelope);
+			}
+
+			.icon-linkedin {
+				@include fa-icon($fa-linkedin-square);
 			}
 		}
 
@@ -66,8 +81,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			padding: $linkPadding;
 
 			.icon {
-				font-size: $imgSize;
-				line-height: $imgSize;
+				@include font-size($imgSize);
 			}
 
 			.text {

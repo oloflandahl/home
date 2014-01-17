@@ -12,26 +12,15 @@
   font-weight: normal;
   font-style: normal; }
 
-.testing:before {
-  font-family: "FontAwesome";
-  content: "\f001";
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased; }
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0; }
+  html *, body * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
   html h1, html h2, html h3, html h4, body h1, body h2, body h3, body h4 {
     margin: 0;
     font-weight: 100; }
@@ -190,6 +179,18 @@ body {
         display: table-cell;
         vertical-align: middle;
         padding: 0.2em; }
+      #container ul.group li.text-content .content .icon-example {
+        font-size: 50px;
+        line-height: 50px; }
+        #container ul.group li.text-content .content .icon-example:before {
+          font-family: "FontAwesome";
+          content: "\f00c";
+          speak: none;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased; }
       #container ul.group li.text-content .content .title {
         text-transform: capitalize; }
     #container ul.group li.text-content:hover .content.main {
@@ -316,10 +317,10 @@ body.theme-light {
   color: #333333; }
   body.theme-light #menu {
     background-color: white; }
-    body.theme-light #menu .header img {
+    body.theme-light #menu .header .icon {
       -webkit-filter: invert(0.8); }
     body.theme-light #menu .links .nav-link
-    img {
+    .icon {
       -webkit-filter: invert(0.8);
       -moz-filter: invert(0.8); }
     body.theme-light #menu .links li.nav-link:hover, body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {

@@ -7,17 +7,17 @@
 }
 
 // Reset
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
+	* {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
 
 	h1, h2, h3, h4 {
 		margin: 0;
@@ -148,6 +148,11 @@ body {
 						display: table-cell;
 						vertical-align: middle;
 						padding: 0.2em;
+					}
+
+					.icon-example {
+						@include fa-icon($fa-check);
+						@include font-size(50px);
 					}
 
 					.title { text-transform: capitalize }
@@ -349,13 +354,13 @@ body.theme-light {
 		background-color: $other_bg;
 		// border-bottom-color: $other_text;
 
-		.header img {
+		.header .icon {
 			-webkit-filter: invert($other_invert);
 		}
 
 		.links {
 			.nav-link 
-				img {
+				.icon {
 					-webkit-filter: invert($other_invert);
 					-moz-filter: invert($other_invert);
 			}
