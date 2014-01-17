@@ -4,6 +4,11 @@
 	height: $size;
 }
 
+@mixin font-size($size) {
+	font-size: $size;
+	line-height: $size;
+}
+
 @mixin transition($property, $duration) {
 	-webkit-transition: $property $duration;
 	-moztransition: $property $duration;
