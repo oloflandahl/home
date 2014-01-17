@@ -207,99 +207,47 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 6019,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/app.js",
-			"settings":
-			{
-				"buffer_size": 5816,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/base.scss",
-			"settings":
-			{
-				"buffer_size": 6219,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/_font-icons.scss",
-			"settings":
-			{
-				"buffer_size": 19748,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/visualisation/libraries/Metrize_Icons/Font-Face/style.css",
-			"settings":
-			{
-				"buffer_size": 9600,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/mobile.scss",
-			"settings":
-			{
-				"buffer_size": 1997,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/desktop.scss",
-			"settings":
-			{
-				"buffer_size": 2699,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/_colors.scss",
-			"settings":
-			{
-				"buffer_size": 405,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/ie8.css",
-			"settings":
-			{
-				"buffer_size": 156,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/_helper.scss",
-			"settings":
-			{
-				"buffer_size": 710,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 67.0,
 		"selected_items":
 		[
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"package con",
+				"Package Control: Remove Package"
+			],
+			[
+				"packag",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 0.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
 	},
 	"distraction_free":
 	{
@@ -312,6 +260,8 @@
 	},
 	"file_history":
 	[
+		"/Users/oloflandahl/home/home.sublime-project",
+		"/D/visualisation/libraries/Metrize_Icons/Font-Face/style.css",
 		"/D/visualisation/libraries/font-awesome-4.0.3/scss/_variables.scss",
 		"/D/visualisation/home/css/base.css",
 		"/D/visualisation/home/css/base.scss",
@@ -366,7 +316,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -558,283 +508,14 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 6019,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								770,
-								780
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/app.js",
-					"settings":
-					{
-						"buffer_size": 5816,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/base.scss",
-					"settings":
-					{
-						"buffer_size": 6219,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2721,
-								2721
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2471.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/_font-icons.scss",
-					"settings":
-					{
-						"buffer_size": 19748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/visualisation/libraries/Metrize_Icons/Font-Face/style.css",
-					"settings":
-					{
-						"buffer_size": 9600,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								9600
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "css/mobile.scss",
-					"settings":
-					{
-						"buffer_size": 1997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1086,
-								1086
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "css/desktop.scss",
-					"settings":
-					{
-						"buffer_size": 2699,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1806,
-								1806
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "css/_colors.scss",
-					"settings":
-					{
-						"buffer_size": 405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								368,
-								374
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "css/ie8.css",
-					"settings":
-					{
-						"buffer_size": 156,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "css/_helper.scss",
-					"settings":
-					{
-						"buffer_size": 710,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								408
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -867,9 +548,14 @@
 	{
 		"height": 100.0
 	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "home.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -888,10 +574,24 @@
 		],
 		"width": 0.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

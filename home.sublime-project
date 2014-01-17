@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/D/visualisation/home"
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }

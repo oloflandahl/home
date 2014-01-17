@@ -4,12 +4,6 @@
 	height: $size;
 }
 
-@mixin border-box-sizing() {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 @mixin transition($property, $duration) {
 	-webkit-transition: $property $duration;
 	-moztransition: $property $duration;

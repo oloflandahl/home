@@ -12,6 +12,11 @@
   font-weight: normal;
   font-style: normal; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html, body {
   width: 100%;
   height: 100%;
@@ -28,7 +33,7 @@ html, body {
 
 body {
   min-width: 270px;
-  font-family: "Segoe UI", "Noto Sans", sans-serif;
+  font-family: 'Segoe UI', 'Noto Sans', sans-serif;
   color: #fff;
   -webkit-transition: background-color 1s;
   -moztransition: background-color 1s;
@@ -53,10 +58,7 @@ body {
   top: 0;
   z-index: 100;
   width: 100%;
-  border-bottom: 1px solid white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
   -webkit-transition: background-color 1s;
   -moztransition: background-color 1s;
   -o-transition: background-color 1s;
@@ -73,9 +75,6 @@ body {
       display: table-cell;
       vertical-align: middle;
       text-align: center;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
       -webkit-transition: background-color 0.4s;
       -moztransition: background-color 0.4s;
       -o-transition: background-color 0.4s;
@@ -102,9 +101,6 @@ body {
     display: table;
     clear: both; }
   #container ul.group li {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     float: left;
     position: relative;
     font-size: 100%;
@@ -116,7 +112,7 @@ body {
     -ms-transition: background-color 1s;
     transition: background-color 1s; }
     #container ul.group li:hover, #container ul.group li.touching {
-      border: 1px solid white; }
+      border: 1px solid #fff; }
     #container ul.group li .content {
       display: table;
       position: absolute;

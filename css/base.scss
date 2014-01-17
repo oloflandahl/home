@@ -7,6 +7,12 @@
 }
 
 // Reset
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -48,7 +54,6 @@ body {
 	width: 100%;
 	border-bottom: 1px solid #fff;
 
-	@include border-box-sizing();
 	@include smooth-background-transition();
 
 	.links {
@@ -65,7 +70,6 @@ body {
 
 				&.nav-link { cursor: pointer }
 				
-				@include border-box-sizing();
 				@include transition(background-color, 0.4s);
 			}
 		}
@@ -90,7 +94,6 @@ body {
 		@include clearfix();
 
 		li {
-			@include border-box-sizing();
 			float: left;
 			position: relative;
 
