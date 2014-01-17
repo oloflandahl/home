@@ -137,8 +137,8 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 	.arrow.big {
 		position: fixed;
 		z-index: 10;
-		@include size(64px);
-		right: 5em;
+		@include font-size(70px);
+		right: 1em;
 		background-repeat: no-repeat;
 		opacity: 0.2;
 		cursor: pointer;
@@ -150,12 +150,12 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 		&.up {
 			top: $menuHeight + 50px;
-			background-image: url(../img/up.png);
+			@include fa-icon($fa-arrow-circle-up);
 		}
 
 		&.down {
-			bottom: 2em;
-			background-image: url(../img/down.png);
+			bottom: 1em;
+			@include fa-icon($fa-arrow-circle-down);
 		}
 	}
 
@@ -172,7 +172,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			height: 180px;
 			margin: 10px;
 
-			@include transition(box-shadow, 0.5s);
+			@include transition-double(background-color 1s, box-shadow 0.5s);
 			
 			&:hover,
 			&.touching { 

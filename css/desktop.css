@@ -118,20 +118,36 @@
   #container .arrow.big {
     position: fixed;
     z-index: 10;
-    width: 64px;
-    height: 64px;
-    right: 5em;
+    font-size: 70px;
+    line-height: 70px;
+    right: 1em;
     background-repeat: no-repeat;
     opacity: 0.2;
     cursor: pointer; }
     #container .arrow.big:hover, #container .arrow.big.touching {
       opacity: 1; }
     #container .arrow.big.up {
-      top: 170px;
-      background-image: url(../img/up.png); }
+      top: 170px; }
+      #container .arrow.big.up:before {
+        font-family: "FontAwesome";
+        content: "\f0aa";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
     #container .arrow.big.down {
-      bottom: 2em;
-      background-image: url(../img/down.png); }
+      bottom: 1em; }
+      #container .arrow.big.down:before {
+        font-family: "FontAwesome";
+        content: "\f0ab";
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
   #container ul.group {
     width: 70%;
     margin: 0 5%; }
@@ -143,11 +159,11 @@
       width: 360px;
       height: 180px;
       margin: 10px;
-      -webkit-transition: box-shadow 0.5s;
-      -moztransition: box-shadow 0.5s;
-      -o-transition: box-shadow 0.5s;
-      -ms-transition: box-shadow 0.5s;
-      transition: box-shadow 0.5s; }
+      -webkit-transition: background-color 1s, box-shadow 0.5s;
+      -moztransition: background-color 1s, box-shadow 0.5s;
+      -o-transition: background-color 1s, box-shadow 0.5s;
+      -ms-transition: background-color 1s, box-shadow 0.5s;
+      transition: background-color 1s, box-shadow 0.5s; }
       #container ul.group li:hover, #container ul.group li.touching {
         -moz-box-shadow: 0 0 10px 2px white;
         -webkit-box-shadow: 0 0 10px 2px white;

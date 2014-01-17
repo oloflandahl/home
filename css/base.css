@@ -329,7 +329,12 @@ body.theme-light {
       transition: color 1s;
       color: #333333; }
   body.theme-light #container .arrow {
-    -webkit-filter: invert(0.8); }
+    -webkit-transition: opacity 1s, color 1s;
+    -moztransition: opacity 1s, color 1s;
+    -o-transition: opacity 1s, color 1s;
+    -ms-transition: opacity 1s, color 1s;
+    transition: opacity 1s, color 1s;
+    color: #333333; }
   body.theme-light #container .group li.text-content {
     -webkit-transition: color 1s;
     -moztransition: color 1s;

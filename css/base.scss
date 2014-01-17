@@ -387,7 +387,8 @@ body.theme-light {
 	}
 	#container {
 		.arrow {
-			-webkit-filter: invert($other_invert);
+			@include transition-double(opacity 1s, color 1s);
+			color: $other_text;
 		}
 		.group li.text-content {
 			
