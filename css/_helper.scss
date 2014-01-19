@@ -38,3 +38,26 @@
 		clear: both;
 	}
 }
+
+@mixin pulse-animation($name) {
+	animation-name: #{$name};
+	-webkit-animation-name: #{$name};
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@mixin define-pulse($name, $property, $from, $to) {
+	@keyframes #{$name} {
+		0% { #{$property}: $from }
+		50% { #{$property}: $to }
+		100% { #{$property}: $from }
+	}
+
+	@-webkit-keyframes #{$name} {
+		0% { #{$property}: $from }
+		50% { #{$property}: $to }
+		100% { #{$property}: $from }
+	}
+}

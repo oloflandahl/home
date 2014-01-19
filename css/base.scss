@@ -259,6 +259,10 @@ body {
 }
 
 // Color theme: Metro
+$metro_pulse: "metro-pulse";
+$metro_border_pulse: "metro-border-pulse";
+@include define-pulse($metro_pulse, "background-color", $metro_purple, $metro_lightblue);
+@include define-pulse($metro_border_pulse, "border-color", $metro_purple, $metro_lightblue);
 body.theme-metro {
 	background-color: $metro_lightblue;
 	#menu { 
@@ -269,6 +273,9 @@ body.theme-metro {
 				&.active {
 					background-color: $metro_purple;
 				}
+				&.pulse {
+					@include pulse-animation($metro_pulse);
+				}
 			}
 			.theme-selector li.theme {
 				border: 1px solid $metro_lightblue;
@@ -276,6 +283,9 @@ body.theme-metro {
 				&.touching,
 				&.active { 
 					border: 1px solid $metro_purple;
+				}
+				&.pulse {
+					@include pulse-animation($metro_border_pulse);
 				}
 			}
 			@media (max-width: 400px) {
@@ -298,6 +308,10 @@ body.theme-metro {
 // Color theme: Black & White
 $bw_active: #999;
 $bw_bg: #000;
+$bw_pulse: "bw-pulse";
+$bw_border_pulse: "bw-border-pulse";
+@include define-pulse($bw_pulse, "background-color", $bw_active, $bw_bg);
+@include define-pulse($bw_border_pulse, "border-color", $bw_active, $bw_bg);
 body.theme-bw {
 	background-color: $bw_bg;
 	#menu { 
@@ -308,6 +322,9 @@ body.theme-bw {
 				&.active { 
 					background-color: $bw_active; 
 				}
+				&.pulse {
+					@include pulse-animation($bw_pulse);
+				}
 			}
 			.theme-selector li.theme {
 				border: 1px solid $bw_bg;
@@ -315,6 +332,9 @@ body.theme-bw {
 				&.touching,
 				&.active {
 					border: 1px solid $bw_active;
+				}
+				&.pulse {
+					@include pulse-animation($bw_border_pulse);
 				}
 			}
 			@media (max-width: 400px) {
@@ -339,6 +359,10 @@ body.theme-bw {
 // Color theme: Light
 $other_bg: #fff;
 $other_text: #333;
+$light_pulse: "light-pulse";
+$light_border_pulse: "light-border-pulse";
+@include define-pulse($light_pulse, "background-color", $metro_light_blue, $other_bg);
+@include define-pulse($light_border_pulse, "border-color", $metro_light_blue, $other_bg);
 body.theme-light {
 	background-color: $other_bg;
 	color: $other_text;
@@ -353,6 +377,9 @@ body.theme-light {
 				&.active {
 					background-color: $metro_light_blue;
 				}
+				&.pulse {
+					@include pulse-animation($light_pulse);
+				}
 			}
 			.theme-selector li.theme {
 				border: 1px solid $other_bg;
@@ -360,6 +387,9 @@ body.theme-light {
 				&.touching,
 				&.active { 
 					border: 1px solid $metro_light_blue;
+				}
+				&.pulse {
+					@include pulse-animation($light_border_pulse);
 				}
 			}
 			@media (max-width: 400px) {

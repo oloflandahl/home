@@ -310,16 +310,70 @@ body {
     margin: 2%;
     z-index: 502; }
 
+@keyframes metro-pulse {
+  0% {
+    background-color: #603cba; }
+
+  50% {
+    background-color: #00889e; }
+
+  100% {
+    background-color: #603cba; } }
+
+@-webkit-keyframes metro-pulse {
+  0% {
+    background-color: #603cba; }
+
+  50% {
+    background-color: #00889e; }
+
+  100% {
+    background-color: #603cba; } }
+
+@keyframes metro-border-pulse {
+  0% {
+    border-color: #603cba; }
+
+  50% {
+    border-color: #00889e; }
+
+  100% {
+    border-color: #603cba; } }
+
+@-webkit-keyframes metro-border-pulse {
+  0% {
+    border-color: #603cba; }
+
+  50% {
+    border-color: #00889e; }
+
+  100% {
+    border-color: #603cba; } }
+
 body.theme-metro {
   background-color: #00889e; }
   body.theme-metro #menu {
     background-color: #00889e; }
     body.theme-metro #menu .links li.nav-link.touching, body.theme-metro #menu .links li.nav-link.active {
       background-color: #603cba; }
+    body.theme-metro #menu .links li.nav-link.pulse {
+      animation-name: metro-pulse;
+      -webkit-animation-name: metro-pulse;
+      animation-duration: 2s;
+      -webkit-animation-duration: 2s;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite; }
     body.theme-metro #menu .links .theme-selector li.theme {
       border: 1px solid #00889e; }
       body.theme-metro #menu .links .theme-selector li.theme:hover, body.theme-metro #menu .links .theme-selector li.theme.touching, body.theme-metro #menu .links .theme-selector li.theme.active {
         border: 1px solid #603cba; }
+      body.theme-metro #menu .links .theme-selector li.theme.pulse {
+        animation-name: metro-border-pulse;
+        -webkit-animation-name: metro-border-pulse;
+        animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite; }
     @media (max-width: 400px) {
       body.theme-metro #menu .links.hover, body.theme-metro #menu .links.touching {
         background-color: #603cba; } }
@@ -332,21 +386,115 @@ body.theme-metro {
   body.theme-metro #container .group li.tile-color4 {
     background-color: #b01a40; }
 
+@keyframes bw-pulse {
+  0% {
+    background-color: #999999; }
+
+  50% {
+    background-color: black; }
+
+  100% {
+    background-color: #999999; } }
+
+@-webkit-keyframes bw-pulse {
+  0% {
+    background-color: #999999; }
+
+  50% {
+    background-color: black; }
+
+  100% {
+    background-color: #999999; } }
+
+@keyframes bw-border-pulse {
+  0% {
+    border-color: #999999; }
+
+  50% {
+    border-color: black; }
+
+  100% {
+    border-color: #999999; } }
+
+@-webkit-keyframes bw-border-pulse {
+  0% {
+    border-color: #999999; }
+
+  50% {
+    border-color: black; }
+
+  100% {
+    border-color: #999999; } }
+
 body.theme-bw {
   background-color: black; }
   body.theme-bw #menu {
     background-color: black; }
     body.theme-bw #menu .links li.nav-link.touching, body.theme-bw #menu .links li.nav-link.active {
       background-color: #999999; }
+    body.theme-bw #menu .links li.nav-link.pulse {
+      animation-name: bw-pulse;
+      -webkit-animation-name: bw-pulse;
+      animation-duration: 2s;
+      -webkit-animation-duration: 2s;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite; }
     body.theme-bw #menu .links .theme-selector li.theme {
       border: 1px solid black; }
       body.theme-bw #menu .links .theme-selector li.theme:hover, body.theme-bw #menu .links .theme-selector li.theme.touching, body.theme-bw #menu .links .theme-selector li.theme.active {
         border: 1px solid #999999; }
+      body.theme-bw #menu .links .theme-selector li.theme.pulse {
+        animation-name: bw-border-pulse;
+        -webkit-animation-name: bw-border-pulse;
+        animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite; }
     @media (max-width: 400px) {
       body.theme-bw #menu .links.hover, body.theme-bw #menu .links.touching {
         background-color: #999999; } }
   body.theme-bw #container .group li.tile-color1, body.theme-bw #container .group li.tile-color2, body.theme-bw #container .group li.tile-color3, body.theme-bw #container .group li.tile-color4 {
     background-color: #333; }
+
+@keyframes light-pulse {
+  0% {
+    background-color: #96c8e6; }
+
+  50% {
+    background-color: white; }
+
+  100% {
+    background-color: #96c8e6; } }
+
+@-webkit-keyframes light-pulse {
+  0% {
+    background-color: #96c8e6; }
+
+  50% {
+    background-color: white; }
+
+  100% {
+    background-color: #96c8e6; } }
+
+@keyframes light-border-pulse {
+  0% {
+    border-color: #96c8e6; }
+
+  50% {
+    border-color: white; }
+
+  100% {
+    border-color: #96c8e6; } }
+
+@-webkit-keyframes light-border-pulse {
+  0% {
+    border-color: #96c8e6; }
+
+  50% {
+    border-color: white; }
+
+  100% {
+    border-color: #96c8e6; } }
 
 body.theme-light {
   background-color: white;
@@ -355,10 +503,24 @@ body.theme-light {
     background-color: white; }
     body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
       background-color: #96c8e6; }
+    body.theme-light #menu .links li.nav-link.pulse {
+      animation-name: light-pulse;
+      -webkit-animation-name: light-pulse;
+      animation-duration: 2s;
+      -webkit-animation-duration: 2s;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite; }
     body.theme-light #menu .links .theme-selector li.theme {
       border: 1px solid white; }
       body.theme-light #menu .links .theme-selector li.theme:hover, body.theme-light #menu .links .theme-selector li.theme.touching, body.theme-light #menu .links .theme-selector li.theme.active {
         border: 1px solid #96c8e6; }
+      body.theme-light #menu .links .theme-selector li.theme.pulse {
+        animation-name: light-border-pulse;
+        -webkit-animation-name: light-border-pulse;
+        animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite; }
     @media (max-width: 400px) {
       body.theme-light #menu .links.hover, body.theme-light #menu .links.touching {
         background-color: #96c8e6; } }

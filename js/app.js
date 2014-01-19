@@ -138,8 +138,10 @@
 			});
 
 			menu.on('mouseenter', SEL.navLink, function() {
-				activeGroup.moveTo($(this).index());
+				var thisLink = $(this);
+				activeGroup.moveTo(thisLink.index());
 				cancelScroll = true;
+				thisLink.addClass('pulse');
 			});
 
 			menu.on('mouseleave', SEL.navLink, function(e) {
@@ -149,6 +151,7 @@
 						activeGroup.moveTo(cachedIndex);
 					}
 				}, 100);
+				$(this).removeClass('pulse');
 			});
 
 			menu.on('click', SEL.links, function(e) {
@@ -241,8 +244,14 @@
 			};
 
 			themes.on('click', SEL.theme, function() { setTheme(this, true, true) });
-			themes.on('mouseenter', SEL.theme, function() { setTheme(this, true, false) });
-			themes.on('mouseleave', SEL.theme, function() { setTheme(this, false, false) });
+			themes.on('mouseenter', SEL.theme, function() { 
+				setTheme(this, true, false);
+				$(this).addClass('pulse');
+			});
+			themes.on('mouseleave', SEL.theme, function() { 
+				setTheme(this, false, false); 
+				$(this).removeClass('pulse');
+			});
 
 		}());
 
