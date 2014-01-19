@@ -120,6 +120,8 @@
 				navLink: '.nav-link'
 			};
 
+			var FADE_DUR = 400;
+
 			var doc = $(document),
 				win = $(window),
 				menu = $(SEL.menu),
@@ -135,11 +137,11 @@
 
 				if (linksList.is(':hidden')) {
 					links.addClass('on');
-					linksList.fadeIn(400);
+					linksList.fadeIn(FADE_DUR);
 				}
 				else if(links.is('.on')) {
 					links.removeClass('on');
-					linksList.fadeOut(400);
+					linksList.fadeOut(FADE_DUR);
 				}
 
 				return false;
@@ -156,7 +158,7 @@
 
 				if (clickedLink.length === 0) {
 					linksList.removeClass('on');
-					linksList.fadeOut(400);
+					linksList.fadeOut(FADE_DUR);
 				}
 			});
 

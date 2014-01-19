@@ -27,9 +27,7 @@ html, body {
 	ul {
 		margin: 0;
 		padding: 0;
-		li {
-			list-style: none;
-		}
+		li { list-style: none }
 	}
 }
 
@@ -74,21 +72,11 @@ body {
 		}
 	}
 
-	.icon-computer {
-		@include icon($icon-laptop);
-	}
-	.icon-photos {
-		@include icon($icon-picture-o);
-	}
-	.icon-music {
-		@include icon($icon-music);
-	}
-	.icon-docs {
-		@include icon($icon-file-text-o);
-	}
-	.icon-links {
-		@include icon($icon-link);
-	}
+	.icon-computer { @include icon($icon-laptop) }
+	.icon-photos { @include icon($icon-picture-o) }
+	.icon-music { @include icon($icon-music) }
+	.icon-docs { @include icon($icon-file-text-o) }
+	.icon-links { @include icon($icon-link) }
 }
 
 #container {
@@ -146,28 +134,20 @@ body {
 					.text {
 						display: table-cell;
 						vertical-align: middle;
-						padding: 0.2em;
 					}
+
+					.text { padding: 1em }
 
 					.icon {
 						@include font-size(80px);
+						padding: 0.2em;
 					}
 
-					.icon-example {
-						@include icon($icon-check);
-					}
-					.icon-fb {
-						@include icon($icon-facebook-square);
-					}
-					.icon-marker {
-						@include icon($icon-map-marker);
-					}
-					.icon-music {
-						@include icon($icon-music);
-					}
-					.icon-graph {
-						@include icon($icon-bar-chart-o);
-					}
+					.icon-example { @include icon($icon-check) }
+					.icon-fb { @include icon($icon-facebook-square) }
+					.icon-marker { @include icon($icon-map-marker) }
+					.icon-music { @include icon($icon-music) }
+					.icon-graph { @include icon($icon-bar-chart-o) }
 
 					.title { text-transform: capitalize }
 				}
@@ -180,8 +160,10 @@ body {
 
 			// Image, Alt text coming in from the bottom
 			&.image-content {
+				background-color: #fff;
+				
 				.content {
-					
+
 					&.main { top: 0 }
 					&.alt { top: 100% }
 					
@@ -200,6 +182,9 @@ body {
 						text-align: center;
 						background-color: #000;
 
+						opacity: 0.8;
+						@include transition(opacity, 1s);
+
 						img {
 							width: 100%;
 							max-width: 640px;
@@ -210,6 +195,7 @@ body {
 
 				&:hover {
 					.alt { top: 70% }
+					.image { opacity: 1 }
 				}
 			}
 		}
@@ -296,9 +282,7 @@ body.theme-metro {
 			@media (max-width: 400px) {
 				// Dropdown menu
 				&.hover,
-				&.touching {
-					background-color: $metro_purple;
-				}
+				&.touching { background-color: $metro_purple }
 			}
 		}
 	}
@@ -323,24 +307,18 @@ body.theme-bw {
 			li.nav-link {
 				&:hover,
 				&.touching,
-				&.active {
-					background-color: $bw_active;
-				}
+				&.active { background-color: $bw_active }
 			}
 			.theme-selector li.theme {
 				border: 1px solid $bw_bg;
 				&:hover,
 				&.touching,
-				&.active { 
-					border: 1px solid $bw_active;
-				}	
+				&.active { border: 1px solid $bw_active }	
 			}
 			@media (max-width: 400px) {
 				// Dropdown menu
 				&.hover,
-				&.touching {
-					background-color: $bw_active;
-				}
+				&.touching { background-color: $bw_active }
 			}
 		}
 	}
@@ -359,7 +337,6 @@ body.theme-bw {
 // Color theme: Light
 $other_bg: #fff;
 $other_text: #333;
-$other_invert: 0.8;
 body.theme-light {
 	background-color: $other_bg;
 	color: $other_text;
@@ -414,10 +391,6 @@ body.theme-light {
 			&.tile-color2 { background-color: $metro_light_yellow }
 			&.tile-color3 { background-color: $metro_light_red }
 			&.tile-color4 { background-color: $metro_light_pink }
-
-			img {
-				-webkit-filter: invert($other_invert);
-			}
 		}
 	}
 }

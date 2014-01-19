@@ -165,11 +165,13 @@ body {
       #container ul.group li.text-content .content .icon,
       #container ul.group li.text-content .content .text {
         display: table-cell;
-        vertical-align: middle;
-        padding: 0.2em; }
+        vertical-align: middle; }
+      #container ul.group li.text-content .content .text {
+        padding: 1em; }
       #container ul.group li.text-content .content .icon {
         font-size: 80px;
-        line-height: 80px; }
+        line-height: 80px;
+        padding: 0.2em; }
       #container ul.group li.text-content .content .icon-example:before {
         font-family: "FontAwesome";
         content: "\f00c";
@@ -221,32 +223,42 @@ body {
       left: -100%; }
     #container ul.group li.text-content:hover .content.alt {
       left: 0; }
-    #container ul.group li.image-content .content {
-      -webkit-transition: top 0.5s;
-      -moztransition: top 0.5s;
-      -o-transition: top 0.5s;
-      -ms-transition: top 0.5s;
-      transition: top 0.5s; }
-      #container ul.group li.image-content .content.main {
-        top: 0; }
-      #container ul.group li.image-content .content.alt {
-        top: 100%; }
-      #container ul.group li.image-content .content .text {
-        display: table-cell;
-        vertical-align: top;
-        padding: 0.4em;
-        background-color: rgba(0, 0, 0, 0.5); }
-      #container ul.group li.image-content .content .image {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        background-color: #000; }
-        #container ul.group li.image-content .content .image img {
+    #container ul.group li.image-content {
+      background-color: #fff; }
+      #container ul.group li.image-content .content {
+        -webkit-transition: top 0.5s;
+        -moztransition: top 0.5s;
+        -o-transition: top 0.5s;
+        -ms-transition: top 0.5s;
+        transition: top 0.5s; }
+        #container ul.group li.image-content .content.main {
+          top: 0; }
+        #container ul.group li.image-content .content.alt {
+          top: 100%; }
+        #container ul.group li.image-content .content .text {
+          display: table-cell;
+          vertical-align: top;
+          padding: 0.4em;
+          background-color: rgba(0, 0, 0, 0.5); }
+        #container ul.group li.image-content .content .image {
           width: 100%;
-          max-width: 640px;
-          max-height: 320px; }
-    #container ul.group li.image-content:hover .alt {
-      top: 70%; }
+          height: 100%;
+          text-align: center;
+          background-color: #000;
+          opacity: 0.8;
+          -webkit-transition: opacity 1s;
+          -moztransition: opacity 1s;
+          -o-transition: opacity 1s;
+          -ms-transition: opacity 1s;
+          transition: opacity 1s; }
+          #container ul.group li.image-content .content .image img {
+            width: 100%;
+            max-width: 640px;
+            max-height: 320px; }
+      #container ul.group li.image-content:hover .alt {
+        top: 70%; }
+      #container ul.group li.image-content:hover .image {
+        opacity: 1; }
 
 #overlay {
   display: none;
@@ -379,5 +391,3 @@ body.theme-light {
       background-color: #fe7a7a; }
     body.theme-light #container .group li.text-content.tile-color4 {
       background-color: #ff7ea4; }
-    body.theme-light #container .group li.text-content img {
-      -webkit-filter: invert(0.8); }
