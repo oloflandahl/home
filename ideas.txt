@@ -3,6 +3,11 @@ METRO
 Olof Landahl
 A digital CV/Portfolio
 
+
+hover over non-active item: blink or some other indication of temporary state
+
+
+
 lazy loading
 
 Home?

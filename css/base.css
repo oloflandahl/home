@@ -314,7 +314,7 @@ body.theme-metro {
   background-color: #00889e; }
   body.theme-metro #menu {
     background-color: #00889e; }
-    body.theme-metro #menu .links li.nav-link:hover, body.theme-metro #menu .links li.nav-link.touching, body.theme-metro #menu .links li.nav-link.active {
+    body.theme-metro #menu .links li.nav-link.touching, body.theme-metro #menu .links li.nav-link.active {
       background-color: #603cba; }
     body.theme-metro #menu .links .theme-selector li.theme {
       border: 1px solid #00889e; }
@@ -336,7 +336,7 @@ body.theme-bw {
   background-color: black; }
   body.theme-bw #menu {
     background-color: black; }
-    body.theme-bw #menu .links li.nav-link:hover, body.theme-bw #menu .links li.nav-link.touching, body.theme-bw #menu .links li.nav-link.active {
+    body.theme-bw #menu .links li.nav-link.touching, body.theme-bw #menu .links li.nav-link.active {
       background-color: #999999; }
     body.theme-bw #menu .links .theme-selector li.theme {
       border: 1px solid black; }
@@ -353,7 +353,7 @@ body.theme-light {
   color: #333333; }
   body.theme-light #menu {
     background-color: white; }
-    body.theme-light #menu .links li.nav-link:hover, body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
+    body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
       background-color: #96c8e6; }
     body.theme-light #menu .links .theme-selector li.theme {
       border: 1px solid white; }

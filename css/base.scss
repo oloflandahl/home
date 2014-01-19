@@ -265,7 +265,6 @@ body.theme-metro {
 		background-color: $metro_lightblue;
 		.links {
 			li.nav-link {
-				&:hover,
 				&.touching,
 				&.active {
 					background-color: $metro_purple;
@@ -277,7 +276,7 @@ body.theme-metro {
 				&.touching,
 				&.active { 
 					border: 1px solid $metro_purple;
-				}	
+				}
 			}
 			@media (max-width: 400px) {
 				// Dropdown menu
@@ -305,15 +304,18 @@ body.theme-bw {
 		background-color: $bw_bg;
 		.links {
 			li.nav-link {
-				&:hover,
 				&.touching,
-				&.active { background-color: $bw_active }
+				&.active { 
+					background-color: $bw_active; 
+				}
 			}
 			.theme-selector li.theme {
 				border: 1px solid $bw_bg;
 				&:hover,
 				&.touching,
-				&.active { border: 1px solid $bw_active }	
+				&.active {
+					border: 1px solid $bw_active;
+				}
 			}
 			@media (max-width: 400px) {
 				// Dropdown menu
@@ -347,7 +349,6 @@ body.theme-light {
 		.links {
 
 			li.nav-link {
-				&:hover,
 				&.touching,
 				&.active {
 					background-color: $metro_light_blue;

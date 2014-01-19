@@ -126,9 +126,30 @@
 				win = $(window),
 				menu = $(SEL.menu),
 				links = menu.find(SEL.links),
-				linksList = links.find('ul'); 
+				linksList = links.find('ul');
 
-			menu.on('click', SEL.navLink, function() { activeGroup.moveTo($(this).index()) });
+			var cachedIndex =  linksList.find(SEL.navLink).filter('.active').index(),
+				cancelScroll = false;
+
+			menu.on('click', SEL.navLink, function() { 
+				var index = $(this).index();
+				cachedIndex = index;
+				activeGroup.moveTo(index);
+			});
+
+			menu.on('mouseenter', SEL.navLink, function() {
+				activeGroup.moveTo($(this).index());
+				cancelScroll = true;
+			});
+
+			menu.on('mouseleave', SEL.navLink, function(e) {
+				cancelScroll = false;
+				setTimeout(function() { 
+					if (!cancelScroll) {
+						activeGroup.moveTo(cachedIndex);
+					}
+				}, 100);
+			});
 
 			menu.on('click', SEL.links, function(e) {
 				if (this !== e.target) {
@@ -200,12 +221,29 @@
 			var body = $('body'),
 				themes = $(SEL.themes); 
 
-			themes.on('click', SEL.theme, function() {
-				var theme = $(this);
-				themes.find(SEL.theme).filter('.active').removeClass('active');
-				theme.addClass('active');
-				body.removeClass().addClass(theme.data('theme'));
-			});
+			var cachedTheme = themes.find(SEL.theme).filter('.active').data('theme');
+
+			var setTheme = function(target, activate, cache) {
+				var theme = $(target),
+					newTheme;
+				if (activate) {
+					newTheme = theme.data('theme');
+					themes.find('.active').removeClass('active');
+					theme.addClass('active');
+				} else {
+					newTheme = cachedTheme;
+					theme.removeClass('active');
+					themes.find('[data-theme='+cachedTheme+']').addClass('active');
+				}
+
+				if (cache) { cachedTheme = newTheme }
+				body.removeClass().addClass(newTheme);
+			};
+
+			themes.on('click', SEL.theme, function() { setTheme(this, true, true) });
+			themes.on('mouseenter', SEL.theme, function() { setTheme(this, true, false) });
+			themes.on('mouseleave', SEL.theme, function() { setTheme(this, false, false) });
+
 		}());
 
 		var overlay = (function () {
