@@ -99,9 +99,19 @@
         -o-transition: border-color 0.4s;
         -ms-transition: border-color 0.4s;
         transition: border-color 0.4s; }
-        #menu .links li.extra .theme-selector ul li.theme img {
+        #menu .links li.extra .theme-selector ul li.theme:after {
+          content: "";
+          display: inline-block;
           width: 12px;
-          height: 12px; }
+          height: 12px;
+          background-image: url(../img/themes.gif);
+          background-repeat: no-repeat; }
+        #menu .links li.extra .theme-selector ul li.theme.theme-light:after {
+          background-position: 0 0; }
+        #menu .links li.extra .theme-selector ul li.theme.theme-metro:after {
+          background-position: 0 -12px; }
+        #menu .links li.extra .theme-selector ul li.theme.theme-bw:after {
+          background-position: 0 -24px; }
     @media (max-width: 940px) {
       #menu .links {
         margin: 0; } }

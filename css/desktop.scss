@@ -46,7 +46,6 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 			.icon { 
 				@include font-size(20px);
-
 				opacity: 0.5;
 
 				&:hover,
@@ -55,13 +54,8 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				}
 			}
 
-			.icon-mail {
-				@include icon($icon-envelope);
-			}
-
-			.icon-linkedin {
-				@include icon($icon-linkedin-square);
-			}
+			.icon-mail { @include icon($icon-envelope) }
+			.icon-linkedin { @include icon($icon-linkedin-square) }
 		}
 
 		@media (max-width: $xsmall) {
@@ -80,9 +74,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			margin: 0 1px;
 			padding: $linkPadding;
 
-			.icon {
-				@include font-size($imgSize);
-			}
+			.icon { @include font-size($imgSize) }
 
 			.text {
 				font-size: 16px;
@@ -117,9 +109,17 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 					@include transition(border-color, 0.4s);
 
-					img {
+					&:after { 
+						content: "";
+						display: inline-block;
 						@include size($themeImg);
+						background-image: url(../img/themes.gif);
+						background-repeat: no-repeat;
 					}
+
+					&.theme-light:after { background-position: 0 0 }
+					&.theme-metro:after { background-position: 0 -12px }
+					&.theme-bw:after { background-position: 0 -24px }
 				}
 			}
 		}
