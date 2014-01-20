@@ -75,9 +75,7 @@
         padding-top: 2px; }
       @media (max-width: 1010px) {
         #menu .links li.nav-link {
-          width: 110px; } }
-      @media (max-width: 940px) {
-        #menu .links li.nav-link {
+          width: 110px;
           padding: 5px; } }
       @media (max-width: 910px) {
         #menu .links li.nav-link {
@@ -112,7 +110,7 @@
           background-position: 0 -12px; }
         #menu .links li.extra .theme-selector ul li.theme.theme-bw:after {
           background-position: 0 -24px; }
-    @media (max-width: 940px) {
+    @media (max-width: 1010px) {
       #menu .links {
         margin: 0; } }
 

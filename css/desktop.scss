@@ -3,10 +3,9 @@
 @import "font-icons";
 
 // Media width
-$xsmall: 740px;
-$small: $xsmall + 170px;
-$medium: $small + 30px;
-$large: $medium + 70px;
+$small: 740px;
+$medium: $small + 170px;
+$large: $medium + 100px;
 
 // Menu
 $imgSize: 48px;
@@ -58,7 +57,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			.icon-linkedin { @include icon($icon-linkedin-square) }
 		}
 
-		@media (max-width: $xsmall) {
+		@media (max-width: $small) {
 			width: 150px;
 			h3 { display: none }
 			.contact { padding-left: 0 }
@@ -84,18 +83,16 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 			@media (max-width: $large) {
 				width: 110px;
-			}
-			@media (max-width: $medium) {
 				padding: $linkPadding - 5px;
 			}
-			@media (max-width: $small) {
+			@media (max-width: $medium) {
 				width: 80px;
 				.text { font-size: 12px }	
 			}
 		}
 
 		li.extra {
-			@media (max-width: $small) {
+			@media (max-width: $medium) {
 				display: none !important;
 			}
 			.theme-selector {
@@ -124,7 +121,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			}
 		}
 
-		@media (max-width: $medium) {
+		@media (max-width: $large) {
 			margin: 0;
 		}
 	}
