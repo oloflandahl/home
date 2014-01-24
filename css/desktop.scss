@@ -58,7 +58,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 		}
 
 		@media (max-width: $small) {
-			width: 150px;
+			width: 154px;
 			h3 { display: none }
 			.contact { padding-left: 0 }
 		}
@@ -86,7 +86,8 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				padding: $linkPadding - 5px;
 			}
 			@media (max-width: $medium) {
-				width: 80px;
+				width: 82px;
+				padding: $linkPadding - 7px;
 				.text { font-size: 12px }	
 			}
 		}

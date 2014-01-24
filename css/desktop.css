@@ -54,7 +54,7 @@
         -webkit-font-smoothing: antialiased; }
     @media (max-width: 740px) {
       #menu .header {
-        width: 150px; }
+        width: 154px; }
         #menu .header h3 {
           display: none; }
         #menu .header .contact {
@@ -79,7 +79,8 @@
           padding: 5px; } }
       @media (max-width: 910px) {
         #menu .links li.nav-link {
-          width: 80px; }
+          width: 82px;
+          padding: 3px; }
           #menu .links li.nav-link .text {
             font-size: 12px; } }
     @media (max-width: 910px) {
