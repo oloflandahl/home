@@ -297,23 +297,32 @@
 			var SEL = {
 				container: '#container',
 				group: '.group',
-				groupItem: '.group li'
+				groupItem: '.group li',
+				icon: '.icon'
 			};
 
 			var TEMPLATES = {
 				project:
-					'<h2><%= title %></h2>'+
-					'<ul>'+
-						'<li><%= project.type %></li>'+
-						'<li><%= project.tech.join(", ") %></li>'+
-						'<li><%= project.date %></li>'+
-					'</ul>'+
+					'<div class="top">'+
+						'<div class="icon <%= iconClass %>"></div>'+
+						'<div class="header">'+
+							'<h2><%= title %></h2>'+
+							'<ul>'+
+								'<li><%= project.type %></li>'+
+								'<li><%= project.tech.join(", ") %></li>'+
+								'<li><%= project.date %></li>'+
+							'</ul>'+
+						'</div>'+
+					'</div>'+
 					'<p><%= project.description %></p>'+
-					'<% if (project.mobile) { %>'+
-						'<p><a href="<%= project.demoUrl %>">RUN DEMO</a></p>'+
+					'<% var unsuppText = ""; if (project.unsupported.browsers.length > 0) { %>'+
+						'<% unsuppText = " (Not supported: "+project.unsupported.browsers.join(\", \")+")"; %>'+
+					'<% } %>'+
+					'<% if (project.unsupported.mobile) { %>'+
+						'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
+						'<p class="is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
 					'<% } else { %>'+
-						'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a></p>'+
-						'<p class="is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+
+						'<p><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
 					'<% } %>'+
 					'<ul>'+
 						'<% $(project.links).each(function() { %>'+
@@ -328,9 +337,12 @@
 				var item = $(this),
 					itemId = item.attr('id'),
 					groupId = item.closest(SEL.group).attr('id'),
-					url = [BASE_PATH, groupId, itemId].join('/')+'.json';
+					url = [BASE_PATH, groupId, itemId].join('/')+'.json',
+					iconClass = item.find(SEL.icon).get(0).classList[1]; // TODO
 
 				$.getJSON(url, function(data) {
+					data.iconClass = iconClass;
+
 					var template = TEMPLATES[data.type];
 					overlay.show(_.template(template, data));
 				});

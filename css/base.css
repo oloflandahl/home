@@ -69,51 +69,6 @@ body {
       transition: background-color 0.4s; }
       #menu .links ul li.menu-item.nav-link {
         cursor: pointer; }
-  #menu .icon-computer:before {
-    font-family: "FontAwesome";
-    content: "\f109";
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased; }
-  #menu .icon-photos:before {
-    font-family: "FontAwesome";
-    content: "\f03e";
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased; }
-  #menu .icon-music:before {
-    font-family: "FontAwesome";
-    content: "\f001";
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased; }
-  #menu .icon-docs:before {
-    font-family: "FontAwesome";
-    content: "\f0f6";
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased; }
-  #menu .icon-links:before {
-    font-family: "FontAwesome";
-    content: "\f0c1";
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased; }
 
 #container .arrow {
   -webkit-transition: opacity 1s;
@@ -172,51 +127,6 @@ body {
         font-size: 80px;
         line-height: 80px;
         padding: 0.2em; }
-      #container ul.group li.text-content .content .icon-example:before {
-        font-family: "FontAwesome";
-        content: "\f00c";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
-      #container ul.group li.text-content .content .icon-fb:before {
-        font-family: "FontAwesome";
-        content: "\f082";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
-      #container ul.group li.text-content .content .icon-marker:before {
-        font-family: "FontAwesome";
-        content: "\f041";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
-      #container ul.group li.text-content .content .icon-music:before {
-        font-family: "FontAwesome";
-        content: "\f001";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
-      #container ul.group li.text-content .content .icon-graph:before {
-        font-family: "FontAwesome";
-        content: "\f080";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
       #container ul.group li.text-content .content .title {
         text-transform: capitalize; }
     #container ul.group li.text-content:hover .content.main {
@@ -278,7 +188,7 @@ body {
     z-index: 501;
     border-radius: 3px;
     background-color: #000;
-    opacity: 0.8; }
+    opacity: 0.9; }
   #overlay .close-btn-container .close-btn {
     position: absolute;
     right: 10px;
@@ -305,10 +215,24 @@ body {
       border-color: #555; }
   #overlay .content {
     position: absolute;
-    width: 96%;
-    height: 96%;
-    margin: 2%;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
     z-index: 502; }
+    #overlay .content .top:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #overlay .content .top .icon {
+      float: left;
+      font-size: 120px;
+      line-height: 120px;
+      margin-right: 30px; }
+    #overlay .content .top .header {
+      float: left;
+      padding-top: 10px; }
+      #overlay .content .top .header h2 {
+        padding-bottom: 5px; }
 
 @keyframes metro-pulse {
   0% {
@@ -496,41 +420,42 @@ body.theme-bw {
   100% {
     border-color: #96c8e6; } }
 
-body.theme-light {
+body.theme-light #menu {
   background-color: white;
   color: #333333; }
-  body.theme-light #menu {
-    background-color: white; }
-    body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
-      background-color: #96c8e6; }
-    body.theme-light #menu .links li.nav-link.pulse {
-      animation-name: light-pulse;
-      -webkit-animation-name: light-pulse;
+  body.theme-light #menu .links li.nav-link.touching, body.theme-light #menu .links li.nav-link.active {
+    background-color: #96c8e6; }
+  body.theme-light #menu .links li.nav-link.pulse {
+    animation-name: light-pulse;
+    -webkit-animation-name: light-pulse;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; }
+  body.theme-light #menu .links .theme-selector li.theme {
+    border: 1px solid white; }
+    body.theme-light #menu .links .theme-selector li.theme:hover, body.theme-light #menu .links .theme-selector li.theme.touching, body.theme-light #menu .links .theme-selector li.theme.active {
+      border: 1px solid #96c8e6; }
+    body.theme-light #menu .links .theme-selector li.theme.pulse {
+      animation-name: light-border-pulse;
+      -webkit-animation-name: light-border-pulse;
       animation-duration: 2s;
       -webkit-animation-duration: 2s;
       animation-iteration-count: infinite;
       -webkit-animation-iteration-count: infinite; }
-    body.theme-light #menu .links .theme-selector li.theme {
-      border: 1px solid white; }
-      body.theme-light #menu .links .theme-selector li.theme:hover, body.theme-light #menu .links .theme-selector li.theme.touching, body.theme-light #menu .links .theme-selector li.theme.active {
-        border: 1px solid #96c8e6; }
-      body.theme-light #menu .links .theme-selector li.theme.pulse {
-        animation-name: light-border-pulse;
-        -webkit-animation-name: light-border-pulse;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite; }
-    @media (max-width: 400px) {
-      body.theme-light #menu .links.hover, body.theme-light #menu .links.touching {
-        background-color: #96c8e6; } }
-    body.theme-light #menu .contact .icon {
-      -webkit-transition: color 1s;
-      -moztransition: color 1s;
-      -o-transition: color 1s;
-      -ms-transition: color 1s;
-      transition: color 1s;
-      color: #333333; }
+  @media (max-width: 400px) {
+    body.theme-light #menu .links.hover, body.theme-light #menu .links.touching {
+      background-color: #96c8e6; } }
+  body.theme-light #menu .contact .icon {
+    -webkit-transition: color 1s;
+    -moztransition: color 1s;
+    -o-transition: color 1s;
+    -ms-transition: color 1s;
+    transition: color 1s;
+    color: #333333; }
+body.theme-light #container {
+  background-color: white;
+  color: #333333; }
   body.theme-light #container .arrow {
     -webkit-transition: opacity 1s, color 1s;
     -moztransition: opacity 1s, color 1s;
@@ -553,3 +478,103 @@ body.theme-light {
       background-color: #fe7a7a; }
     body.theme-light #container .group li.text-content.tile-color4 {
       background-color: #ff7ea4; }
+
+.icon-computer:before {
+  font-family: "FontAwesome";
+  content: "\f109";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-photos:before {
+  font-family: "FontAwesome";
+  content: "\f03e";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-music:before {
+  font-family: "FontAwesome";
+  content: "\f001";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-docs:before {
+  font-family: "FontAwesome";
+  content: "\f0f6";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-links:before {
+  font-family: "FontAwesome";
+  content: "\f0c1";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-example:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-fb:before {
+  font-family: "FontAwesome";
+  content: "\f082";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-marker:before {
+  font-family: "FontAwesome";
+  content: "\f041";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-music:before {
+  font-family: "FontAwesome";
+  content: "\f001";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-graph:before {
+  font-family: "FontAwesome";
+  content: "\f080";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }

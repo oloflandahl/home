@@ -11,7 +11,10 @@
 			{"text": "Word Cloud", "url": "https://github.com/jasondavies/d3-cloud", "description": "(js file used to create the word cloud, external link)"}, 
 			{"text": "Facebook Web API", "url": "https://developers.facebook.com/docs/web", "description": "(external link)"} 
 		],
-		"mobile": false,
+		"unsupported": {
+			"mobile": true,
+			"browsers": []
+		},
 		"demoUrl": "demo/fb"
 	}
 }

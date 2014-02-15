@@ -1,0 +1,19 @@
+{
+	"type": "project",
+	"title": "Spotify Catalogue",
+	"project": {
+		"type": "Private project",
+		"tech": ["jQuery", "CartoDB", "Spotify API", "SASS"],
+		"date": "March 2013",
+		"description": "This project was the result of a rainy weekend in Sydney. I was eager to try the map visualization tool CartoDB and thought it would go well together with my idea to try the Spotify web API. By searching for an artist and select an album you can see in what countries it is available. Since the raw catalogue consist of a lot of duplicate albums the result does not look like in the Spotify client.",
+		"links": [ 
+			{"text": "CartoDB", "url": "http://cartodb.com/", "description": "(external link)"}, 
+			{"text": "Spotify Web API", "url": "http://developer.spotify.com/technologies/web-api/", "description": "(external link)"} 
+		],
+		"unsupported": {
+			"mobile": true,
+			"browsers": ["IE9"]
+		},
+		"demoUrl": "demo/spotify"
+	}
+}

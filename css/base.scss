@@ -57,7 +57,7 @@ body {
 		ul {
 			display: table;
 
-			@include clearfix();
+			@include clearfix;
 
 			li.menu-item {
 				float: left;
@@ -71,12 +71,6 @@ body {
 			}
 		}
 	}
-
-	.icon-computer { @include icon($icon-laptop) }
-	.icon-photos { @include icon($icon-picture-o) }
-	.icon-music { @include icon($icon-music) }
-	.icon-docs { @include icon($icon-file-text-o) }
-	.icon-links { @include icon($icon-link) }
 }
 
 #container {
@@ -94,7 +88,7 @@ body {
 			text-transform: capitalize;
 		}
 
-		@include clearfix();
+		@include clearfix;
 
 		li {
 			float: left;
@@ -142,12 +136,6 @@ body {
 						@include font-size(80px);
 						padding: 0.2em;
 					}
-
-					.icon-example { @include icon($icon-check) }
-					.icon-fb { @include icon($icon-facebook-square) }
-					.icon-marker { @include icon($icon-map-marker) }
-					.icon-music { @include icon($icon-music) }
-					.icon-graph { @include icon($icon-bar-chart-o) }
 
 					.title { text-transform: capitalize }
 				}
@@ -223,7 +211,7 @@ body {
 		z-index: 501;
 		border-radius: 3px;
 		background-color: #000;
-		opacity: 0.8;
+		opacity: 0.9;
 	}
 	.close-btn-container {
 		.close-btn {
@@ -251,10 +239,30 @@ body {
 	}
 	.content {
 		position: absolute;
-		width: 96%;
-		height: 96%;
-		margin: 2%;
+		width: 90%;
+		height: 90%;
+		margin: 5%;
 		z-index: 502;
+
+		.top {
+			@include clearfix;
+		
+			.icon {
+				float: left;
+				font-size: 120px;
+				line-height: 120px;
+				margin-right: 30px;
+			}
+
+			.header {
+				float: left;
+				padding-top: 10px;
+
+				h2 {
+					padding-bottom: 5px;
+				}
+			}
+		}
 	}
 }
 
@@ -364,11 +372,10 @@ $light_border_pulse: "light-border-pulse";
 @include define-pulse($light_pulse, "background-color", $metro_light_blue, $other_bg);
 @include define-pulse($light_border_pulse, "border-color", $metro_light_blue, $other_bg);
 body.theme-light {
-	background-color: $other_bg;
-	color: $other_text;
-
+	
 	#menu { 
 		background-color: $other_bg;
+		color: $other_text;
 
 		.links {
 
@@ -409,6 +416,9 @@ body.theme-light {
 		}
 	}
 	#container {
+		background-color: $other_bg;
+		color: $other_text;
+
 		.arrow {
 			@include transition-double(opacity 1s, color 1s);
 			color: $other_text;
@@ -425,3 +435,17 @@ body.theme-light {
 		}
 	}
 }
+
+
+// Icons
+.icon-computer { @include icon($icon-laptop) }
+.icon-photos { @include icon($icon-picture-o) }
+.icon-music { @include icon($icon-music) }
+.icon-docs { @include icon($icon-file-text-o) }
+.icon-links { @include icon($icon-link) }
+
+.icon-example { @include icon($icon-check) }
+.icon-fb { @include icon($icon-facebook-square) }
+.icon-marker { @include icon($icon-map-marker) }
+.icon-music { @include icon($icon-music) }
+.icon-graph { @include icon($icon-bar-chart-o) }
