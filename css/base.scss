@@ -229,11 +229,11 @@ body {
 		.close-btn {
 			position: absolute;
 			right: 10px;
-			top: 10px;
+			top: 5px;
 			z-index: 503;
-			font-size: 48px;
+			font-size: 30px;
 			line-height: 40px;
-			color: #999;
+			color: #ccc;
 			cursor: pointer;
 
 			@include icon($icon-times);

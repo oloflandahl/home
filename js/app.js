@@ -266,14 +266,14 @@
 			};
 
 			var overlay = $(SEL.overlay),
-				content = overlay.find(SEL.content),
+				oContent = overlay.find(SEL.content),
 				closeButton = overlay.find(SEL.close);
 
 			var show = function(markup) {
-				content.html('');
+				oContent.html('');
 				$.when( $(SEL.overlay).fadeIn(FADE_DUR) )
 					.then(function() {
-						content.html(markup);
+						oContent.html(markup);
 					});
 			};
 
@@ -301,7 +301,7 @@
 			};
 
 			var TEMPLATE = {
-				text: "<h2><%= title %></h2><p><%= description %></p>"
+				text: '<h2><%= title %></h2><p><%= description %></p>'
 			};
 
 			var container = $(SEL.container);
@@ -310,7 +310,7 @@
 				var item = $(this),
 					itemId = item.attr('id'),
 					groupId = item.closest(SEL.group).attr('id'),
-					url = [BASE_PATH, groupId, itemId].join('/')+'.js';
+					url = [BASE_PATH, groupId, itemId].join('/')+'.json';
 
 				$.getJSON(url, function(data) {
 					overlay.show(_.template(TEMPLATE.text, data));
