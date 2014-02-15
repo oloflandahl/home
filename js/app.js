@@ -159,7 +159,7 @@
 					return true;
 				}
 
-				if (linksList.is(':hidden')) {
+				if (!linksList.is(':visible')) {
 					links.addClass('on');
 					linksList.fadeIn(FADE_DUR);
 				}
