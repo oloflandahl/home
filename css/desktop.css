@@ -181,3 +181,6 @@
         bottom: 10px; }
       #container ul.group li .text {
         font-size: 150%; }
+
+.is-desktop-hidden {
+  display: none; }

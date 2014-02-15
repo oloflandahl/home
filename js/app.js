@@ -300,8 +300,26 @@
 				groupItem: '.group li'
 			};
 
-			var TEMPLATE = {
-				text: '<h2><%= title %></h2><p><%= description %></p>'
+			var TEMPLATES = {
+				project:
+					'<h2><%= title %></h2>'+
+					'<ul>'+
+						'<li><%= project.type %></li>'+
+						'<li><%= project.tech.join(", ") %></li>'+
+						'<li><%= project.date %></li>'+
+					'</ul>'+
+					'<p><%= project.description %></p>'+
+					'<% if (project.mobile) { %>'+
+						'<p><a href="<%= project.demoUrl %>">RUN DEMO</a></p>'+
+					'<% } else { %>'+
+						'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a></p>'+
+						'<p class="is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+
+					'<% } %>'+
+					'<ul>'+
+						'<% $(project.links).each(function() { %>'+
+							'<li><a href="<%= this.url %>"><%= this.text %></a> <%= this.description %></li>'+
+						'<% }) %>'+
+					'</ul>'
 			};
 
 			var container = $(SEL.container);
@@ -313,7 +331,8 @@
 					url = [BASE_PATH, groupId, itemId].join('/')+'.json';
 
 				$.getJSON(url, function(data) {
-					overlay.show(_.template(TEMPLATE.text, data));
+					var template = TEMPLATES[data.type];
+					overlay.show(_.template(template, data));
 				});
 			});
 

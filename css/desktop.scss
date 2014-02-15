@@ -194,3 +194,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 		}
 	}
 }
+
+.is-desktop-hidden {
+	display: none;
+}
