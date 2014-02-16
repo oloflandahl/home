@@ -42,6 +42,10 @@ body {
 		border: none;
 		@include transition(-webkit-filter, 1s);
 	}
+
+	&.scroll-lock {
+		overflow: hidden;
+	}
 }
 
 #menu {
@@ -232,10 +236,12 @@ body {
 	}
 	.content {
 		position: absolute;
-		width: 90%;
-		height: 90%;
-		margin: 5%;
+		width: 96%;
+		height: 96%;
+		margin: 2%;
+		padding: 20px;
 		z-index: 502;
+		overflow-y: scroll;
 
 		.top {
 			@include clearfix;

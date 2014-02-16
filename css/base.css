@@ -39,6 +39,8 @@ body {
     -o-transition: -webkit-filter 1s;
     -ms-transition: -webkit-filter 1s;
     transition: -webkit-filter 1s; }
+  body.scroll-lock {
+    overflow: hidden; }
 
 #menu {
   position: fixed;
@@ -210,10 +212,12 @@ body {
       border-color: #555; }
   #overlay .content {
     position: absolute;
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-    z-index: 502; }
+    width: 96%;
+    height: 96%;
+    margin: 2%;
+    padding: 20px;
+    z-index: 502;
+    overflow-y: scroll; }
     #overlay .content .top:after {
       content: "";
       display: table;

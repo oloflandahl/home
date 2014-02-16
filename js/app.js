@@ -271,11 +271,13 @@
 				close: '.close-btn'
 			};
 
-			var overlay = $(SEL.overlay),
+			var body = $('body'),
+				overlay = $(SEL.overlay),
 				oContent = overlay.find(SEL.content),
 				closeButton = overlay.find(SEL.close);
 
 			var show = function(markup) {
+				body.addClass('scroll-lock');
 				oContent.html('');
 				$.when( $(SEL.overlay).fadeIn(FADE_DUR) )
 					.then(function() {
@@ -284,6 +286,7 @@
 			};
 
 			var hide = function() {
+				body.removeClass('scroll-lock');
 				$(SEL.overlay).fadeOut(FADE_DUR);
 			};
 
