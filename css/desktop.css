@@ -194,7 +194,10 @@
   0% {
     background-color: #603cba; }
 
-  50% {
+  40% {
+    background-color: #00889e; }
+
+  60% {
     background-color: #00889e; }
 
   100% {
@@ -204,7 +207,10 @@
   0% {
     background-color: #603cba; }
 
-  50% {
+  40% {
+    background-color: #00889e; }
+
+  60% {
     background-color: #00889e; }
 
   100% {
@@ -214,7 +220,10 @@
   0% {
     border-color: #603cba; }
 
-  50% {
+  40% {
+    border-color: #00889e; }
+
+  60% {
     border-color: #00889e; }
 
   100% {
@@ -224,7 +233,10 @@
   0% {
     border-color: #603cba; }
 
-  50% {
+  40% {
+    border-color: #00889e; }
+
+  60% {
     border-color: #00889e; }
 
   100% {
@@ -233,15 +245,15 @@
 body.theme-metro #menu .links li.nav-link.pulse {
   animation-name: metro-pulse;
   -webkit-animation-name: metro-pulse;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 body.theme-metro #menu .links .theme-selector li.theme.pulse {
   animation-name: metro-border-pulse;
   -webkit-animation-name: metro-border-pulse;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 
@@ -249,7 +261,10 @@ body.theme-metro #menu .links .theme-selector li.theme.pulse {
   0% {
     background-color: #999999; }
 
-  50% {
+  40% {
+    background-color: black; }
+
+  60% {
     background-color: black; }
 
   100% {
@@ -259,7 +274,10 @@ body.theme-metro #menu .links .theme-selector li.theme.pulse {
   0% {
     background-color: #999999; }
 
-  50% {
+  40% {
+    background-color: black; }
+
+  60% {
     background-color: black; }
 
   100% {
@@ -269,7 +287,10 @@ body.theme-metro #menu .links .theme-selector li.theme.pulse {
   0% {
     border-color: #999999; }
 
-  50% {
+  40% {
+    border-color: black; }
+
+  60% {
     border-color: black; }
 
   100% {
@@ -279,7 +300,10 @@ body.theme-metro #menu .links .theme-selector li.theme.pulse {
   0% {
     border-color: #999999; }
 
-  50% {
+  40% {
+    border-color: black; }
+
+  60% {
     border-color: black; }
 
   100% {
@@ -288,15 +312,15 @@ body.theme-metro #menu .links .theme-selector li.theme.pulse {
 body.theme-bw #menu .links li.nav-link.pulse {
   animation-name: bw-pulse;
   -webkit-animation-name: bw-pulse;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 body.theme-bw #menu .links .theme-selector li.theme.pulse {
   animation-name: bw-border-pulse;
   -webkit-animation-name: bw-border-pulse;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 
@@ -304,7 +328,10 @@ body.theme-bw #menu .links .theme-selector li.theme.pulse {
   0% {
     background-color: #96c8e6; }
 
-  50% {
+  40% {
+    background-color: white; }
+
+  60% {
     background-color: white; }
 
   100% {
@@ -314,7 +341,10 @@ body.theme-bw #menu .links .theme-selector li.theme.pulse {
   0% {
     background-color: #96c8e6; }
 
-  50% {
+  40% {
+    background-color: white; }
+
+  60% {
     background-color: white; }
 
   100% {
@@ -324,7 +354,10 @@ body.theme-bw #menu .links .theme-selector li.theme.pulse {
   0% {
     border-color: #96c8e6; }
 
-  50% {
+  40% {
+    border-color: white; }
+
+  60% {
     border-color: white; }
 
   100% {
@@ -334,7 +367,10 @@ body.theme-bw #menu .links .theme-selector li.theme.pulse {
   0% {
     border-color: #96c8e6; }
 
-  50% {
+  40% {
+    border-color: white; }
+
+  60% {
     border-color: white; }
 
   100% {
@@ -343,15 +379,15 @@ body.theme-bw #menu .links .theme-selector li.theme.pulse {
 body.theme-light #menu .links li.nav-link.pulse {
   animation-name: light-pulse;
   -webkit-animation-name: light-pulse;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 body.theme-light #menu .links .theme-selector li.theme.pulse {
   animation-name: light-border-pulse;
   -webkit-animation-name: light-border-pulse;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 

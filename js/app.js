@@ -132,22 +132,28 @@
 				win = $(window),
 				menu = $(SEL.menu),
 				links = menu.find(SEL.links),
+				navLinks = menu.find(SEL.navLink),
 				linksList = links.find('ul');
 
 			var cachedIndex =  linksList.find(SEL.navLink).filter('.active').index(),
 				cancelScroll = false;
 
 			menu.on('click', SEL.navLink, function() { 
-				var index = $(this).index();
+				var thisLink = $(this),
+					index = thisLink.index();
+				thisLink.removeClass('pulse');
 				cachedIndex = index;
 				activeGroup.moveTo(index);
 			});
 
 			menu.on('mouseenter', SEL.navLink, function() {
-				var thisLink = $(this);
-				activeGroup.moveTo(thisLink.index());
-				cancelScroll = true;
-				thisLink.addClass('pulse');
+				var thisLink = $(this),
+					index = thisLink.index();
+				if (index !== cachedIndex) {
+					activeGroup.moveTo(index);
+					cancelScroll = true;
+					thisLink.addClass('pulse');
+				}
 			});
 
 			menu.on('mouseleave', SEL.navLink, function(e) {
@@ -249,8 +255,14 @@
 				body.removeClass().addClass(newTheme);
 			};
 
-			themes.on('click', SEL.theme, function() { setTheme(this, true, true) });
+			themes.on('click', SEL.theme, function() { 
+				setTheme(this, true, true);
+				$(this).removeClass('pulse');
+			});
 			themes.on('mouseenter', SEL.theme, function() { 
+				if ($(this).hasClass('active')) {
+					return;
+				}
 				setTheme(this, true, false);
 				$(this).addClass('pulse');
 			});
