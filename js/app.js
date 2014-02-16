@@ -23,6 +23,7 @@
 			var	offset,
 				index = 0, 
 				win = $(window),
+				doc = $(document),
 				body = $('body'),
 				menu = $('#menu'),
 				groups = $('.group'),
@@ -80,14 +81,23 @@
 			};
 
 			var updateActive = function() {
+				var scrollPos = win.scrollTop(),
+					bottomScroll = doc.height() - win.height();
+
 				var i = -1;
-				groups.each(function() {
-					var groupPos = $(this).offset().top,
-						scrollPos = win.scrollTop();
-					if (groupPos > scrollPos + offset) { return false }
-					else { i++ }
-				});
-				i = Math.max(i, 0);
+				if (scrollPos > bottomScroll - 10) {
+					i = groups.length;
+					i = 2; // TODO REMOVE
+				} 
+				else {
+					groups.each(function() {
+						var groupPos = $(this).offset().top;
+						if (groupPos > scrollPos + offset) { return false }
+						else { i++ }
+					});
+					i = Math.max(i, 0);
+				}
+				
 				setIndex(i, false);
 			};
 
