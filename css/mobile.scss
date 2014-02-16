@@ -145,6 +145,10 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 	}
 }
 
+#overlay .content {
+	padding: 20px;
+}
+
 .is-mobile-hidden {
 	display: none;
 }

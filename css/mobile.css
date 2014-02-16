@@ -114,5 +114,8 @@
       #container ul.group li.image-content .content.alt {
         top: 70%; }
 
+#overlay .content {
+  padding: 20px; }
+
 .is-mobile-hidden {
   display: none; }

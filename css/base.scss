@@ -34,6 +34,7 @@ html, body {
 body {
 	min-width: 270px;
 	font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+	font-size: 16px;
 	color: #fff;
 
 	@include transition-double(background-color 1s, color 1s);
@@ -239,7 +240,7 @@ body {
 		width: 96%;
 		height: 96%;
 		margin: 2%;
-		padding: 20px;
+		padding: 40px;
 		z-index: 502;
 		overflow-y: scroll;
 
@@ -260,6 +261,23 @@ body {
 				h2 {
 					padding-bottom: 5px;
 				}
+			}
+		}
+
+		p {
+			padding: 10px 0;
+
+			&.alert {
+				color: $metro-light-purple;
+			}
+		}
+
+		a {
+			color: $metro_light_orange;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}

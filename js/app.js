@@ -314,6 +314,12 @@
 
 			closeButton.click(hide);
 
+			$(document).keyup(function(e) {
+				if (e.which === 27) {
+					hide();
+				}
+			});
+
 			return {
 				show: show,
 				hide: hide
@@ -351,13 +357,13 @@
 					'<% } %>'+
 					'<% if (project.unsupported.mobile) { %>'+
 						'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
-						'<p class="is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
+						'<p class="alert is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
 					'<% } else { %>'+
-						'<p><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
+						'<p><a href="<%= project.demoUrl %>" target="_BLANK">RUN DEMO</a> <%= unsuppText %></p>'+
 					'<% } %>'+
 					'<ul>'+
 						'<% $(project.links).each(function() { %>'+
-							'<li><a href="<%= this.url %>"><%= this.text %></a> <%= this.description %></li>'+
+							'<li><a href="<%= this.url %>" target="_BLANK"><%= this.text %></a> <%= this.description %></li>'+
 						'<% }) %>'+
 					'</ul>'
 			};

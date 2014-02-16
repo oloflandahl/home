@@ -3,11 +3,11 @@
 	"title": "Facebook Words",
 	"project": {
 		"type": "Private project",
-		"tech": ["jQuery", "FacebookAPI", "HTML5", "CSS3", "SASS", "D3", "Backbone"],
+		"tech": ["jQuery", "Facebook API", "HTML5", "CSS3", "SASS", "D3", "Backbone"],
 		"date": "July 2013",
 		"description": "My interest in data visualisation drew me to the Facebook API. A lot of data can be extracted from friends status updates and I decided to visualise the words from those status messages. I'm using HTML5 specific features like Web Workers, Session Storage and Progress Bar. The idea is that I will continue to work on the app and add more features. Currently it works best in Chrome, Firefox and IE10. There is currently a bug in IE9 with batch requests to the Facebook API. Since IE8 and earlier does not support SVG the word cloud will not work in those browsers.",
 		"links": [ 
-			{"text": "Scripts", "url": "demo/js/scripts.html", "description": "An overview of the javascript implementation."}, 
+			{"text": "Scripts", "url": "demo/fb/js/scripts.html", "description": "An overview of the javascript implementation."}, 
 			{"text": "Word Cloud", "url": "https://github.com/jasondavies/d3-cloud", "description": "(js file used to create the word cloud, external link)"}, 
 			{"text": "Facebook Web API", "url": "https://developers.facebook.com/docs/web", "description": "(external link)"} 
 		],

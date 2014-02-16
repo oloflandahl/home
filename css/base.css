@@ -26,6 +26,7 @@ html, body {
 body {
   min-width: 270px;
   font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+  font-size: 16px;
   color: #fff;
   -webkit-transition: background-color 1s, color 1s;
   -moztransition: background-color 1s, color 1s;
@@ -215,7 +216,7 @@ body {
     width: 96%;
     height: 96%;
     margin: 2%;
-    padding: 20px;
+    padding: 40px;
     z-index: 502;
     overflow-y: scroll; }
     #overlay .content .top:after {
@@ -232,6 +233,15 @@ body {
       padding-top: 10px; }
       #overlay .content .top .header h2 {
         padding-bottom: 5px; }
+    #overlay .content p {
+      padding: 10px 0; }
+      #overlay .content p.alert {
+        color: #c4a0ff; }
+    #overlay .content a {
+      color: #ffaf8c;
+      text-decoration: none; }
+      #overlay .content a:hover {
+        text-decoration: underline; }
 
 body.theme-metro {
   background-color: #00889e; }

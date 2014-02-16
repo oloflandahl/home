@@ -1,0 +1,19 @@
+{
+	"type": "project",
+	"title": "Crime Visualisation",
+	"project": {
+		"type": "Private project",
+		"tech": ["JavaScript", "D3", "CSS3", "SASS"],
+		"date": "February 2013",
+		"description": "This project was the result of a rainy weekend in Sydney. I was eager to try the map visualization tool CartoDB and thought it would go well together with my idea to try the Spotify web API. By searching for an artist and select an album you can see in what countries it is available. Since the raw catalogue consist of a lot of duplicate albums the result does not look like in the Spotify client. ",
+		"links": [ 
+			{"text": "D3", "url": "http://d3js.org/", "description": "(external link)"}, 
+			{"text": "NSW Government Data", "url": "http://data.nsw.gov.au/", "description": "(external link)"}
+		],
+		"unsupported": {
+			"mobile": true,
+			"browsers": ["IE8"]
+		},
+		"demoUrl": "demo/crimevis"
+	}
+}
