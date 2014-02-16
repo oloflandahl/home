@@ -132,6 +132,11 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 				font-size: 80%;
 			}
 
+			&.text-content.swiped {
+				.content.main { left: -100% }
+				.content.alt { left: 0 }
+			}
+
 			&.image-content {
 				.content.alt { top: 70% }
 			}

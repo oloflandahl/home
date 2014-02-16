@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"unsupp",
+				"unsuppText"
+			],
+			[
+				"icon",
+				"iconClass"
+			],
+			[
 				"light",
 				"light_border_pulse"
 			],
@@ -255,7 +263,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5947,
+				"buffer_size": 6069,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/content/development/fb.json",
+			"settings":
+			{
+				"buffer_size": 1277,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/content/development/spotify.json",
+			"settings":
+			{
+				"buffer_size": 928,
 				"line_ending": "Unix"
 			}
 		},
@@ -268,18 +292,10 @@
 			}
 		},
 		{
-			"file": "css/_helper.scss",
-			"settings":
-			{
-				"buffer_size": 1412,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "css/base.scss",
 			"settings":
 			{
-				"buffer_size": 7804,
+				"buffer_size": 7891,
 				"line_ending": "Unix"
 			}
 		},
@@ -287,15 +303,7 @@
 			"file": "css/desktop.scss",
 			"settings":
 			{
-				"buffer_size": 3209,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/app.js",
-			"settings":
-			{
-				"buffer_size": 7090,
+				"buffer_size": 3441,
 				"line_ending": "Unix"
 			}
 		},
@@ -303,7 +311,15 @@
 			"file": "css/mobile.scss",
 			"settings":
 			{
-				"buffer_size": 1963,
+				"buffer_size": 2098,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 15393,
 				"line_ending": "Unix"
 			}
 		}
@@ -364,10 +380,11 @@
 	},
 	"file_history":
 	[
+		"/Users/oloflandahl/home/js/jquery-swipe.min.js",
+		"/Users/oloflandahl/home/css/_helper.scss",
+		"/Users/oloflandahl/home/css/_font-icons.scss",
 		"/Users/oloflandahl/home/offline/notosans.css",
 		"/Users/oloflandahl/home/offline/jquery.js",
-		"/Users/oloflandahl/home/css/_font-icons.scss",
-		"/Users/oloflandahl/home/css/_helper.scss",
 		"/Users/oloflandahl/home/css/base.css",
 		"/Users/oloflandahl/home/home.sublime-project",
 		"/D/visualisation/libraries/Metrize_Icons/Font-Face/style.css",
@@ -440,6 +457,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".alt",
+			".scroll",
+			"clearfix()",
+			"clearfix",
+			"overlay",
+			"content",
+			"todo",
+			"metro-pulse",
+			"pulse",
 			"header",
 			"$xsmall",
 			"$small",
@@ -558,16 +584,7 @@
 			"26authkey",
 			"host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fap",
 			"loader",
-			"1deg",
-			"initEventHandlers",
-			"removeActive",
-			"width",
-			"getWord",
-			"resetVis",
-			"reset",
-			"resetVis",
-			"TODO",
-			"getData"
+			"1deg"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -575,6 +592,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"clearfix",
 			"$small",
 			"$medium",
 			"selected",
@@ -626,7 +644,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -635,15 +653,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5947,
+						"buffer_size": 6069,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5881,
-								5881
+								6060,
+								6060
 							]
 						],
 						"settings":
@@ -652,14 +670,71 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2435.0,
+						"translation.y": 2552.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "js/content/development/fb.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1244,
+								1244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/content/development/spotify.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								608,
+								608
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "index_offline.html",
 					"semi_transient": false,
 					"settings":
@@ -684,53 +759,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "css/_helper.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1412,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1287,
-								1287
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "css/base.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7804,
+						"buffer_size": 7891,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17,
-								17
+								1511,
+								1511
 							]
 						],
 						"settings":
@@ -746,20 +792,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "css/desktop.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3209,
+						"buffer_size": 3441,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1581,
-								1581
+								3295,
+								3205
 							]
 						],
 						"settings":
@@ -768,39 +814,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1107.0,
+						"translation.y": 2845.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7090,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3978,
-								3978
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2700.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -809,15 +826,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1963,
+						"buffer_size": 2098,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								472,
-								472
+								1777,
+								1777
 							]
 						],
 						"settings":
@@ -826,10 +843,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 1755.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7461,
+								7461
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
