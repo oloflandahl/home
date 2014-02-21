@@ -1,0 +1,153 @@
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+	html, body {
+		margin: 0;
+		padding: 0;
+		background-color: #000;
+	}
+
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+	}
+
+	.albums {
+		margin: 0 10px; 
+	}
+
+	.albums li {
+		float: left;
+		list-style-type: none;
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.albums li:hover {
+		color: #ccc;
+		cursor: pointer;
+	}
+
+	.albums li.selected {
+		color: #aaf;
+	}
+
+	.albums li.selected:hover {
+		cursor: default;
+	}
+
+	.picasa.container {
+		position: relative;
+		background-color: #000;
+		margin: 20px;
+	}
+
+	.content {
+		z-index: 10;
+		background-color: #000;
+		overflow: hidden;
+	}
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 20;
+		background-color: #000;
+		background-image: url(loader.gif);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	</style>
+
+	<script type="text/javascript" src="../libraries/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../libraries/underscore-min.js"></script>
+
+	<script type="text/javascript">
+
+	var albums = [
+		{name: "Nature", id: "2F5547617195389335425", key: "3DGv1sRgCJHx16LX94OWSw"},
+		{name: "Travel", id: "2F5547617133225302625", key: "3DGv1sRgCIeMjNTOmv2lUQ"},
+		{name: "City", id: "2F5547616996105903617", key: "3DGv1sRgCL6K79j51a62zgE"},
+		{name: "Studio", id: "2F5590909909116615265", key: "3DGv1sRgCP_B_MLC_eOlBw"},
+		{name: "Concerts", id: "2F5547617089961848369", key: "3DGv1sRgCLeIte2B85ryuAE"}
+	],
+	slideTemplate = '<embed type="application/x-shockwave-flash" src="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf" width="<%= size.width %>" height="<%= size.height %>" flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F113241056971667725100%2Falbumid%<%= album.id %>%3Falt%3Drss%26kind%3Dphoto%26authkey%<%= album.key %>%26hl%3Den_US" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>',
+	albumTemplate = "<li><%= name %></li>",
+	current = 0,
+	size, picasa, overlay, albumSelector;
+
+	function updateAlbum() {
+		var data = { album: albums[current], size: size };
+		var html = _.template(slideTemplate, data);
+		overlay.fadeIn(800, function() {
+			picasa.html(html);
+			setTimeout(function() {
+				overlay.fadeOut(800);
+			}, 2000);
+		});
+	}
+	
+	function nextAlbum() {
+		current = current >= albums.length-1 ? 0 : current+1;
+		updateAlbum();
+	}
+
+	function setSize() {
+		size = {width: $(window).width()-100, height: $(window).height()-100};
+		updateAlbum();
+	}
+
+	$(document).ready(function() {
+		albumSelector = $(".albums");
+		picasa = $(".picasa .content");
+		overlay = $(".picasa .overlay");
+
+		var items = "";
+		$(albums).each(function() {
+			items += _.template(albumTemplate, this);
+		});
+		albumSelector.append(items);
+
+		$(".albums li").first().addClass("selected");
+		albumSelector.on("click", "li:not('.selected')", function() {
+			$(".albums li.selected").removeClass("selected");
+			$(this).addClass("selected");
+			current = albumSelector.children().index(this);
+			updateAlbum();
+		});
+
+		$(window).resize(setSize);
+
+		setSize();
+	});
+
+	</script>
+
+</head>
+<body>
+
+
+<div class="picasa container">
+	<ul class="albums clearfix"></ul>
+	<div class="overlay"></div>
+	<div class="content"></div>
+</div>
+
+</body>
+</html>
