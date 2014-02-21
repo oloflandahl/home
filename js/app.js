@@ -355,11 +355,13 @@
 					'<% var unsuppText = ""; if (project.unsupported.browsers.length > 0) { %>'+
 						'<% unsuppText = " (Not supported: "+project.unsupported.browsers.join(\", \")+")"; %>'+
 					'<% } %>'+
-					'<% if (project.unsupported.mobile) { %>'+
-						'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
-						'<p class="alert is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
-					'<% } else { %>'+
-						'<p><a href="<%= project.demoUrl %>" target="_BLANK">RUN DEMO</a> <%= unsuppText %></p>'+
+					'<% if (project.demoUrl) { %>'+
+						'<% if (project.unsupported.mobile) { %>'+
+							'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
+							'<p class="alert is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
+						'<% } else { %>'+
+							'<p><a href="<%= project.demoUrl %>" target="_BLANK">RUN DEMO</a> <%= unsuppText %></p>'+
+						'<% } %>'+
 					'<% } %>'+
 					'<ul>'+
 						'<% $(project.links).each(function() { %>'+
