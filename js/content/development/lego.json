@@ -1,0 +1,14 @@
+{
+	"type": "course",
+	"title": "3D Movie",
+	"project": {
+		"course": "3D Computer Graphics & Animation",
+		"tech": ["3D Studio Max", "Adobe Premiere"],
+		"date": "May 2004",
+		"description": "To increase the understanding of how 3D graphics works, how different techniques are used practically, we got the assignment to make a short movie in 3D. We choose to do a remake of a scene from the classic western movie The Good, the Bad and the Ugly, but in Lego.",
+		"links": [
+			{"text": "Report", "url": "assets/lego_rapport.pdf", "description": "(pdf, swedish)"},
+			{"text": "Movie", "url": "assets/lego_clip.pdf", "description": "(avi/divx)"}
+		]
+	}
+}

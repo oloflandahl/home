@@ -380,6 +380,10 @@
 				course:
 					PARTIAL_TEMPLATES.top('course')+
 					PARTIAL_TEMPLATES.description+
+					PARTIAL_TEMPLATES.links,
+				employment:
+					PARTIAL_TEMPLATES.top('type')+
+					PARTIAL_TEMPLATES.description+
 					PARTIAL_TEMPLATES.links
 			};
 

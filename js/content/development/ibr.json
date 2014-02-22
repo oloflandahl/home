@@ -2,14 +2,14 @@
 	"type": "course",
 	"title": "Image Based Rendering",
 	"project": {
-		"course": "Procedural Rendering",
-		"tech": ["C++", "OpenGL", "GLSL"],
-		"date": "January 2007",
-		"description": "The project task was to, with procedural methods, simulate something from the real world. I choose to make a real time lightning simulation. The final result was an animated lightning which is generated and rendered in real time. For more details, download the source code and read the report.",
+		"course": "Image Based Rendering",
+		"tech": ["Matlab", "3D Studio Max"],
+		"date": "April 2007",
+		"description": "In this course I implemented the Median Cut algorithm to create virtual light sources from the light in an actual scene. This is useful when placing 3D objects in an actual movie scene an make the lighting to look good.",
 		"links": [ 
-			{"text": "Report", "url": "assets/blixt_rapport.pdf", "description": "(pdf, swedish)"},
-			{"text": "Executable and source code", "url": "assets/blixt_source.zip", "description": "(zip)"},
-			{"text": "Video clip", "url": "assets/blixt_clip.avi", "description": "(avi/xvid)"}
+			{"text": "Report", "url": "assets/ibr_report.pdf", "description": "(pdf, english)"},
+			{"text": "Source code", "url": "assets/ibr_code.rar", "description": "(rar)"},
+			{"text": "Median Cut algorithm", "url": "http://gl.ict.usc.edu/Research/MedianCut/", "description": "(external link)"}
 		]
 	}
 }

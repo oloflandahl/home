@@ -140,6 +140,7 @@ body {
 					.icon {
 						@include font-size(80px);
 						padding: 0.2em;
+						text-align: center;
 					}
 
 					.title { text-transform: capitalize }
@@ -312,9 +313,9 @@ body.theme-metro {
 	}
 	#container {
 		.group li {
-			&.tile-color1 { background-color: $metro_orange }
-			&.tile-color2 { background-color: $metro_yellow }
-			&.tile-color3 { background-color: $metro_red }
+			&.tile-color1 { background-color: $metro_red }
+			&.tile-color2 { background-color: $metro_orange }
+			&.tile-color3 { background-color: $metro_yellow }
 			&.tile-color4 { background-color: $metro_pink }
 		}
 	}
@@ -428,6 +429,7 @@ body.theme-light {
 .icon-links { @include icon($icon-link) }
 
 .icon-example { @include icon($icon-check) }
+.icon-home { @include icon($icon-home) }
 .icon-fb { @include icon($icon-facebook-square) }
 .icon-marker { @include icon($icon-map-marker) }
 .icon-music { @include icon($icon-music) }
@@ -435,3 +437,5 @@ body.theme-light {
 .icon-bullseye { @include icon($icon-bullseye) }
 .icon-plane { @include icon($icon-plane) }
 .icon-flash { @include icon($icon-bolt) }
+.icon-camera { @include icon($icon-camera) }
+.icon-film { @include icon($icon-film) }

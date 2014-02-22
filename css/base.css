@@ -129,7 +129,8 @@ body {
       #container ul.group li.text-content .content .icon {
         font-size: 80px;
         line-height: 80px;
-        padding: 0.2em; }
+        padding: 0.2em;
+        text-align: center; }
       #container ul.group li.text-content .content .title {
         text-transform: capitalize; }
     #container ul.group li.image-content {
@@ -257,11 +258,11 @@ body.theme-metro {
       body.theme-metro #menu .links.hover, body.theme-metro #menu .links.touching {
         background-color: #603cba; } }
   body.theme-metro #container .group li.tile-color1 {
-    background-color: #d44b28; }
-  body.theme-metro #container .group li.tile-color2 {
-    background-color: #fdd115; }
-  body.theme-metro #container .group li.tile-color3 {
     background-color: #9a1616; }
+  body.theme-metro #container .group li.tile-color2 {
+    background-color: #d44b28; }
+  body.theme-metro #container .group li.tile-color3 {
+    background-color: #fdd115; }
   body.theme-metro #container .group li.tile-color4 {
     background-color: #b01a40; }
 
@@ -386,6 +387,16 @@ body.theme-light #container {
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
+.icon-home:before {
+  font-family: "FontAwesome";
+  content: "\f015";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
 .icon-fb:before {
   font-family: "FontAwesome";
   content: "\f082";
@@ -449,6 +460,26 @@ body.theme-light #container {
 .icon-flash:before {
   font-family: "FontAwesome";
   content: "\f0e7";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-camera:before {
+  font-family: "FontAwesome";
+  content: "\f030";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-film:before {
+  font-family: "FontAwesome";
+  content: "\f008";
   speak: none;
   font-weight: normal;
   font-variant: normal;
