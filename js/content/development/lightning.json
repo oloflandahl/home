@@ -1,0 +1,15 @@
+{
+	"type": "course",
+	"title": "Lightning Simulation",
+	"project": {
+		"course": "Procedural Rendering",
+		"tech": ["C++", "OpenGL", "GLSL"],
+		"date": "January 2007",
+		"description": "The project task was to, with procedural methods, simulate something from the real world. I choose to make a real time lightning simulation. The final result was an animated lightning which is generated and rendered in real time. For more details, download the source code and read the report.",
+		"links": [ 
+			{"text": "Report", "url": "assets/blixt_rapport.pdf", "description": "(pdf, swedish)"},
+			{"text": "Executable and source code", "url": "assets/blixt_source.zip", "description": "(zip)"},
+			{"text": "Video clip", "url": "assets/blixt_clip.avi", "description": "(avi/xvid)"}
+		]
+	}
+}

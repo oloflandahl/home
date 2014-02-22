@@ -433,3 +433,5 @@ body.theme-light {
 .icon-music { @include icon($icon-music) }
 .icon-graph { @include icon($icon-bar-chart-o) }
 .icon-bullseye { @include icon($icon-bullseye) }
+.icon-plane { @include icon($icon-plane) }
+.icon-flash { @include icon($icon-bolt) }

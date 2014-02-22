@@ -1,0 +1,14 @@
+{
+	"type": "course",
+	"title": "Visualisation of Aviation Weather",
+	"project": {
+		"course": "Thesis Project",
+		"tech": ["C#/.NET", "C++", "Carmenta Engine"],
+		"date": "January 2008",
+		"description": "My thesis project included an investigation of aviation weather visualization standards and an implementation of the best suited standard, integrated with Carmentas map tool Carmenta Engine. The final result was a demo application that show aviation weather forecasts according to the standard SIGWX as well as wind forecasts.",
+		"links": [ 
+			{"text": "Report", "url": "assets/sigwx_rapport.pdf", "description": "(pdf, swedish)"},
+			{"text": "Carmenta Engine", "url": "http://www.carmenta.com/products/carmenta-engine/", "description": "(external link)"}
+		]
+	}
+}

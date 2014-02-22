@@ -3,7 +3,7 @@
 	"title": "TIBCO Spotfire",
 	"project": {
 		"type": "Employment",
-		"tech": [".NET", "JavaScript", "jQuery", "CSS"],
+		"tech": ["C#/.NET", "JavaScript", "jQuery", "CSS"],
 		"date": "2008 - 2013",
 		"description": "Being a developer at TIBCO for 4,5 years I was involved in most visualisations and UIs, either implementing enhancements or creating new from scratch. Heat Map, Bullet Graph, Tabular Plots and Map Chart are the visualisations I've been most involved in.",
 		"links": [ 

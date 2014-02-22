@@ -338,36 +338,49 @@
 				icon: '.icon'
 			};
 
-			var TEMPLATES = {
-				project:
-					'<div class="top">'+
+			var PARTIAL_TEMPLATES = {
+				top: function(type) {
+					var coursePre = type === 'course' ? 'Course: ' : '';
+					return '<div class="top">'+
 						'<div class="icon <%= iconClass %>"></div>'+
 						'<div class="header">'+
 							'<h2><%= title %></h2>'+
 							'<ul>'+
-								'<li><%= project.type %></li>'+
+								'<li>'+coursePre+'<%= project.'+type+' %></li>'+
 								'<li><%= project.tech.join(", ") %></li>'+
 								'<li><%= project.date %></li>'+
 							'</ul>'+
 						'</div>'+
-					'</div>'+
-					'<p><%= project.description %></p>'+
-					'<% var unsuppText = ""; if (project.unsupported.browsers.length > 0) { %>'+
-						'<% unsuppText = " (Not supported: "+project.unsupported.browsers.join(\", \")+")"; %>'+
-					'<% } %>'+
-					'<% if (project.demoUrl) { %>'+
-						'<% if (project.unsupported.mobile) { %>'+
-							'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
-							'<p class="alert is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
-						'<% } else { %>'+
-							'<p><a href="<%= project.demoUrl %>" target="_BLANK">RUN DEMO</a> <%= unsuppText %></p>'+
-						'<% } %>'+
-					'<% } %>'+
+					'</div>'
+				},
+				description:
+					'<p><%= project.description %></p>',
+				links: 
 					'<ul>'+
 						'<% $(project.links).each(function() { %>'+
 							'<li><a href="<%= this.url %>" target="_BLANK"><%= this.text %></a> <%= this.description %></li>'+
 						'<% }) %>'+
 					'</ul>'
+			};
+
+			var TEMPLATES = {
+				project:
+					PARTIAL_TEMPLATES.top('type')+
+					PARTIAL_TEMPLATES.description+
+					'<% var unsuppText = ""; if (project.unsupported.browsers.length > 0) { %>'+
+						'<% unsuppText = " (Not supported: "+project.unsupported.browsers.join(\", \")+")"; %>'+
+					'<% } %>'+
+					'<% if (project.unsupported.mobile) { %>'+
+						'<p class="is-mobile-hidden"><a href="<%= project.demoUrl %>">RUN DEMO</a> <%= unsuppText %></p>'+
+						'<p class="alert is-desktop-hidden">Unfortunately, this app does not support mobile displays</p>'+						
+					'<% } else { %>'+
+						'<p><a href="<%= project.demoUrl %>" target="_BLANK">RUN DEMO</a> <%= unsuppText %></p>'+
+					'<% } %>'+
+					PARTIAL_TEMPLATES.links,
+				course:
+					PARTIAL_TEMPLATES.top('course')+
+					PARTIAL_TEMPLATES.description+
+					PARTIAL_TEMPLATES.links
 			};
 
 			var container = $(SEL.container);
