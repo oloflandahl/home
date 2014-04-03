@@ -80,6 +80,8 @@ body {
 
 #container {
 
+	padding-bottom: 40px;
+
 	.arrow {
 		@include transition(opacity, 1s);
 		&.hide { display: none }
@@ -179,8 +181,43 @@ body {
 							left: 0;
 							bottom: 0;
 							width: 100%;
-							max-width: 640px;
-							max-height: 320px;
+							max-width: 100%;
+							max-height: 180px;
+						}
+					}
+				}
+			}
+
+			// Small Image, Alt text coming in from the bottom
+			&.image-small-content {
+				background-color: #fff;
+				
+				.content {
+
+					&.main { top: 0 }
+					&.alt { top: 100% }
+					
+					@include transition(top, 0.5s);
+
+					.text {
+						display: table-cell;
+						vertical-align: top;
+						padding: 0.4em;
+						background-color: rgba(0,0,0,0.5);
+					}
+
+					.image {
+						@include size(100%);
+
+						text-align: center;
+
+						opacity: 0.8;
+						@include transition(opacity, 1s);
+
+						img {
+							height: 100%;
+							max-width: 360px;
+							max-height: 180px;
 						}
 					}
 				}

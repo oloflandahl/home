@@ -73,101 +73,134 @@ body {
       #menu .links ul li.menu-item.nav-link {
         cursor: pointer; }
 
-#container .arrow {
-  -webkit-transition: opacity 1s;
-  -moztransition: opacity 1s;
-  -o-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  transition: opacity 1s; }
-  #container .arrow.hide {
-    display: none; }
-#container ul.group {
-  width: 100%; }
-  #container ul.group h2 {
-    font-size: 200%;
-    text-transform: capitalize; }
-  #container ul.group:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #container ul.group li {
-    float: left;
-    position: relative;
-    font-size: 100%;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transition: background-color 1s;
-    -moztransition: background-color 1s;
-    -o-transition: background-color 1s;
-    -ms-transition: background-color 1s;
-    transition: background-color 1s; }
-    #container ul.group li:hover, #container ul.group li.touching {
-      border: 1px solid #fff; }
-    #container ul.group li .content {
+#container {
+  padding-bottom: 40px; }
+  #container .arrow {
+    -webkit-transition: opacity 1s;
+    -moztransition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s; }
+    #container .arrow.hide {
+      display: none; }
+  #container ul.group {
+    width: 100%; }
+    #container ul.group h2 {
+      font-size: 200%;
+      text-transform: capitalize; }
+    #container ul.group:after {
+      content: "";
       display: table;
-      position: absolute;
-      width: 100%;
-      height: 100%; }
-      #container ul.group li .content .text {
-        text-align: center; }
-    #container ul.group li.text-content .content {
-      -webkit-transition: left 0.5s;
-      -moztransition: left 0.5s;
-      -o-transition: left 0.5s;
-      -ms-transition: left 0.5s;
-      transition: left 0.5s; }
-      #container ul.group li.text-content .content.main {
-        left: 0; }
-      #container ul.group li.text-content .content.alt {
-        left: 100%; }
-      #container ul.group li.text-content .content .icon,
-      #container ul.group li.text-content .content .text {
-        display: table-cell;
-        vertical-align: middle; }
-      #container ul.group li.text-content .content .text {
-        padding: 1em; }
-      #container ul.group li.text-content .content .icon {
-        font-size: 80px;
-        line-height: 80px;
-        padding: 0.2em;
-        text-align: center; }
-      #container ul.group li.text-content .content .title {
-        text-transform: capitalize; }
-    #container ul.group li.image-content {
-      background-color: #fff; }
-      #container ul.group li.image-content .content {
-        -webkit-transition: top 0.5s;
-        -moztransition: top 0.5s;
-        -o-transition: top 0.5s;
-        -ms-transition: top 0.5s;
-        transition: top 0.5s; }
-        #container ul.group li.image-content .content.main {
-          top: 0; }
-        #container ul.group li.image-content .content.alt {
-          top: 100%; }
-        #container ul.group li.image-content .content .text {
+      clear: both; }
+    #container ul.group li {
+      float: left;
+      position: relative;
+      font-size: 100%;
+      color: #fff;
+      overflow: hidden;
+      -webkit-transition: background-color 1s;
+      -moztransition: background-color 1s;
+      -o-transition: background-color 1s;
+      -ms-transition: background-color 1s;
+      transition: background-color 1s; }
+      #container ul.group li:hover, #container ul.group li.touching {
+        border: 1px solid #fff; }
+      #container ul.group li .content {
+        display: table;
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+        #container ul.group li .content .text {
+          text-align: center; }
+      #container ul.group li.text-content .content {
+        -webkit-transition: left 0.5s;
+        -moztransition: left 0.5s;
+        -o-transition: left 0.5s;
+        -ms-transition: left 0.5s;
+        transition: left 0.5s; }
+        #container ul.group li.text-content .content.main {
+          left: 0; }
+        #container ul.group li.text-content .content.alt {
+          left: 100%; }
+        #container ul.group li.text-content .content .icon,
+        #container ul.group li.text-content .content .text {
           display: table-cell;
-          vertical-align: top;
-          padding: 0.4em;
-          background-color: rgba(0, 0, 0, 0.5); }
-        #container ul.group li.image-content .content .image {
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          background-color: #000;
-          opacity: 0.8;
-          -webkit-transition: opacity 1s;
-          -moztransition: opacity 1s;
-          -o-transition: opacity 1s;
-          -ms-transition: opacity 1s;
-          transition: opacity 1s; }
-          #container ul.group li.image-content .content .image img {
-            position: absolute;
-            left: 0;
-            bottom: 0;
+          vertical-align: middle; }
+        #container ul.group li.text-content .content .text {
+          padding: 1em; }
+        #container ul.group li.text-content .content .icon {
+          font-size: 80px;
+          line-height: 80px;
+          padding: 0.2em;
+          text-align: center; }
+        #container ul.group li.text-content .content .title {
+          text-transform: capitalize; }
+      #container ul.group li.image-content {
+        background-color: #fff; }
+        #container ul.group li.image-content .content {
+          -webkit-transition: top 0.5s;
+          -moztransition: top 0.5s;
+          -o-transition: top 0.5s;
+          -ms-transition: top 0.5s;
+          transition: top 0.5s; }
+          #container ul.group li.image-content .content.main {
+            top: 0; }
+          #container ul.group li.image-content .content.alt {
+            top: 100%; }
+          #container ul.group li.image-content .content .text {
+            display: table-cell;
+            vertical-align: top;
+            padding: 0.4em;
+            background-color: rgba(0, 0, 0, 0.5); }
+          #container ul.group li.image-content .content .image {
             width: 100%;
-            max-width: 640px;
-            max-height: 320px; }
+            height: 100%;
+            text-align: center;
+            background-color: #000;
+            opacity: 0.8;
+            -webkit-transition: opacity 1s;
+            -moztransition: opacity 1s;
+            -o-transition: opacity 1s;
+            -ms-transition: opacity 1s;
+            transition: opacity 1s; }
+            #container ul.group li.image-content .content .image img {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              max-width: 100%;
+              max-height: 180px; }
+      #container ul.group li.image-small-content {
+        background-color: #fff; }
+        #container ul.group li.image-small-content .content {
+          -webkit-transition: top 0.5s;
+          -moztransition: top 0.5s;
+          -o-transition: top 0.5s;
+          -ms-transition: top 0.5s;
+          transition: top 0.5s; }
+          #container ul.group li.image-small-content .content.main {
+            top: 0; }
+          #container ul.group li.image-small-content .content.alt {
+            top: 100%; }
+          #container ul.group li.image-small-content .content .text {
+            display: table-cell;
+            vertical-align: top;
+            padding: 0.4em;
+            background-color: rgba(0, 0, 0, 0.5); }
+          #container ul.group li.image-small-content .content .image {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            opacity: 0.8;
+            -webkit-transition: opacity 1s;
+            -moztransition: opacity 1s;
+            -o-transition: opacity 1s;
+            -ms-transition: opacity 1s;
+            transition: opacity 1s; }
+            #container ul.group li.image-small-content .content .image img {
+              height: 100%;
+              max-width: 360px;
+              max-height: 180px; }
 
 #overlay {
   display: none;

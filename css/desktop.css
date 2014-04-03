@@ -189,6 +189,10 @@
         top: 70%; }
       #container ul.group li.image-content:hover .content.image {
         opacity: 1; }
+      #container ul.group li.image-small-content:hover .content.alt {
+        top: 70%; }
+      #container ul.group li.image-small-content:hover .content.image {
+        opacity: 1; }
 
 @keyframes metro-pulse {
   0% {

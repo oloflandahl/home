@@ -114,8 +114,8 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 
 		li {
 			width: 100%;
-			height: 5em;
-			margin: 0;
+			height: 140px;
+			margin: 5px 0;
 			font-size: 170%;
 
 			.icon {
@@ -137,7 +137,8 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 				.content.alt { left: 0 }
 			}
 
-			&.image-content {
+			&.image-content,
+			&.image-small-content {
 				.content.alt { top: 70% }
 			}
 		}

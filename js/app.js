@@ -334,6 +334,7 @@
 			var SEL = {
 				container: '#container',
 				group: '.group',
+				linksGroup: '#links',
 				groupItem: '.group li',
 				icon: '.icon'
 			};
@@ -407,12 +408,21 @@
 						'</div>'+
 					'</div>'+
 					'<p><%= description %></p>'+
-					'<a href="<%= url %>">Listen</a> (external link)'
+					'<a href="<%= url %>" target="_BLANK">Listen</a> (external link)',
+				cv:
+					'<object class="pdf-container" data="<%= url %>#toolbar=1&amp;navpanes=0&amp;scrollbar=1&amp;page=1&amp;pagemode=thumbs&amp;view=Fit" type="application/pdf" width="100%" height="100%">'+
+						'<p>Unfortunately you do not have a PDF plugin for this browser. To view the CV, use the link below.</p>'+
+					'</object>'+
+					'<p>Click <a href="<%= url %>">here</a> to download the pdf document.</p>'
 			};
 
 			var container = $(SEL.container);
 
 			container.on('click', SEL.groupItem, function(e) {
+				if ($(this).closest(SEL.linksGroup)) {
+					return;
+				}
+
 				e.preventDefault();
 
 				var item = $(this),
