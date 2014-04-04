@@ -202,9 +202,12 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 				.content.image { opacity: 1 }
 			}
 
-			&.image-small-content:hover {
-				.content.alt { top: 70% }
-				.content.image { opacity: 1 }
+			&.image-small-content {
+				width: 180px;
+				&:hover {
+					.content.alt { top: 70% }
+					.content.image { opacity: 1 }
+				}
 			}
 		}
 	}
