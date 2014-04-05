@@ -396,6 +396,17 @@ body.theme-light #menu .links .theme-selector li.theme.pulse {
   -webkit-animation-duration: 1.5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
+body.theme-light #container .group li {
+  -webkit-transition: border 0.5, box-shadow 0.5s;
+  -moztransition: border 0.5, box-shadow 0.5s;
+  -o-transition: border 0.5, box-shadow 0.5s;
+  -ms-transition: border 0.5, box-shadow 0.5s;
+  transition: border 0.5, box-shadow 0.5s; }
+  body.theme-light #container .group li:hover, body.theme-light #container .group li.touching {
+    border: 1px solid #333;
+    -moz-box-shadow: 0 0 10px 2px #333333;
+    -webkit-box-shadow: 0 0 10px 2px #333333;
+    box-shadow: 0 0 10px 2px #333333; }
 
 .is-desktop-hidden {
   display: none; }

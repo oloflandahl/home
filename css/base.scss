@@ -190,7 +190,6 @@ body {
 
 			// Small Image, Alt text coming in from the bottom
 			&.image-small-content {
-				background-color: #fff;
 				
 				.content {
 
@@ -354,6 +353,7 @@ body.theme-metro {
 			&.tile-color2 { background-color: $metro_orange }
 			&.tile-color3 { background-color: $metro_yellow }
 			&.tile-color4 { background-color: $metro_pink }
+			&.image-small-content { background-color: #fff }
 		}
 	}
 }
@@ -390,7 +390,8 @@ body.theme-bw {
 			&.tile-color1, 
 			&.tile-color2,
 			&.tile-color3,
-			&.tile-color4 { 
+			&.tile-color4,
+			&.image-small-content { 
 				background-color: #333; 
 			}
 		}
@@ -444,15 +445,17 @@ body.theme-light {
 			@include transition-double(opacity 1s, color 1s);
 			color: $other_text;
 		}
-		.group li.text-content {
-			
+		.group li {
 			@include transition(color, 1s);
-			color: $other_text;
+			&.text-content {
+				color: $other_text;
 
-			&.tile-color1 { background-color: $metro_light_orange }
-			&.tile-color2 { background-color: $metro_light_yellow }
-			&.tile-color3 { background-color: $metro_light_red }
-			&.tile-color4 { background-color: $metro_light_pink }
+				&.tile-color1 { background-color: $metro_light_orange }
+				&.tile-color2 { background-color: $metro_light_yellow }
+				&.tile-color3 { background-color: $metro_light_red }
+				&.tile-color4 { background-color: $metro_light_pink }
+				&.image-small-content { background-color: #fff }
+			}
 		}
 	}
 }
