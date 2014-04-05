@@ -419,7 +419,7 @@
 			var container = $(SEL.container);
 
 			container.on('click', SEL.groupItem, function(e) {
-				if ($(this).closest(SEL.linksGroup)) {
+				if ($(this).closest(SEL.linksGroup).length > 0) {
 					return;
 				}
 
