@@ -149,31 +149,9 @@
 				cancelScroll = false;
 
 			menu.on('click', SEL.navLink, function() { 
-				var thisLink = $(this),
-					index = thisLink.index();
-				thisLink.removeClass('pulse');
+				var index = $(this).index();
 				cachedIndex = index;
 				activeGroup.moveTo(index);
-			});
-
-			menu.on('mouseenter', SEL.navLink, function() {
-				var thisLink = $(this),
-					index = thisLink.index();
-				if (index !== cachedIndex) {
-					activeGroup.moveTo(index);
-					cancelScroll = true;
-					thisLink.addClass('pulse');
-				}
-			});
-
-			menu.on('mouseleave', SEL.navLink, function(e) {
-				cancelScroll = false;
-				setTimeout(function() { 
-					if (!cancelScroll) {
-						activeGroup.moveTo(cachedIndex);
-					}
-				}, 100);
-				$(this).removeClass('pulse');
 			});
 
 			menu.on('click', SEL.links, function(e) {

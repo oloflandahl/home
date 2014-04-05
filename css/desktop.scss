@@ -74,6 +74,11 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			padding: $linkPadding;
 
 			.icon { @include font-size($imgSize) }
+			&:hover {
+				&:not(.active) .icon {
+					@include font-size($imgSize + 4px);
+				}
+			}
 
 			.text {
 				font-size: 16px;
@@ -214,15 +219,10 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 }
 
 // Color theme: Metro pulse
-$metro_pulse: "metro-pulse";
 $metro_border_pulse: "metro-border-pulse";
-@include define-pulse($metro_pulse, "background-color", $metro_purple, $metro_lightblue);
 @include define-pulse($metro_border_pulse, "border-color", $metro_purple, $metro_lightblue);
 body.theme-metro {
 	#menu .links { 
-		li.nav-link.pulse {
-			@include pulse-animation($metro_pulse);
-		}
 		.theme-selector li.theme.pulse {
 			@include pulse-animation($metro_border_pulse);
 		}
@@ -230,15 +230,10 @@ body.theme-metro {
 }
 
 // Color theme: Black & White pulse
-$bw_pulse: "bw-pulse";
 $bw_border_pulse: "bw-border-pulse";
-@include define-pulse($bw_pulse, "background-color", $bw_active, $bw_bg);
 @include define-pulse($bw_border_pulse, "border-color", $bw_active, $bw_bg);
 body.theme-bw {
 	#menu .links { 
-		li.nav-link.pulse {
-			@include pulse-animation($bw_pulse);
-		}
 		.theme-selector li.theme.pulse {
 			@include pulse-animation($bw_border_pulse);
 		}
@@ -246,15 +241,10 @@ body.theme-bw {
 }
 
 // Color theme: Light pulse
-$light_pulse: "light-pulse";
 $light_border_pulse: "light-border-pulse";
-@include define-pulse($light_pulse, "background-color", $metro_light_blue, $other_bg);
 @include define-pulse($light_border_pulse, "border-color", $metro_light_blue, $other_bg);
 body.theme-light {
 	#menu .links { 
-		li.nav-link.pulse {
-			@include pulse-animation($light_pulse);
-		}
 		.theme-selector li.theme.pulse {
 			@include pulse-animation($light_border_pulse);
 		}
