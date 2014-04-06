@@ -82,23 +82,25 @@
 
 			var updateActive = function() {
 				var scrollPos = win.scrollTop(),
-					bottomScroll = doc.height() - win.height();
+					offsetScrollPos = scrollPos + offset,
+					bottomScroll = doc.height() - win.height(),
+					middleScroll = offsetScrollPos + (win.height() - offset) / 2;
 
-				var i = -1;
+				var newIndex = -1;
 				if (scrollPos > bottomScroll - 10) {
-					i = groups.length;
-					i = 2; // TODO REMOVE
+					newIndex = bounds.max;
 				} 
 				else {
-					groups.each(function() {
-						var groupPos = $(this).offset().top;
-						if (groupPos > scrollPos + offset) { return false }
-						else { i++ }
+					groups.each(function(i) {
+						var groupPos = $(this).offset().top,
+							nextGroupPos = i < groups.length - 1 ? $(groups[i+1]).offset().top : 999999;
+						if (groupPos > offsetScrollPos && nextGroupPos - middleScroll > 0) { return false } // TODO
+						else { newIndex++ }
 					});
-					i = Math.max(i, 0);
+					newIndex = Math.max(newIndex, 0);
 				}
 				
-				setIndex(i, false);
+				setIndex(newIndex, false);
 			};
 
 			arrowUp.click(function() { activeGroup.moveUp() });
