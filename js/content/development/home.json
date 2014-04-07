@@ -1,0 +1,16 @@
+{
+	"type": "project",
+	"title": "Homepage",
+	"project": {
+		"type": "Private project",
+		"tech": ["HTML5", "CSS3, Media queries", "SASS", "jQuery"],
+		"date": "April 2014",
+		"description": "I was tired of my homepage and decided to create a new responsive one. The design is inspired by the Windows Metro UI",
+		"links": [],
+		"unsupported": {
+			"mobile": false,
+			"browsers": []
+		},
+		"demoUrl": "http://www.oloflandahl.com"
+	}
+}
