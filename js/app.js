@@ -92,9 +92,8 @@
 				} 
 				else {
 					groups.each(function(i) {
-						var groupPos = $(this).offset().top,
-							nextGroupPos = i < groups.length - 1 ? $(groups[i+1]).offset().top : 999999;
-						if (groupPos > offsetScrollPos && nextGroupPos - middleScroll > 0) { return false } // TODO
+						var groupPos = $(this).offset().top;
+						if (groupPos > offsetScrollPos && groupPos - middleScroll > 0) { return false }
 						else { newIndex++ }
 					});
 					newIndex = Math.max(newIndex, 0);
@@ -392,8 +391,7 @@
 				cv:
 					'<object class="pdf-container" data="<%= url %>#toolbar=1&amp;navpanes=0&amp;scrollbar=1&amp;page=1&amp;pagemode=thumbs&amp;view=Fit" type="application/pdf" width="100%" height="100%">'+
 						'<p>Unfortunately you do not have a PDF plugin for this browser. To view the CV, use the link below.</p>'+
-					'</object>'+
-					'<p>Click <a href="<%= url %>">here</a> to download the pdf document.</p>'
+					'</object>'
 			};
 
 			var container = $(SEL.container);
