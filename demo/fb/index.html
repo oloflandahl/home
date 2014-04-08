@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Facebook Words
+</title>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/wordcloud.css" rel="stylesheet" type="text/css">
+<link href="css/bars.css" rel="stylesheet" type="text/css">
+<link href="css/cards.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../Scripts/underscore-min.js"></script>
+<script type="text/javascript" src="../Scripts/backbone-min.js"></script>
+<script type="text/javascript" src="../Scripts/d3.v3.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../Scripts/d3.layout.cloud.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/resize.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/logger.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/store.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/progress.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/facebook.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/words.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/wordcloud.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/bars.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/cards.js"></script>
+<script type="text/javascript" charset="UTF-8" src="js/app.js"></script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<div id="login_status" class="top-right clearfix">
+		<p></p>
+		<a id="logout_link" href>Logout</a>
+	</div>
+	<div id="progress_status" class="bottom-center hidden">
+		<p>Loading data from Facebook</p>
+		<progress value="0" max="100"></progress>
+	</div>
+	<div id="container" class="inner adjust-size">
+		<div id="login_content" class="hidden">
+			<div id="login_info" class="center"><p>You need to log in to Facebook to see all the cool stuff.</p></div>
+			<div id="login_btn" class="center button"><p>LOGIN</p></div>
+		</div>
+		<div id="vis_content" class="content-container clearfix hidden">
+			<div id="word_cloud" class="content-item link" hover-title="Word Cloud">
+				<div class="nav left-nav">
+					<div class="back-btn" title="Go Back"><img src="img/back.png"></div>
+					<div class="bottom-ctrls">
+						<div class="search-btn" title="Search for words"><img src="img/search.png"></div>
+						<div class="step-btn up" title="Increase word count"><img src="img/up.png"></div>
+						<input type="number" min="1" max="100" value="100" title="Set word count" />
+						<div class="step-btn down" title="Decrease word count"><img src="img/down.png"></div>
+					</div>
+				</div>
+				<div class="image-container"><img src="img/wordcloud.png"></div>
+				<div class="content"></div>
+			</div>
+			<div id="bar_chart" class="content-item link" hover-title="Bar Chart">
+				<div class="nav left-nav">
+					<div class="back-btn" title="Go Back"><img src="img/back.png"></div>
+					<div class="bottom-ctrls">
+						<div id="date" class="date" title="Date of current week"><p></p></div>
+						<div class="buttons-container">
+							<div class="step-btn play" title="Play"><img src="img/play.png"></div>
+							<div class="step-btn ff" title="Fast forward"><img src="img/ff.png"></div>
+							<div class="step-btn pause" title="Pause"><img src="img/pause.png"></div>
+							<div class="step-btn stop" title="Stop and start over"><img src="img/stop.png"></div>
+						</div>
+					</div>
+				</div>
+				<div class="image-container"><img src="img/bars.png"></div>
+				<div class="content"></div>
+			</div>
+			<div id="cards" class="content-item link" hover-title="Wild Card">
+				<div class="nav left-nav">
+					<div class="back-btn" title="Go Back"><img src="img/back.png"></div>
+				</div>
+				<div class="image-container"><img src="img/cards.jpg"></div>
+				<div class="content">
+					<div class="cards">
+						<ul></ul>
+					</div>
+					<div class="info hidden">
+						<div class="header clearfix">
+							<span class="name"></span>
+							<span class="date"></span>
+						</div>
+						<div class="message"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

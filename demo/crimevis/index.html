@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css"></link>
+	<script type="text/javascript" src="d3.min.js"></script>
+	<title>Crime Visualisation</title>
+</head>
+<body>
+<header>
+<b>NSW Recorded Crime Statistics 1999 to June 2010</b><br />
+Monthly incidents of personal and property crime and alcohol related non domestic violence assault in NSW recorded by the NSW Police Force.<br />
+Data source: NSW Bureau of Crime Statistics and Research.	
+</header>
+<section>
+	<div id="selectors">
+		Select crime category<br />
+		<select id="category_selector">
+			<option>Personal Crime</option>
+			<option>Property Crime</option>
+			<option>Alcohol Related</option>
+		</select>
+		<div id="seasons">
+			<input type="checkbox" id="seasons_toggle">Show season colors</input>
+			<br />
+			<div id="seasons_legend">
+				<div class="summer legend_item"></div>Summer<br />
+				<div class="autumn legend_item"></div>Autumn<br />
+				<div class="winter legend_item"></div>Winter<br />
+				<div class="spring legend_item"></div>Spring
+			</div>
+		</div>
+	</div>
+	<div id="canvas" />
+</section>
+
+<script type="text/javascript">
+
+// Define date parser: yyyy-mm
+var dateParser = d3.time.format("%y-%m").parse;
+	
+// Define size and margins
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+	availableWidth = 600,
+	availableHeight = 300,
+	width = availableWidth - margin.left - margin.right,
+	height = availableHeight - margin.top - margin.bottom;
+	
+// Append SVG canvas
+var svg = d3.select("#canvas").append("svg")
+	.attr("width", availableWidth)
+	.attr("height", availableHeight)
+	.append("g")
+	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+// Append background
+svg.append("g")
+	.attr("id", "seasons_background")
+	.attr("visibility", "hidden");
+
+// Define method that gets the current (trimmed) category
+var getCategory = function () { 
+	var category = document.getElementById("category_selector").value;
+	return category.replace(/\s/g, "");
+};
+	
+// Define the X scale
+var x = d3.time.scale()
+	.range([0, width]);
+
+// Define the Y scale
+var y = d3.scale.linear()
+	.range([height, 0]);
+
+// Define the X axis
+var xAxis = d3.svg.axis()
+	.scale(x)
+	.orient("bottom");
+
+// Define the Y axis
+var yAxis = d3.svg.axis()
+	.scale(y)
+	.orient("left");
+
+// Define the line functions
+var line = d3.svg.line()
+	.x(function(d) { return x(d.Month);	})
+	.y(function(d) { return y(d[getCategory()]); });
+	
+// Load CSV data
+var data;
+d3.csv("NSWcrimes.csv", function(e, d) 
+{
+	// Assign data
+	data = d;
+
+	// Find the max y value,
+	// parse the month values to proper Date objects
+	var maxY = 0;
+	data.forEach(function(d) 
+	{
+		maxY = 
+			Math.max(maxY, 
+				Math.max(d.PersonalCrime, 
+					Math.max(d.PropertyCrime, d.AlcoholRelated)));
+		
+		d.Month = dateParser(d.Month);
+	});
+	
+	// Set x and y domain
+	x.domain(d3.extent(data, function(d) { return d.Month; }));
+	y.domain([0, maxY]);
+
+	var getSeason = function (date) 
+	{
+		switch (date.getMonth()) 
+		{
+			case 12: case 0: case 1: case 2: return 1;
+			case 3: case 4: case 5: return 2;
+			case 6: case 7: case 8: return 3;
+			case 9: case 10: case 11: return 4;
+			default: return 0;
+		}
+	};
+	
+	var getSeasonClass = function (s) 
+	{
+		switch (s) 
+		{
+			case 1: return "summer";
+			case 2: return "autumn";
+			case 3: return "winter";
+			case 4: return "spring";
+			default: return undefined;
+		};
+	};
+	
+	var firstMonth = data[0].Month;
+	var currentSeason = getSeason(firstMonth);
+	var startX = x(firstMonth);
+	data.forEach(function(d) 
+	{
+		var s = getSeason(d.Month);
+		if (s !== currentSeason || d.Month === data[data.length - 1].Month) 
+		{
+			var endX = x(d.Month);
+			d3.select("#seasons_background").append("rect")
+				.attr("x", startX)
+				.attr("y", y(maxY))
+				.attr("width", endX - startX)
+				.attr("height", height)
+				.attr("class", getSeasonClass(currentSeason));
+			
+			currentSeason = s;
+			startX = endX;
+		}
+	});
+
+	// Append X Axis
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis);
+		
+	// Append Y Axis
+	svg.append("g")
+			.attr("class", "y axis")
+			.call(yAxis)
+
+	// Append the line path
+	svg.append("path")
+	  .datum(data)
+	  .attr("class", "line")
+	  .attr("d", line);
+});
+
+// Define what happens when the category changes
+d3.select("#category_selector").on("change", function() 
+{ 
+	svg.selectAll(".line").transition()
+		.attr("d", line) 
+		.duration(500);
+});
+
+// Define what happens when the season colors visiblity is toggled
+d3.select("#seasons_toggle").on("change", function() 
+{ 
+	var visibility = document.getElementById("seasons_toggle").checked ? 
+		"visible" : "hidden";
+		
+	svg.select("#seasons_background").transition()
+		.attr("visibility", visibility) 
+		.duration(500);
+});
+
+</script>
+</body>
+</html>

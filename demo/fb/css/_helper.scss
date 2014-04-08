@@ -1,0 +1,123 @@
+// PARTIAL CSS
+
+// Function to style rounded corners
+@mixin rounded($radius, $topleft: true, $topright: true, $bottomright: true, $bottomleft: true) {
+	@if $topleft and $topright and $bottomright and $bottomleft {
+		-webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		border-radius: $radius;
+	}
+	@else {
+		@if $topleft {
+			-webkit-border-top-left-radius: $radius;
+			-moz-border-top-left-radius: $radius;
+			-ms-border-top-left-radius: $radius;
+			border-top-left-radius: $radius;
+		}
+		@if $topright {
+			-webkit-border-top-right-radius: $radius;
+			-moz-border-top-right-radius: $radius;
+			-ms-border-top-right-radius: $radius;
+			border-top-right-radius: $radius;
+		}
+		@if $bottomright {
+			-webkit-border-bottom-right-radius: $radius;
+			-moz-border-bottom-right-radius: $radius;
+			-ms-border-bottom-right-radius: $radius;
+			border-bottom-right-radius: $radius;
+		}
+		@if $bottomleft {
+			-webkit-border-bottom-left-radius: $radius;
+			-moz-border-bottom-left-radius: $radius;
+			-ms-border-bottom-left-radius: $radius;
+			border-bottom-left-radius: $radius;
+		}
+	}
+}
+
+// Function to hide element
+@mixin hide() {
+	display: none;
+}
+
+// Function to show element
+@mixin show($type: block) {
+	display: $type;
+}
+
+// Function to center align element
+// (Parent needs to be relative)
+@mixin centerAlign($width: 0, $height: 0) {
+	position: absolute;
+	@if $width > 0 {
+		width: $width;
+		left: 50%;
+		margin-left: -1 * $width / 2;
+	}
+	@if $height > 0 {
+		height: $height;
+		top: 50%;
+		margin-top: -1 * $height / 2;
+	}
+}
+
+// Function to center align text
+// (Parent needs to be relative)
+@mixin centerAlignText() {
+	position: absolute;
+	left: 0;
+    top: 50%;
+    width: 100%;
+    margin: auto;
+    margin-top: -100px;
+    line-height: 200px;
+    text-align: center;
+}
+
+@mixin normalise() {
+	margin:0;
+	padding:0;
+}
+
+@mixin font($color, $size) {
+	color: $color;
+	font-size: $size;
+}
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+// Function to create a gradient, bottom up
+@mixin gradient($bottom, $top, $bg) {
+	background-color: $bg;
+	background-image: linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -o-linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -moz-linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -webkit-linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -ms-linear-gradient(bottom, $bottom 30%, $top 60%);
+}
+
+@mixin grayscale($on) {
+
+	$matrix: "";
+	@if $on {
+		$matrix: "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0";
+
+		// IE6-9
+		filter: gray;
+
+		// Chrome 19+, Safari 6+, Safari 6+ iOS
+		-webkit-filter: grayscale(100%);
+
+	} @else {
+		$matrix: "1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0";
+
+		-webkit-filter: grayscale(0%);
+	}
+
+	//  Firefox 10+, Firefox on Android
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'"+$matrix+"\'/></filter></svg>#grayscale");
+}

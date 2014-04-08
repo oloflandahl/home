@@ -1,0 +1,171 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+
+	<link href="jquery.mobile.css" rel="stylesheet" type="text/css" />
+	<link href="http://www.surf-forecast.com/stylesheets/feed.css" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="jquery.js"></script>
+	<script src="jquery.mobile.js"></script>
+	
+	<title>
+	Sydney Surf Forecast Maps
+	</title>
+</head>
+<body>
+	<style>
+	.crop-img {
+		margin-top: -70px;
+		margin-left: -250px;
+	}
+	
+	.crop-div {
+		width: 300px;
+		height: 300px;
+		overflow: hidden;
+	}
+	
+	.scale-img {
+		width: 300px;
+		height: 50px;
+	}
+	
+	#layout_button {
+		
+	}
+	
+	#play_button {
+		float:right;
+		font-weight: bold;
+	}
+	
+	#time_label {
+		float:right;
+		font-weight: bold;
+	}
+	
+	#time_slider {
+		display: none;
+	}
+	
+	.cache {
+		display: none;
+	}
+	
+	</style>
+	
+	<div class='header' data-role="header" data-position="fixed" data-theme="c">
+		<form>
+			<p id="layout_button" data-role="button" data-inline="true">COMPACT</p>
+			<label id="time_label" for="time_slider">Now</label>
+			<input id="time_slider" type="range" min="6" max="180" step="6" data-highlight="true" value="6">
+		</form>
+	</div>
+	<div class="content">
+		<div class="crop-div">
+			<img id="map_energy" class="crop-img" src="http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.maxenergy.6.cc23.jpg" name="mapimg">
+		</div>
+		<img id="scale_energy" class="scale-img" src="http://www.surf-forecast.com/pa/fcmaps/images/scales/waveenergyscale.gif" galleryimg="no" name="scale">
+		
+		<div class="crop-div">
+			<img id="map_htsgw" class="crop-img" src="http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.htsgw.metric.6.cc23.jpg" name="mapimg">
+		</div>
+		<img id="scale_htsgw" class="scale-img" src="http://www.surf-forecast.com/pa/fcmaps/images/scales/htsgwscale.metric.gif?cache_bust=1" galleryimg="no" name="scale">
+		
+		<div class="crop-div">
+			<img id="map_wind" class="crop-img" src="http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.wind.6.cc23.jpg" name="mapimg">
+		</div>
+		<img id="scale_wind" class="scale-img" src="http://www.surf-forecast.com/pa/fcmaps/images/scales/windscale.metric.gif" galleryimg="no" name="scale">
+	</div>
+	<div class="cache">
+		<img id="cache1" src="">
+		<img id="cache2" src="">
+		<img id="cache3" src="">
+	</div>
+	
+	<script type="text/javascript">
+	
+	var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+	
+	function getTime () {
+		var value = $("#time_slider").val();
+		return parseInt(value);
+	}
+	
+	function setTime (value) {
+		$("#time_slider").val(value)
+			.change();
+	}
+	
+	$(document).ready(function () {
+		$("#time_slider").change(function () {
+			
+			var time = getTime();
+			var date = new Date();
+			var hours = date.getHours();
+			date.setHours(hours + time - 6);
+			$("#time_label").text(days[date.getDay()] + " " + date.getHours());
+			
+			$("#map_energy").attr("src", "http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.maxenergy." + time + ".cc23.jpg");
+			$("#map_htsgw").attr("src", "http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.htsgw.metric." + time + ".cc23.jpg");
+			$("#map_wind").attr("src", "http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.wind." + time + ".cc23.jpg");
+			
+			var cacheTime = time == 180 ? 6 : time + 6;
+			$(".cache #cache1").attr("src", "http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.maxenergy." + cacheTime + ".cc23.jpg");
+			$(".cache #cache2").attr("src", "http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.htsgw.metric." + cacheTime + ".cc23.jpg");
+			$(".cache #cache3").attr("src", "http://a0.fast-meteo.com/maps/dynamic/New-South-Wales.wind." + cacheTime + ".cc23.jpg");
+		});
+		
+		$("#layout_button").click(function () {
+			var text = $(this).text();
+			if (text == "COMPLETE")
+			{
+				$(this).text("COMPACT");
+				$(".content .crop-img").css("margin-top", "-70px");
+				$(".content .crop-div").css("height", "300px");
+				$(".content .scale-img").show();
+			}
+			else 
+			{
+				$(this).text("COMPLETE");
+				$(".content .crop-img").css("margin-top", "-170px");
+				$(".content .crop-div").css("height", "130px");
+				$(".content .scale-img").hide();
+			}
+		});
+		
+		/*
+		var player;
+		function play () {
+			player = setTimeout(function () {
+				var time = getTime();
+				time = time == 180 ? 6 : time + 6;
+				setTime(time);
+				play();
+			}, 2000);
+		}
+		
+		var playing = false;
+		$("#time_label").click(function () {
+			
+			if (playing == true) {
+				clearTimeout(player);
+			}
+			else {
+				play();
+			}
+			
+			playing = !playing;
+		});
+		*/
+		
+		$("#time_label").click(function () {
+			var time = getTime();
+			time = time == 180 ? 6 : time + 6;
+			setTime(time);
+		});
+		
+	});
+	</script>
+</body>
+</html>

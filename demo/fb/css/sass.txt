@@ -1,0 +1,349 @@
+// Function to style rounded corners
+@mixin rounded($radius, $topleft: true, $topright: true, $bottomright: true, $bottomleft: true) {
+	@if $topleft and $topright and $bottomright and $bottomleft {
+		-webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		border-radius: $radius;
+	}
+	@else {
+		@if $topleft {
+			-webkit-border-top-left-radius: $radius;
+			-moz-border-top-left-radius: $radius;
+			-ms-border-top-left-radius: $radius;
+			border-top-left-radius: $radius;
+		}
+		@if $topright {
+			-webkit-border-top-right-radius: $radius;
+			-moz-border-top-right-radius: $radius;
+			-ms-border-top-right-radius: $radius;
+			border-top-right-radius: $radius;
+		}
+		@if $bottomright {
+			-webkit-border-bottom-right-radius: $radius;
+			-moz-border-bottom-right-radius: $radius;
+			-ms-border-bottom-right-radius: $radius;
+			border-bottom-right-radius: $radius;
+		}
+		@if $bottomleft {
+			-webkit-border-bottom-left-radius: $radius;
+			-moz-border-bottom-left-radius: $radius;
+			-ms-border-bottom-left-radius: $radius;
+			border-bottom-left-radius: $radius;
+		}
+	}
+}
+
+// Function to hide element
+@mixin hide() {
+	display: none;
+}
+
+// Function to show element
+@mixin show($type: block) {
+	display: $type;
+}
+
+// Function to center align element
+// (Parent needs to be relative)
+@mixin centerAlign($width: 0, $height: 0) {
+	position: absolute;
+	@if $width > 0 {
+		width: $width;
+		left: 50%;
+		margin-left: -1 * $width / 2;
+	}
+	@if $height > 0 {
+		height: $height;
+		top: 50%;
+		margin-top: -1 * $height / 2;
+	}
+}
+
+// Function to center align text
+// (Parent needs to be relative)
+@mixin centerAlignText() {
+	position: absolute;
+	left: 0;
+    top: 50%;
+    width: 100%;
+    margin: auto;
+    margin-top: -100px;
+    line-height: 200px;
+    text-align: center;
+}
+
+@mixin normalise() {
+	margin:0;
+	padding:0;
+}
+
+@mixin font($color, $size) {
+	color: $color;
+	font-size: $size;
+}
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+// Function to create a gradient, bottom up
+@mixin gradient($bottom, $top, $bg) {
+	background-color: $bg;
+	background-image: linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -o-linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -moz-linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -webkit-linear-gradient(bottom, $bottom 30%, $top 60%);
+	background-image: -ms-linear-gradient(bottom, $bottom 30%, $top 60%);
+}
+
+@mixin grayscale($on) {
+
+	$matrix: "";
+	@if $on {
+		$matrix: "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0";
+
+		// IE6-9
+		filter: gray;
+
+		// Chrome 19+, Safari 6+, Safari 6+ iOS
+		-webkit-filter: grayscale(100%);
+
+	} @else {
+		$matrix: "1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0";
+
+		-webkit-filter: grayscale(0%);
+	}
+
+	//  Firefox 10+, Firefox on Android
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'"+$matrix+"\'/></filter></svg>#grayscale");
+}
+
+
+html,
+body {background-color: #eee;}
+
+#fb-root {@include hide();}
+
+/* TOP RIGHT */
+.top-right {
+	position: absolute;
+	top: -50px;
+	right: 0;
+	background-color: #000;
+	opacity: 0.6;
+	padding: 10px;
+	z-index: 100;
+
+	@include rounded(5px, false, false, false, true);
+
+	p, a {
+		@include font(#fff, 12px);
+		@include normalise();
+	}
+
+	a {
+		float: right;
+		color: #ccf;
+		font-weight: bold;
+		text-decoration: none;
+		&:hover {color: #6464fa;}
+	}
+}
+
+/* BOTTOM CENTER */
+.bottom-center {
+	position: absolute;
+	display: block;
+	width: 99%;
+	text-align: center;
+	bottom: 0;
+	padding: 5px 0;
+
+	p {
+		display: inline;
+		font-size: 12px;
+		margin-right: 10px;
+	}
+
+	$progressBack: #fff;
+	$progressBar: #3C5A96;
+	progress, progress::-webkit-progress-bar {
+		@include size(150px, 10px);
+		vertical-align: middle;
+		background-color: $progressBack;
+		@include rounded(10px);
+	}
+	progress, progress::-webkit-progress-value {
+		background-color: $progressBar;
+		@include rounded(10px);
+	}
+	progress::-moz-progress-bar {background-color: $progressBar;}
+}
+
+/* INNER */
+.inner {
+	background-color: #fff;
+	margin: 25px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	@include rounded(20px);
+
+	p {@include font(#888, 22px);}
+}
+.center {
+	display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* BUTTON */
+.button {
+	border: 1px solid #ccc;
+	@include rounded(5px);
+	@include size(200px, 70px);
+	margin: 20px 0;
+	cursor: pointer;
+	
+	@include gradient(rgb(40,70,130), rgb(80,110,170), #3C5A96);
+
+	&:hover {
+		@include gradient(rgb(80,110,170), rgb(120,150,210), #6969fc);
+	}
+	&:active {
+		@include gradient(rgb(40,70,130), rgb(20,50,110), #7474ff);
+	}
+
+	a { 
+		text-decoration: none;
+		line-height: 70px;
+		@include font(#fff, 34px);
+		text-shadow: #555 0.1em 0.1em 0.2em
+	}
+}
+
+.content-container{@include size(100%, 100%);}
+
+.content-item {position: relative;}
+
+.content-item .content {margin-left: 50px;}
+
+/* CONTENT ITEM */
+.content-item {
+	.left-nav {
+		@include show();
+		position: absolute;
+		height: 100%;
+		width: 50px;
+		@include rounded(20px, true, false, false, true);
+
+		.back-btn {
+			margin-top: 5px;
+			text-align: center;
+			cursor: pointer;
+			&:hover {
+				img {opacity: 1;}
+			}
+
+			img {opacity: 0.4;}
+		}
+
+		.top-n-limiter {
+			position: absolute;
+			bottom: 10px;
+
+			input {
+				opacity: 0.4;
+				width: 100%;
+				margin-bottom: 4px;
+				background: transparent;
+				cursor: default;
+				border: none;
+				text-align: center;
+				font-size: 24px;
+				font-weight: bold;
+				&:hover {opacity: 1;}
+			}
+
+			input::-webkit-inner-spin-button,
+			input::-webkit-outer-spin-button {
+			    -webkit-appearance: none;
+			    margin: 0;
+			}
+
+			.step-btn {
+				text-align: center;
+				&:hover {
+					cursor: pointer;
+					img {opacity: 1;}
+				}
+
+				img {opacity: 0.4;}
+			}
+		}
+	}
+
+	&.link {
+		float: left;
+		@include size(20%, 50%);
+		margin: 10% 6.5%;
+		background-color: #eee;
+		border:	1px solid #ccc;
+		@include rounded(10px);
+
+		&.enabled {
+			background-color: #fff;
+			box-shadow: 5px 5px 5px #888;
+
+			&:hover {
+				border-color: #aaa;
+				box-shadow: 7px 7px 5px #999;
+				cursor: pointer;
+				p {color:#777;}
+			}
+			&:active {
+				border-color: #ccc;
+				box-shadow: 1px 1px 5px #555;
+				p {color:#999;}
+			}
+
+			p {color:#888;}
+
+			.image-container {
+				position: relative;
+				overflow: hidden;
+				@include size(90%, 90%);
+				margin: 5%;
+
+				img {
+					@include centerAlign(245px, 245px);
+				    @include grayscale(true);
+				}
+				.content-item.link.enabled:hover img {
+				    @include grayscale(false);
+				}
+			}
+		}
+
+		p {
+			@include centerAlignText();
+		    color:#ccc;
+		}
+
+		.left-nav {@include hide();}
+	}
+}
+
+/* SVG */
+.word-cloud text
+{
+	cursor: default;
+	font-family: "Impact";
+	opacity: 0.4;
+	fill: #3C5A96;
+}
+.word-cloud text:hover
+{
+	opacity: 1.0;
+}

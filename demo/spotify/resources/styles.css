@@ -1,0 +1,107 @@
+/* PARTIAL CSS */
+#main_header {
+  width: 925px;
+  margin: 0 5px 0 5px;
+  background-color: #28c81e;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  #main_header h1 {
+    margin: 0;
+    font: 30px Arial;
+    text-align: center;
+    color: #fff;
+    padding: 4px; }
+
+#search_section {
+  float: left;
+  margin: 5px;
+  width: 200px;
+  height: 100%;
+  padding: 5px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  overflow-y: scroll; }
+
+#search_input {
+  width: 140px;
+  margin: 5px;
+  padding: 3px;
+  border: 1px solid black;
+  color: #000;
+  background-color: #fafff0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+
+ul {
+  font: 13px sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0 5px 0 5px; }
+  ul li {
+    font: 13px sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0 5px 0 5px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #969696; }
+    ul li:hover {
+      color: black; }
+  ul li.activeArtist {
+    color: black;
+    background-color: whitesmoke; }
+  ul li.album {
+    margin-left: 20px; }
+
+.loading_img {
+  margin-left: 5px;
+  vertical-align: middle; }
+
+#content {
+  float: left; }
+
+.info {
+  float: left;
+  margin: 10px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .info h2 {
+    margin: 0 5px 0 5px;
+    font: 20px Verdana; }
+  .info #artist_name {
+    width: 140px; }
+  .info h3 {
+    margin: 5px 5px 0 5px;
+    font: 14px Verdana; }
+  .info #album_name {
+    width: 450px; }
+  .info a {
+    margin: 0 5px 5px 7px;
+    font: 10px Verdana;
+    text-decoration: none; }
+  .info hgroup {
+    margin-bottom: 15px; }
+
+#pop {
+  display: inline;
+  margin: 15px; }
+
+#map_wrapper {
+  width: 500px;
+  height: 300px;
+  margin: 0;
+  padding: 0; }
+
+#av_text {
+  font: 11px Verdana;
+  color: #000;
+  margin-left: 3px; }

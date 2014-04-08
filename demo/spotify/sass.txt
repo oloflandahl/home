@@ -1,0 +1,138 @@
+@import "utilities";
+
+$itemColor: rgb(150,150,150);
+$activeItemColor: rgb(0,0,0);
+$activeItemBackColor: rgb(245,245,245);
+$searchSectionWidth: 200px;
+$defaultMargin: 5px;
+
+#main_header {
+	width: 925px;
+	margin: 0 $defaultMargin 0 $defaultMargin;
+	background-color: rgb(40, 200, 30);
+	@include rounded(5px);
+	
+	h1 {
+		margin: 0;
+		font: 30px Arial;
+		text-align: center;
+		color: #fff;
+		padding: 4px;
+	}
+}
+
+#search_section {
+	float: left;
+	height: 400px;
+	margin: $defaultMargin;
+	width: $searchSectionWidth;
+	padding: $defaultMargin;
+	border: 2px solid #ccc;
+	@include rounded(5px);
+	overflow-y: scroll;
+}
+
+#search_input {
+	width: $searchSectionWidth - (2*$defaultMargin) - 50;
+	margin: $defaultMargin;
+	padding: 3px;
+	border: 1px solid #000;
+	color: #000;
+	background-color: rgb(250, 255, 240);
+	@include rounded(5px);
+}
+
+@mixin listBasics {
+	font: 13px sans-serif;
+	list-style: none;
+    padding: 0;
+	margin: 0 5px 0 5px;
+}
+
+ul { 
+	@include listBasics;
+
+	li {
+		@include listBasics;
+		margin-bottom: 1px;
+		cursor: pointer;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: $itemColor;
+		
+		&:hover {
+			color: $activeItemColor;
+		}
+	}
+	
+	li.activeArtist {
+		color: $activeItemColor;
+		background-color: $activeItemBackColor;
+	}
+	
+	li.artist {
+	}
+	
+	li.album {
+		margin-left: 20px;
+	}
+}
+
+.loading_img {
+	margin-left: $defaultMargin;
+	vertical-align: middle;
+}
+
+#content {
+	float: left;
+}
+
+.info {
+	float: left;
+	margin: 10px;
+	border: 2px solid #ccc;
+	@include rounded(5px);
+	
+	h2 {		
+		margin: 0 $defaultMargin 0 $defaultMargin;
+		font: 20px Verdana;
+	}
+	
+	#artist_name {
+		width: 140px;
+	}
+	
+	h3 {
+		margin: $defaultMargin $defaultMargin 0 $defaultMargin;
+		font: 14px Verdana;
+	}
+	
+	a {
+		margin: 0 $defaultMargin $defaultMargin ($defaultMargin + 2px);
+		font: 10px Verdana;
+		text-decoration: none;
+	}
+	
+	hgroup {
+		margin-bottom: 15px;
+	}
+}
+
+#pop {
+	display: inline;
+	margin: 15px;
+}
+
+#map_wrapper {
+	width: 500px;
+	height: 300px;
+	margin: 0;
+	padding:0;
+}
+
+#av_text{
+	font: 11px Verdana;
+	color: #000;
+	margin-left: 3px;
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type='text/javascript' src='resources/jquery-1.9.1.min.js'></script>
+<script type='text/javascript' src='resources/underscore-min.js'></script>
+<script type='text/javascript' src='resources/jQuery.XDomainRequest.js'></script>
+
+<script type='text/javascript' src='resources/progress.js'></script>
+<script type='text/javascript' src='resources/data.js'></script>
+<script type='text/javascript' src='resources/map.js'></script>
+<script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
+
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.css" />
+<link type="text/css" rel="stylesheet" href='resources/styles.css' />
+
+<title>
+Spotify Catalogue
+</title>
+
+</head>
+<body>
+<div id='container'>
+	<!--[if lte IE 8]>
+		<div style="color:#cc0000;width:70%">This page does not look very good, right? That's because you're using an old version of Internet Explorer.<br>I recommend you to change browser or get Internet Explorer 9.</div>
+	<![endif]-->
+	<header id='main_header'>
+		<hgroup>
+			<h1>Spotify Catalogue</h1>
+		</hgroup>
+	</header>
+	<section id='search_section'>
+		<div>
+			<input id='search_input' title='Search for an artist'>
+		</div>
+		<ul id='artist_list'>
+		</ul>
+	</section>
+	<section id='content'>
+		<section id='artist_section' class='info'>
+			<header>
+				<hgroup>
+					<h3>Artist:</h3>
+					<h2 id='artist_name'></h2>
+					<a href='' id='artist_link' title='Listen to the artist in Spotify'>Open in Spotify</a>
+				</hgroup>
+				<div id='pop' title='Popularity'>
+					<img />
+					<img />
+					<img />
+					<img />
+					<img />
+					<img />
+					<img />
+					<img />
+					<img />
+					<img />
+				</div>
+			</header>
+		</section>
+		<section id='album_section' class='info'>
+			<header>
+				<hgroup>
+					<h3>Album:</h3>
+					<h2 id='album_name'></h2>
+					<a href='' id='album_link'  title='Listen to the album in Spotify'>Open in Spotify</a>
+				</hgroup>
+				<div id='av_text'></div>
+				<div id='map_wrapper'></div>
+			</header>
+		</section>
+	</section>
+</div>
+
+<script>
+
+// Toggle section visibility.
+function toggleVisibility(section, show) 
+{
+	// Hide section if no name, otherwise show.
+	var d = 400;
+	if (show) { section.show(d); }
+	else { section.hide(d); }
+}
+
+// Update the artist section.
+function updateArtistSection(artistData) 
+{
+	var artistSection = $('#artist_section');
+	if (artistData === undefined) 
+	{
+		toggleVisibility(artistSection, false);
+		return;
+	}
+
+	$('#artist_name').text(artistData.name);
+	$('#artist_link').attr('href', artistData.uri);
+	
+	var popularity = Math.round(artistData.pop * 10);
+	for (var i=0; i<10; i++) 
+	{
+		var image = popularity > 0 ? 'resources/green.png' : 'resources/empty.png';
+		$('#pop').children().eq(i).attr('src', image);
+		popularity--;
+	}
+	
+	toggleVisibility(artistSection, true);
+}
+
+// Update the album section.
+function updateAlbumSection(albumData) 
+{
+	var albumSection = $('#album_section');
+	if (albumData === undefined) 
+	{
+		toggleVisibility(albumSection, false);
+		return;
+	}
+
+	$('#album_name').text(albumData.name + ' (' + albumData.year + ')');
+	$('#album_link').attr('href', albumData.uri);
+	toggleVisibility(albumSection, true);
+	
+	// Update the availability text.
+	var codes = albumData.available.length === 0 ? [] : albumData.available.split(' ');
+	$('#av_text').text('Available in ' + codes.length + ' countries');
+	
+	// Update the availability indication in the map.
+	MapHandler.update(codes);
+}
+
+// Collapse the list of albums for the active artist.
+function collapseActiveArtist() 
+{
+	var activeArtist = $('.activeArtist');
+	activeArtist.children().remove();
+	activeArtist.removeClass('activeArtist');
+}
+
+// Empty the artist and album sections.
+function emptySections() 
+{
+	updateArtistSection();
+	updateAlbumSection();
+}
+
+// Abort any data request.
+function abortDataRequest() 
+{	
+	if (DataHandler.abort())
+	{
+		// If a request was aborted, hide the progress icon.
+		ProgressHandler.hide();
+	}
+};
+
+// Update the album list.
+function updateAlbumList(artist, callback) 
+{
+	collapseActiveArtist();
+	abortDataRequest();
+
+	// Get albums data.
+	DataHandler.getAlbums(
+		artist.data().uri, 
+		function (data) 
+		{
+			artist.addClass('activeArtist');
+			var albumList = artist.append('<ul></ul>');
+		
+			// Update album list
+			for (var i=0; i < data.artist.albums.length; i++) 
+			{
+				var album = data.artist.albums[i].album;
+				var albumItem = $('<li class="album" title="' + album.name + '">' + album.name + '</li>');
+				albumItem.data({ 
+					name: album.name, 
+					uri: album.href, 
+					year: album.released, 
+					available: album.availability.territories });
+					
+				albumList.append(albumItem);
+			}
+		
+			// Update album section when an album item is clicked.
+			albumList.children('.album').click(function (e) 
+			{
+				var clickedItem = $(e.target);
+				if (clickedItem.hasClass('album')) 
+				{
+					updateAlbumSection(clickedItem.data());
+				}
+			});
+			
+			callback();
+		});
+}
+
+// Update the search results list.
+function updateArtistList(item, callback) 
+{
+	// Empty artist list & abort data request.
+	var artistList = $('#artist_list');
+	artistList.children().remove();
+	abortDataRequest();
+
+	// Get search text
+	var searchText = $('#search_input').get(0).value;
+	
+	// Get artists data.
+	DataHandler.getArtists(
+		searchText,
+		function (data) 
+		{
+			// Update artist list
+			for (var i=0; i < data.artists.length; i++) 
+			{
+				var artist = data.artists[i];
+				var listItem = $('<li class="artist" title="' + artist.name + '">' + artist.name + '</li>');
+				listItem.data({ name: artist.name, uri: artist.href, pop: artist.popularity });
+				artistList.append(listItem);
+			}
+			
+			// Update the search results list when an artist item is clicked.
+			artistList.children('.artist').click(function (e) {
+				var clickedItem = $(e.target);
+				if (!clickedItem.hasClass('album')) 
+				{
+					// An artist item was clicked.
+					if (clickedItem.hasClass('activeArtist')) 
+					{
+						emptySections();
+						collapseActiveArtist();
+					}
+					else 
+					{
+						updateAlbumSection();
+						updateArtistSection(clickedItem.data());
+						ProgressHandler.show(clickedItem, updateAlbumList);
+					}
+				}
+			});
+
+			callback();
+		});
+}
+
+// Search Enter key down
+var searchInput = $('#search_input');
+searchInput.keydown(function (e) 
+{
+	if (e.which === 13) {
+		emptySections();
+		ProgressHandler.show(searchInput.parent(), updateArtistList);
+	}
+});
+
+searchInput.click(function (e) 
+{
+	searchInput.get(0).value = '';
+});
+
+var adjustSize = function () 
+{
+	// Adjust size.
+	var container = $('#container');
+	var win = $(window);
+	container.width(win.width() - 20);
+	container.height(win.height() - 80);
+};
+
+$(window).resize(adjustSize);
+$('#search_section').resize(adjustSize);
+adjustSize();
+
+// Initialize sections.
+$('#artist_section').hide();
+$('#album_section').hide();
+
+// Initialize map.
+MapHandler.init('map_wrapper');
+
+// Initialize search.
+searchInput.get(0).value = 'abba';
+updateArtistList(searchInput, function () {});
+
+</script>
+
+</body>
+</html>

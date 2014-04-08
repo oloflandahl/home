@@ -1,0 +1,12 @@
+/* SVG */
+.word-cloud text {
+  cursor: default;
+  font-family: "Impact";
+  opacity: 0.4;
+  fill: #3C5A96; }
+
+.word-cloud text.highlight {
+  fill: #ff0000; }
+
+.word-cloud text:hover {
+  opacity: 1.0; }

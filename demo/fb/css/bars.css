@@ -1,0 +1,27 @@
+.bar rect {
+  opacity: 0.7;
+}
+
+.bar rect.old {
+  fill: #3C5A96;
+}
+
+.bar rect.new {
+  fill: #8B0000;
+}
+
+.bar rect:hover {
+  opacity: 1.0;
+}
+
+.bar text {
+  cursor: default;
+}
+
+.bar text.word {
+  fill: black;
+}
+
+.bar text.count {
+  fill: white;
+}

@@ -1,0 +1,105 @@
+.cards {
+  position: absolute;
+  bottom: 150px;
+  width: 100%; }
+  .cards ul {
+    position: relative; }
+    .cards ul li {
+      position: absolute;
+      left: -200px;
+      width: 100px;
+      height: 130px;
+      display: inline;
+      background: url(../img/cardback.jpg) no-repeat;
+      list-style: none;
+      overflow: hidden;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px; }
+      .cards ul li p, .cards ul li img {
+        display: none; }
+      .cards ul li:hover {
+        bottom: -110px; }
+      .cards ul li.front {
+        z-index: 10;
+        -moz-box-shadow: 3px 3px 5px #333333;
+        -webkit-box-shadow: 3px 3px 5px #333333;
+        box-shadow: 3px 3px 5px #333333; }
+      .cards ul li.active {
+        background: #fff;
+        border: 1px solid #555555;
+        bottom: -110px; }
+        .cards ul li.active p {
+          display: block;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          padding: a0px;
+          color: #555;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .cards ul li.active img {
+          display: block;
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          width: 50px;
+          left: 50%;
+          margin-left: -25px;
+          height: 50px;
+          top: 50%;
+          margin-top: -25px; }
+.info {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  margin: 10px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px 30px;
+  background-color: #ffffdd;
+  background-image: linear-gradient(bottom, #ffffee 30%, #ffffcc 60%);
+  background-image: -o-linear-gradient(bottom, #ffffee 30%, #ffffcc 60%);
+  background-image: -moz-linear-gradient(bottom, #ffffee 30%, #ffffcc 60%);
+  background-image: -webkit-linear-gradient(bottom, #ffffee 30%, #ffffcc 60%);
+  background-image: -ms-linear-gradient(bottom, #ffffee 30%, #ffffcc 60%); }
+  .info .header {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    -webkit-border-top-left-radius: 20px;
+    -moz-border-top-left-radius: 20px;
+    -ms-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-top-right-radius: 20px;
+    -ms-border-top-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #3c5a96;
+    background-image: linear-gradient(bottom, #284682 30%, #506eaa 60%);
+    background-image: -o-linear-gradient(bottom, #284682 30%, #506eaa 60%);
+    background-image: -moz-linear-gradient(bottom, #284682 30%, #506eaa 60%);
+    background-image: -webkit-linear-gradient(bottom, #284682 30%, #506eaa 60%);
+    background-image: -ms-linear-gradient(bottom, #284682 30%, #506eaa 60%); }
+    .info .header .name {
+      float: left; }
+    .info .header .date {
+      float: right; }
+  .info .message {
+    color: #777;
+    font-size: 18px;
+    padding: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-bottom-right-radius: 20px;
+    -ms-border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-bottom-left-radius: 20px;
+    -ms-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;

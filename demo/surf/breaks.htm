@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>
+	Breaks Maps
+	</title>
+	<link href="jquery.mobile.css" rel="stylesheet" type="text/css" />
+	<script src="jquery.js"></script>
+	<script src="jquery.mobile.js"></script>
+
+	<style type="text/css">
+
+	.sydney-south.align {
+		margin-left: 213px;
+	}
+	.coal-coast.align {
+		margin-left: 84px;
+		margin-bottom: -40px;
+	}
+	.south-coast.align {
+		margin-left: -30;
+	}
+
+	</style>
+
+</head>
+<body>
+	<a id="btn-align" href="#" data-role="button" style="margin:10px;">ALIGN</a>
+	<div class="sydney-south"><img src="http://www.wannasurf.com/spot/Australia_Pacific/Australia/NSW/Sydney_South/map/map_.gif"></div>
+	<div class="coal-coast"><img src="http://www.wannasurf.com/spot/Australia_Pacific/Australia/NSW/Coal_Coast/map/map_.gif"></div>
+	<div class="south-coast"><img src="http://www.wannasurf.com/spot/Australia_Pacific/Australia/NSW/South_Coast/map/map_.gif"></div>
+</body>
+
+<script type="text/javascript">
+
+$("#btn-align").click(function() {
+	$("div").toggleClass("align");
+});
+
+</script>
+
+</html>

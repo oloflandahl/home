@@ -1,0 +1,220 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+  <title>Spotify Catalogue</title> 
+  
+  <script src="../resources/jquery-1.9.1.min.js"></script>
+  <script src="jquery.mobile.js"></script>
+  <script src="../resources/map.js"></script>
+  <script src="../resources/data.js"></script>
+  <script src="../resources/progress.js"></script>
+  <script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="jquery.mobile.css" />
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.css" />
+</head> 
+<body> 
+
+<script type="text/javascript">
+
+var clickAlbum = function (e) {
+	var name = $(e.target).text();
+	$('#album_title').text(name);
+	var albumData = albums[name];
+	
+	// Update the availability text.
+	var codes = albumData.available.length === 0 ? [] : albumData.available.split(' ');
+	$('#av_text').text('Available in ' + codes.length + ' countries');
+	
+	var width = $('#album').width() - 50;
+	var height = width / 2;
+	$('#map_wrapper').width(width);
+	$('#map_wrapper').height(height);
+	
+	// Update the availability indication in the map.
+	MapHandler.update(codes);
+};
+
+var clickArtist = function (e) {
+	var name = $(e.target).text();
+	$('#artist_title').text(name);
+	var artistData = artists[name];
+	
+	var popularity = Math.round(artistData.pop * 10);
+	for (var i=0; i<10; i++)
+	{
+		var image = popularity > 0 ? 'images/green.png' : 'images/empty.png';
+		$('#pop').children().eq(i).attr('src', image);
+		popularity--;
+	}
+	
+	// Get albums data.
+	DataHandler.getAlbums(
+		artistData.uri, 
+		function (data) 
+		{
+			var albumList = $('#album_list');
+			albumList.children().remove();
+			albums = {};
+		
+			// Update album list
+			for (var i=0; i < data.artist.albums.length; i++) 
+			{
+				var album = data.artist.albums[i].album;
+				albums[album.name] = {
+					uri: album.href, 
+					year: album.released, 
+					available: album.availability.territories};
+				
+				var albumItem = $('<li><a href="#album">' + album.name + '</a></li>');
+				albumItem.click(clickAlbum);
+				albumList.append(albumItem);
+			}
+			
+			albumList.listview('refresh');
+		});
+};
+
+var search = function () {
+	// Get artists data.
+	DataHandler.getArtists(
+		$('#search_input').get(0).value,
+		function (data) 
+		{
+			var artistList = $('#artist_list');
+			artistList.children().remove();
+			artists = {};
+		
+			// Update artist list
+			for (var i=0; i < data.artists.length; i++) 
+			{
+				var artist = data.artists[i];
+				artists[artist.name] = {
+					uri: artist.href, 
+					pop: artist.popularity };
+				
+				var listItem = $('<li><a href="#artist">' + artist.name + '</a></li>');
+				listItem.click(clickArtist);
+				artistList.append(listItem);
+			}
+			
+			artistList.listview('refresh');
+		});
+};
+
+	$(document).ready(function () {
+		var artists = {};
+		var albums = {};
+		$('#ok_button').click(search);
+		
+		// Initialize map.
+		MapHandler.init('map_wrapper');
+	});
+	
+</script>
+
+<!-- SEARCH PAGE -->
+
+<div data-role="page" id="search" data-theme='a' data-header-theme='a' data-content-theme='s'>
+ 
+  <div data-role="header">
+    <h1>Spotify Catalogue</h1>
+	<a href="#about" data-icon="info" class="ui-btn-right">About</a>
+  </div>
+ 
+  <div data-role="content">
+    <p>Search for an artist:</p>
+    <input id='search_input'>
+	<a href="#artists" id='ok_button' data-role="button">GO!</a>
+  </div>
+
+</div>
+
+<!-- ARTISTS PAGE -->
+
+<div data-role="page" id="artists" data-theme='a' data-header-theme='a' data-content-theme='a'>
+ 
+  <div data-role="header">
+    <a href="#search" data-icon="arrow-l">Back</a>
+    <h1>Artists</h1>
+  </div>
+ 
+  <div data-role="content">
+    <ul id='artist_list' data-role="listview">
+	</ul>
+  </div>
+
+</div>
+
+<!-- ARTIST PAGE -->
+
+<div data-role="page" id="artist" data-theme='a' data-header-theme='a' data-content-theme='a'>
+ 
+  <div data-role="header">
+    <a href="#artists" data-icon="arrow-l">Back</a>
+    <h1 id="artist_title">Artist</h1>
+	<div id='pop'>
+		<img />
+		<img />
+		<img />
+		<img />
+		<img />
+		<img />
+		<img />
+		<img />
+		<img />
+		<img />
+	</div>
+  </div>
+ 
+  <div data-role="content">
+    <ul id='album_list' data-role="listview">
+    </ul>
+  </div>
+
+</div>
+
+<!-- ALBUM PAGE -->
+
+<div data-role="page" id="album" data-theme='a' data-header-theme='a' data-content-theme='a'>
+ 
+  <div data-role="header">
+    <a href="#artist" data-icon="arrow-l">Back</a>
+    <h1 id='album_title'>Album</h1>
+  </div>
+ 
+  <div data-role="content">
+	<p id='av_text'></p>
+    <div id='map_wrapper'></div>
+  </div>
+
+</div>
+
+<!-- ABOUT PAGE -->
+ 
+<div data-role="page" id="about" data-theme='a' data-header-theme='a' data-content-theme='a'>
+ 
+  <div data-role="header">
+    <a href="#search" data-icon="arrow-l">Back</a>
+    <h1>About</h1>
+  </div>
+ 
+  <div data-role="content">
+    <p>
+	This is a mobile version of the Spotify Catalogue project.<br>
+	Created by Olof Landahl<br><br><br>
+	<u>Instructions:</u><br><br>
+	1. Search for an artist<br><br>
+	2. Select an artist<br>
+	(View the artist popularity)<br><br>
+	3. Select an album<br>
+	(View the availability of the album)
+	</p>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width initial-scale=0.5" />
+	
+	<link href="jquery.mobile.css" rel="stylesheet" type="text/css" />
+	<link href="http://www.surf-forecast.com/stylesheets/feed.css" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="jquery.js"></script>
+	<script src="jquery.mobile.js"></script>
+	
+	<title>
+	Sydney Surf Forecast
+	</title>
+</head>
+<body>
+	<div id="wf-weatherfeed">
+		<div id="visible-spots"></div>
+		<a id="more-button" href="" data-role="button" style="margin:10px;">MORE</a>
+		<div id="hidden-spots" style="display: none; border-top: solid 1px #ccc;"></div>
+		<div style="border-top: solid 1px #ccc;">
+		<a href="maps.htm" data-role="button" style="margin:10px;">MAPS</a>
+		<a href="breaks.htm" data-role="button" style="margin:10px;">BREAKS</a>
+		</div>
+	</div>
+	
+	<script>
+	
+	var hiddenForecasts = [];
+	
+	function addSpot (name, bestSwell, bestWind, visible) {
+		var forecast = '<iframe style="overflow:hidden;border:none;" allowtransparency="true" height="272" width="469" src="http://www.surf-forecast.com/breaks/' + name + '/forecasts/feed/m" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"><p>Your browser does not support iframes.</p></iframe>';
+		forecast += '<p style="margin:0 0 0 10;">Best: Swell ' + bestSwell + ' | Wind ' + bestWind + '</p>';
+		
+		var element = '<div>';
+		if (visible) {
+			element += forecast;
+		} else {
+			hiddenForecasts.push(forecast);
+		}
+		
+		element += '<p style="text-align:center;">';
+		element += '<a href="http://www.surf-forecast.com/breaks/' + name + '/forecasts/latest" target="_blank" data-inline="true" data-role="button">48h</a>';
+		element += '<a href="http://www.surf-forecast.com/breaks/' + name + '/forecasts/latest/six_day" target="_blank" data-inline="true" data-role="button">6 days</a>';
+		element += '<a href="http://www.surf-forecast.com/breaks/' + name + '?utm_source=embeddable&amp;utm_medium=widget&amp;utm_campaign=' + name + '" target="_blank" data-inline="true" data-role="button">details</a>';
+		element += '</p></div>';
+		
+		var containerId = visible ? '#visible-spots' : '#hidden-spots';
+		$(containerId).append(element);
+	}
+	
+	addSpot("Bondi-Beach", "S", "NNW", true);
+	addSpot("Coogee", "SE", "W", true);
+	addSpot("Maroubra-Beach", "NE", "NW", true);
+	
+	addSpot("Soldiers-Beach", "SSE", "W", false);
+	addSpot("Terrigal-Haven", "SE", "SW", false);
+	addSpot("Bulli-Beach", "NE", "NW", false);
+	addSpot("Bombo-Beach", "SE", "W", false);
+	addSpot("Port-Kembla-Beach", "SE", "NW", false);
+	addSpot("Werri-Beach", "SE", "NNW", false);
+	addSpot("Seven-Mile-Beach", "SE", "NNW", false);
+	
+
+	
+	$("#more-button").one("click", function() {
+		$("#hidden-spots div").each(function (i, el) {
+			$(el).prepend(hiddenForecasts[i]);
+		});
+	});
+	
+	$("#more-button").click(function () {
+		$("#hidden-spots").toggle();
+	});
+		
+	</script>
+</body>
+</html>

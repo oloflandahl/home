@@ -1,0 +1,60 @@
+header {
+  width: 820px;
+  margin: 10px;
+  padding: 5px;
+  font: 14px Verdana sans-serif;
+  border: 2px solid #cccccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+#selectors {
+  float: left;
+  margin-top: 10px;
+  padding: 20px;
+  font: 14px Verdana sans-serif; }
+
+#category_selector {
+  margin-top: 3px; }
+
+.legend_item {
+  float: left;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #999999;
+  margin: 2px 5px 0px 22px; }
+
+#seasons {
+  margin-top: 30px; }
+
+#canvas {
+  float: left;
+  margin-left: 20px;
+  font: 10px sans-serif; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #cccccc;
+  shape-rendering: crispEdges; }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px; }
+
+.summer {
+  fill: #ffffdc;
+  background-color: #ffffdc; }
+
+.autumn {
+  fill: #fff5e6;
+  background-color: #fff5e6; }
+
+.winter {
+  fill: #e6f5ff;
+  background-color: #e6f5ff; }
+
+.spring {
+  fill: #f0ffdc;
+  background-color: #f0ffdc; }

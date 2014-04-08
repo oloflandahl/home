@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Script links</title></head>
+<body>
+	<style type="text/css">
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 1em;
+			color: #777;
+			margin: 2em;
+		}
+		a {
+			font-size: 1.1em;
+			text-decoration: none;
+		}
+		ul {
+		    margin: 0.75em 1em;
+		    padding: 1em 1em;
+		    list-style: none;
+		}
+		li:before { 
+		    content: "";
+		    border-color: transparent #111;
+		    border-style: solid;
+		    border-width: 0.35em 0 0.35em 0.45em;
+		    display: block;
+		    height: 0;
+		    width: 0;
+		    left: -1em;
+		    top: 0.9em;
+		    position: relative;
+		}
+	</style>
+	<p>The app consist of a number of classes/modules that each have its limited responsibilities. The idea is that they are decoupled from each other so each module can be used in any other implementation. They are all singletons which mean there is only one instance of each module.<br>
+		The scripts have not been minified to retain the readability of the code.</p>
+	<ul>
+		<li>
+			<a href="app.js">App</a> is responsible for handling interactions and events in the document. This is the main class that is the connection between the html document and the other modules.
+		</li>
+		<li>
+			<a href="facebook.js">Facebook</a> is responsible for all interactions with the Graph API, including; loading the JavaScript SDK, handling authorisation, response errors and caching. It's the bridge between the app and the facebook api.
+		</li>
+		<li>
+			<a href="store.js">Store</a> is responsible for caching data, in the session storage if available, or otherwise in an alternative storage object. This is used for caching facebook api response data as well as calculated word data.
+		</li>
+		<li>
+			<a href="progress.js">Progress</a> is responsible for showing progress indication on the page. It's through this module that proress is started, updated and ended in a controlled way.
+		</li>
+		<li>
+			<a href="words.js">Words</a> is responsible for handling and storing words. It's the interface through where the calculated data (the words) is available.
+		</li>
+		<li>
+			<a href="logger.js">Logger</a> is responsible for logging on levels Debug, Timer, Warning and Error. I use this module to notify the user of any restrictions or errors that might happen and also for debugging when developing.
+		</li>
+		<li>
+			<a href="resize.js">Resize</a> is responsible for adjusting the size of a specified element when the window is resized.
+		</li>
+		<li>
+			<a href="extractWords.js">Extract Words Worker</a> contains the code used to extract words, which is used both by asynchronous workers for browsers where Web Workers are supported and for the synchronous implemnetation. The script file also represent an actual web worker.
+		</li>
+		<li>
+			<a href="wordcloud.js">Word Cloud</a> is responsible for the initialisation and rendering of the word cloud visualisation.
+		</li>
+		<li>
+			<a href="bars.js">Bar Chart</a> is responsible for the initialisation and rendering of the bar chart visualisation.
+		</li>
+	</ul>
+</body>
+</html>
