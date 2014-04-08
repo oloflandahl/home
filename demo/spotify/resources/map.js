@@ -16,7 +16,8 @@ var MapHandler = new function ()
 		mapCreationInit = true;
 	
 		// Create the CartoDB map visualisation.
-		cartodb.createVis(id, 'http://oloflandahl.cartodb.com/api/v1/viz/22447/viz.json', {
+		// cartodb.createVis(id, 'http://oloflandahl.cartodb.com/api/v1/viz/22447/viz.json', {
+		cartodb.createVis(id, 'http://oloflandahl.cartodb.com/api/v2/viz/9a1411bc-bf07-11e3-84c2-0e73339ffa50/viz.json', {
 			tiles_loader: false,
 			zoomControl: true,
 			cartodb_logo: false,
@@ -104,7 +105,7 @@ var MapHandler = new function ()
 	{
 		if (map !== null) 
 		{
-			map.getLayers()[1].setCartoCSS('#{{table_name}}' + style);
+			map.getLayers()[1].setCartoCSS('#table_name ' + style);
 		}
 	}
 	
@@ -150,7 +151,7 @@ var MapHandler = new function ()
 			var defaultStyle = 			
 				'marker-opacity:0.7;\
 				marker-allow-overlap:true;\
-				marker-width:6;\
+				marker-width:10;\
 				marker-line-color:#fff;\
 				marker-line-opacity:0.5;';
 			
