@@ -277,13 +277,14 @@
 				oContent = overlay.find(SEL.content),
 				closeButton = overlay.find(SEL.close);
 
-			var show = function(markup) {
+			var show = function() {
 				body.addClass('scroll-lock');
-				oContent.html('');
-				$.when( $(SEL.overlay).fadeIn(FADE_DUR) )
-					.then(function() {
-						oContent.html(markup);
-					});
+				oContent.html('loading...'); // TODO
+				$(SEL.overlay).fadeIn(FADE_DUR);
+			};
+
+			var update = function(markup) {
+				oContent.html(markup);
 			};
 
 			var hide = function() {
@@ -301,6 +302,7 @@
 
 			return {
 				show: show,
+				update: update,
 				hide: hide
 			};
 
@@ -410,11 +412,12 @@
 					icon = item.find(SEL.icon).get(0),
 					iconClass = icon ? icon.classList[1] : null; // TODO?
 
+				overlay.show();
 				$.getJSON(url, function(data) {
 					data.iconClass = data.iconClass || iconClass;
 
 					var template = TEMPLATES[data.type];
-					overlay.show(_.template(template, data));
+					overlay.update(_.template(template, data));
 				});
 			});
 
