@@ -356,6 +356,7 @@
 	},
 	"file_history":
 	[
+		"/Users/oloflandahl/home/demo/spotify/index.html",
 		"/Users/oloflandahl/home/index_offline.html",
 		"/Users/oloflandahl/home/css/base.scss",
 		"/Users/oloflandahl/home/js/content/development/lego.json",
@@ -461,6 +462,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"availability",
 			"closest",
 			"Scripts/",
 			"<script",
@@ -587,8 +589,7 @@
 			"px",
 			"<div class='text'>",
 			" $timing",
-			"-property",
-			", margin-left, margin-top"
+			"-property"
 		],
 		"highlight": true,
 		"in_selection": false,

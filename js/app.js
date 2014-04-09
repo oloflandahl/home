@@ -14,6 +14,17 @@
 
 	$(document).ready(function() {
 
+		// Lazy load images when all content has loaded
+		$(window).load(function() {
+			setTimeout(function() {
+			$('img:not("[src]")').each(function() {
+				var image = $(this);
+				image.hide()
+					.attr('src', image.data('src'))
+					.fadeIn(400);
+			})}, 1000);
+		});
+
 		$('.group li, .links li, .contact, .arrow, .close-btn').addTouchHandler();
 		$('.group').on('swiperight', 'li', function() { $(this).removeClass('swiped') });
 		$('.group').on('swipeleft', 'li', function() { $(this).addClass('swiped') });
@@ -110,7 +121,7 @@
 				if (scrolling) {
 					clearTimeout(scrolling);
 				}
-				scrolling = setTimeout(updateActive, 200);
+				scrolling = setTimeout(updateActive, 100);
 			});
 
 			var resizing;
