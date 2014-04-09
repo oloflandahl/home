@@ -287,79 +287,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10209,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index_offline.html",
-			"settings":
-			{
-				"buffer_size": 9766,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/base.scss",
-			"settings":
-			{
-				"buffer_size": 8091,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/content/development/lego.json",
-			"settings":
-			{
-				"buffer_size": 669,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/content/development/crimevis.json",
-			"settings":
-			{
-				"buffer_size": 895,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/content/development/spotify.json",
-			"settings":
-			{
-				"buffer_size": 928,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/content/development/home.json",
-			"settings":
-			{
-				"buffer_size": 434,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/mobile.scss",
-			"settings":
-			{
-				"buffer_size": 2169,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/desktop.scss",
-			"settings":
-			{
-				"buffer_size": 4717,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/_helper.scss",
-			"settings":
-			{
-				"buffer_size": 1472,
+				"buffer_size": 10236,
 				"line_ending": "Unix"
 			}
 		},
@@ -367,7 +295,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 17754,
+				"buffer_size": 17806,
 				"line_ending": "Unix"
 			}
 		}
@@ -428,6 +356,15 @@
 	},
 	"file_history":
 	[
+		"/Users/oloflandahl/home/index_offline.html",
+		"/Users/oloflandahl/home/css/base.scss",
+		"/Users/oloflandahl/home/js/content/development/lego.json",
+		"/Users/oloflandahl/home/js/content/development/crimevis.json",
+		"/Users/oloflandahl/home/js/content/development/home.json",
+		"/Users/oloflandahl/home/css/mobile.scss",
+		"/Users/oloflandahl/home/css/desktop.scss",
+		"/Users/oloflandahl/home/css/_helper.scss",
+		"/Users/oloflandahl/home/js/app.js",
 		"/Users/oloflandahl/home/apps/fb-words/index.html",
 		"/Users/oloflandahl/home/css/desktop.css",
 		"/Users/oloflandahl/home/js/content/cv/swedish.json",
@@ -440,20 +377,12 @@
 		"/Users/oloflandahl/home/js/content/photos/nature.json",
 		"/Users/oloflandahl/home/js/content/photos/concerts.json",
 		"/Users/oloflandahl/home/js/content/photos/city.json",
-		"/Users/oloflandahl/home/js/app.js",
 		"/Users/oloflandahl/home/picasa/concerts.json",
 		"/Users/oloflandahl/home/picasa/city.json",
-		"/Users/oloflandahl/home/css/mobile.scss",
-		"/Users/oloflandahl/home/css/desktop.scss",
 		"/Users/oloflandahl/home/js/content/development/tibco.json",
 		"/Users/oloflandahl/home/js/content/development/ibr.json",
-		"/Users/oloflandahl/home/js/content/development/lego.json",
-		"/Users/oloflandahl/home/css/base.scss",
 		"/Users/oloflandahl/home/js/content/development/fb.json",
-		"/Users/oloflandahl/home/css/_helper.scss",
-		"/Users/oloflandahl/home/js/content/development/crimevis.json",
 		"/Users/oloflandahl/home/css/_colors.scss",
-		"/Users/oloflandahl/home/index_offline.html",
 		"/Users/oloflandahl/home/js/content/development/spotify.json",
 		"/Users/oloflandahl/home/js/jquery-swipe.min.js",
 		"/Users/oloflandahl/home/css/_font-icons.scss",
@@ -532,6 +461,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"closest",
 			"Scripts/",
 			"<script",
 			".js",
@@ -658,8 +588,7 @@
 			"<div class='text'>",
 			" $timing",
 			"-property",
-			", margin-left, margin-top",
-			"<div class='content'>"
+			", margin-left, margin-top"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -719,7 +648,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -728,165 +657,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10209,
+						"buffer_size": 10236,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2607,
-								2607
+								877,
+								877
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 662.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index_offline.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9766,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								614,
-								614
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8091,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8091,
-								8091
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 7399.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/content/development/lego.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 669,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								472,
-								472
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "js/content/development/crimevis.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 895,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								876,
-								880
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/content/development/spotify.json",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 928,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -897,136 +681,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "js/content/development/home.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 434,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								429,
-								429
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "css/mobile.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2169,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1717,
-								1717
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1474.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "css/desktop.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1496,
-								1496
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1050.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "css/_helper.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								881,
-								881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
+					"buffer": 1,
 					"file": "js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17754,
+						"buffer_size": 17806,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9046,
-								9046
+								17329,
+								17329
 							]
 						],
 						"settings":
@@ -1035,10 +703,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1293.0,
+						"translation.y": 6445.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
