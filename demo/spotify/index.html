@@ -184,7 +184,7 @@ function updateAlbumList(artist, callback)
 					name: album.name, 
 					uri: album.href, 
 					year: album.released, 
-					available: album.availability.territories });
+					available: album.availability ? album.availability.territories : [] });
 					
 				albumList.append(albumItem);
 			}
