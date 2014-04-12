@@ -104,7 +104,8 @@
 				else {
 					groups.each(function(i) {
 						var groupPos = $(this).offset().top;
-						if (groupPos > offsetScrollPos && groupPos - middleScroll > 0) { return false }
+						if (Math.abs(groupPos - offsetScrollPos) < 50) { newIndex++; return false; }
+						else if (groupPos > offsetScrollPos && groupPos - middleScroll > 0) { return false }
 						else { newIndex++ }
 					});
 					newIndex = Math.max(newIndex, 0);
