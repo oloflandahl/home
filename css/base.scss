@@ -281,6 +281,10 @@ body {
 		z-index: 502;
 		overflow-y: scroll;
 
+		&.loading {
+			background: url(../img/loading.gif) no-repeat center;
+		}
+
 		.top {
 			@include clearfix;
 		

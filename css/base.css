@@ -251,6 +251,8 @@ body {
     padding: 40px;
     z-index: 502;
     overflow-y: scroll; }
+    #overlay .content.loading {
+      background: url(../img/loading.gif) no-repeat center; }
     #overlay .content .top:after {
       content: "";
       display: table;

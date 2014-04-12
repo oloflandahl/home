@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"update",
+				"updateActive"
+			],
+			[
 				"scroll",
 				"scrollPos"
 			],
@@ -287,7 +291,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10236,
+				"buffer_size": 10286,
 				"line_ending": "Unix"
 			}
 		},
@@ -295,7 +299,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 17806,
+				"buffer_size": 18076,
 				"line_ending": "Unix"
 			}
 		}
@@ -462,6 +466,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"updateacti",
+			"img data-src",
+			"win.scroll",
+			"scroll(",
+			"scrolltop",
+			"scroll",
+			"img src",
 			"availability",
 			"closest",
 			"Scripts/",
@@ -582,14 +593,7 @@
 			"activeGroup",
 			"z-index",
 			"small",
-			"imageh",
-			"menuHeight",
-			"setIndex",
-			"\"",
-			"px",
-			"<div class='text'>",
-			" $timing",
-			"-property"
+			"imageh"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -597,6 +601,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"img src",
+			"img data-src",
 			"clearfix",
 			"$small",
 			"$medium",
@@ -649,7 +655,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -658,15 +664,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10236,
+						"buffer_size": 10286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								877,
-								877
+								5631,
+								5643
 							]
 						],
 						"settings":
@@ -675,10 +681,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2431.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -687,15 +693,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17806,
+						"buffer_size": 18076,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17329,
-								17329
+								9966,
+								9966
 							]
 						],
 						"settings":
@@ -704,10 +710,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6445.0,
+						"translation.y": 1736.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

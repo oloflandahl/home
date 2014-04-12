@@ -285,21 +285,23 @@
 
 			var body = $('body'),
 				overlay = $(SEL.overlay),
+				loadingClass = 'loading',
+				lockClass = 'scroll-lock',
 				oContent = overlay.find(SEL.content),
 				closeButton = overlay.find(SEL.close);
 
 			var show = function() {
-				body.addClass('scroll-lock');
-				oContent.html('loading...'); // TODO
+				body.addClass(lockClass);
+				oContent.addClass(loadingClass);
 				$(SEL.overlay).fadeIn(FADE_DUR);
 			};
 
 			var update = function(markup) {
-				oContent.html(markup);
+				oContent.html(markup).removeClass(loadingClass);
 			};
 
 			var hide = function() {
-				body.removeClass('scroll-lock');
+				body.removeClass(lockClass);
 				$(SEL.overlay).fadeOut(FADE_DUR);
 			};
 
@@ -384,8 +386,9 @@
 						'bgcolor="#000000"'+
 						'src="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf"'+
 						'width="100%" height="100%"'+
-						'flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F113241056971667725100%2Falbumid%<%= album.id %>%3Falt%3Drss%26kind%3Dphoto%26authkey%<%= album.key %>%26hl%3Den_US"'+
+						'flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F113241056971667725100%2Falbumid%2F<%= album.id %>%3Falt%3Drss%26kind%3Dphoto%26authkey%<%= album.key %>%26hl%3Den_US"'+
 						'pluginspage="http://www.macromedia.com/go/getflashplayer">'+
+						// '<p>Flash is not installed. Click <a href="https://plus.google.com/photos/113241056971667725100/albums/<%= album.id %>?authkey=<%= album.key %>">here</a> to see the album.'+
 					'</embed>',
 				music:
 					'<div class="top">'+
@@ -403,7 +406,7 @@
 					'<a href="<%= url %>" target="_BLANK">Listen</a> (external link)',
 				cv:
 					'<object class="pdf-container" data="<%= url %>#toolbar=1&amp;navpanes=0&amp;scrollbar=1&amp;page=1&amp;pagemode=thumbs&amp;view=Fit" type="application/pdf" width="100%" height="100%">'+
-						'<p>Unfortunately you do not have a PDF plugin for this browser. To view the CV, use the link below.</p>'+
+						'<p>Unfortunately you do not have a PDF plugin for this browser. To view the CV, click <a href="<%= url %>">here</a>.</p>'+
 					'</object>'
 			};
 
