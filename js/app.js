@@ -168,17 +168,17 @@
 			});
 
 			menu.on('click', SEL.links, function(e) {
-				if (this !== e.target) {
-					return true;
-				}
-
 				if (!linksList.is(':visible')) {
 					links.addClass('on');
 					linksList.fadeIn(FADE_DUR);
 				}
 				else if(links.is('.on')) {
-					links.removeClass('on');
-					linksList.fadeOut(FADE_DUR);
+					var delay = this !== e.target ? FADE_DUR + 200 : 0;
+					setTimeout(function() {
+						links.removeClass('on');
+						linksList.fadeOut(FADE_DUR);
+					}, delay);
+					
 				}
 
 				return false;
