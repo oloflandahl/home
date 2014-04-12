@@ -20,45 +20,10 @@
       font-size: 24px;
       font-weight: bold; }
     #menu .header h3 {
-      font-size: 16px; }
-    #menu .header .contact {
-      display: inline-block;
-      padding: 5px 10px; }
-      #menu .header .contact a {
-        display: inline-block;
-        color: #fff;
-        text-decoration: none; }
-      #menu .header .contact .icon {
-        font-size: 20px;
-        line-height: 20px;
-        opacity: 0.5; }
-        #menu .header .contact .icon:hover, #menu .header .contact .icon.touching {
-          opacity: 1; }
-      #menu .header .contact .icon-mail:before {
-        font-family: "FontAwesome";
-        content: "\f0e0";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
-      #menu .header .contact .icon-linkedin:before {
-        font-family: "FontAwesome";
-        content: "\f08c";
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
+      font-size: 14px; }
     @media (max-width: 740px) {
       #menu .header {
-        width: 154px; }
-        #menu .header h3 {
-          display: none; }
-        #menu .header .contact {
-          padding-left: 0; } }
+        width: 154px; } }
   #menu .links {
     float: right;
     margin: 0 15px; }

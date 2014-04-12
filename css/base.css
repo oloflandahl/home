@@ -75,7 +75,8 @@ body {
         cursor: pointer; }
 
 #container {
-  padding-bottom: 40px; }
+  position: relative;
+  padding-bottom: 110px; }
   #container .arrow {
     -webkit-transition: opacity 1s;
     -moztransition: opacity 1s;
@@ -200,6 +201,53 @@ body {
             height: 100%;
             max-width: 360px;
             max-height: 180px; }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 5px 5%;
+  border-top: 1px solid #fff; }
+  #footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #footer .copyright {
+    float: left;
+    padding-top: 30px; }
+  #footer .contact {
+    float: right; }
+    #footer .contact a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none; }
+    #footer .contact .icon {
+      font-size: 50px;
+      line-height: 0;
+      padding: 5px;
+      opacity: 0.8; }
+      #footer .contact .icon:hover, #footer .contact .icon.touching {
+        opacity: 1; }
+    #footer .contact .icon-mail:before {
+      font-family: "FontAwesome";
+      content: "\f0e0";
+      speak: none;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased; }
+    #footer .contact .icon-linkedin:before {
+      font-family: "FontAwesome";
+      content: "\f08c";
+      speak: none;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased; }
 
 #overlay {
   display: none;
@@ -330,13 +378,6 @@ body.theme-light #menu {
   @media (max-width: 400px) {
     body.theme-light #menu .links.hover, body.theme-light #menu .links.touching {
       background-color: #96c8e6; } }
-  body.theme-light #menu .contact .icon {
-    -webkit-transition: color 1s;
-    -moztransition: color 1s;
-    -o-transition: color 1s;
-    -ms-transition: color 1s;
-    transition: color 1s;
-    color: #333333; }
 body.theme-light #container {
   background-color: white;
   color: #333333; }
@@ -365,6 +406,13 @@ body.theme-light #container {
         background-color: #ff7ea4; }
       body.theme-light #container .group li.text-content.image-small-content {
         background-color: white; }
+body.theme-light #footer .icon {
+  -webkit-transition: color 1s;
+  -moztransition: color 1s;
+  -o-transition: color 1s;
+  -ms-transition: color 1s;
+  transition: color 1s;
+  color: #333333; }
 
 .icon-computer:before {
   font-family: "FontAwesome";

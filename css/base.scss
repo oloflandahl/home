@@ -6,6 +6,9 @@
 	@include transition(background-color, 1s);
 }
 
+$footer-height: 70px;
+
+
 // Reset
 html, body {
 	width: 100%;
@@ -81,7 +84,8 @@ body {
 
 #container {
 
-	padding-bottom: 40px;
+	position: relative;
+	padding-bottom: $footer-height + 40px;
 
 	.arrow {
 		@include transition(opacity, 1s);
@@ -223,6 +227,48 @@ body {
 				}
 			}
 		}
+	}
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: $footer-height;
+	padding: 5px 5%;
+	border-top: 1px solid #fff;
+	@include clearfix;
+
+	.copyright {
+		float: left;
+		padding-top: 30px;
+	}
+
+	.contact {
+		float: right;
+
+		a {
+			display: inline-block;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.icon { 
+			font-size: 50px;
+			line-height: 0;
+			padding: 5px;
+
+			opacity: 0.8;
+
+			&:hover,
+			&.touching { 
+				opacity: 1; 
+			}
+		}
+
+		.icon-mail { @include icon($icon-envelope) }
+		.icon-linkedin { @include icon($icon-linkedin-square) }
 	}
 }
 
@@ -434,13 +480,6 @@ body.theme-light {
 				}
 			}
 		}
-
-		.contact {
-			.icon {
-				@include transition(color, 1s);
-				color: $other_text;
-			}
-		}
 	}
 	#container {
 		background-color: $other_bg;
@@ -462,6 +501,10 @@ body.theme-light {
 				&.image-small-content { background-color: #fff }
 			}
 		}
+	}
+	#footer .icon {
+		@include transition(color, 1s);
+		color: $other_text;
 	}
 }
 

@@ -16,16 +16,12 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 
 	.header {
 		position: absolute;
-		h1 { 
-			padding: 5px;
+		padding: 5px;
+		h1 {
 			font-size: 18px;
 			font-weight: bold;
 		}
-		h3 { display: none }
-
-		.contact {
-			display: none;
-		}
+		h3 { font-size: 12px }
 	}
 
 	.links {
@@ -50,7 +46,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 		}
 
 		// Create dropdown menu to the right of the header
-		@media (max-width: 400px) {
+		@media (max-width: 430px) {
 
 			$offset: ($linkWidth - $imgSize) / 2;
 			
@@ -114,7 +110,7 @@ $menuHeight: $linkWidth + 2*$menuPadding;
 
 		li {
 			width: 100%;
-			height: 140px;
+			height: 120px;
 			margin: 5px 0;
 			font-size: 170%;
 

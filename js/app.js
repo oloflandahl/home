@@ -293,7 +293,7 @@
 
 			var show = function() {
 				body.addClass(lockClass);
-				oContent.addClass(loadingClass);
+				oContent.html('').addClass(loadingClass);
 				$(SEL.overlay).fadeIn(FADE_DUR);
 			};
 
