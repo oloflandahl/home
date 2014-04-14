@@ -25,7 +25,7 @@ html, body {
 
 body {
   min-width: 270px;
-  font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
   font-size: 16px;
   color: #fff;
   -webkit-transition: background-color 1s, color 1s;
