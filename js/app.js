@@ -338,7 +338,7 @@
 				top: function(type) {
 					var coursePre = type === 'course' ? 'Course: ' : '';
 					return '<div class="top">'+
-						'<div class="icon <%= iconClass %>"></div>'+
+						'<div class="<%= iconClass %>"></div>'+
 						'<div class="header">'+
 							'<h2><%= title %></h2>'+
 							'<ul>'+
@@ -425,7 +425,7 @@
 					groupId = item.closest(SEL.group).attr('id'),
 					url = [BASE_PATH, groupId, itemId].join('/')+'.json',
 					icon = item.find(SEL.icon).get(0),
-					iconClass = icon ? icon.classList[1] : null; // TODO?
+					iconClass = icon ? (icon.classList ? icon.classList[0] + ' ' + icon.classList[1] : icon.className) : null;
 
 				overlay.show();
 				$.getJSON(url, function(data) {
