@@ -121,11 +121,11 @@
         -webkit-font-smoothing: antialiased; }
   #container ul.group {
     width: 70%;
-    margin: 0 5%; }
+    margin: 40px 5%; }
     #container ul.group .arrow.small {
       display: none; }
     #container ul.group h2 {
-      padding: 20px 0 10px 0; }
+      padding: 40px 0 10px 0; }
     #container ul.group li {
       width: 360px;
       height: 180px;

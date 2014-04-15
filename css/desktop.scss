@@ -139,11 +139,11 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 
 	ul.group {
 		width: 70%;
-		margin: 0 5%;
+		margin: 40px 5%;
 
 		.arrow.small { display: none }
 
-		h2 { padding: 20px 0 10px 0 }
+		h2 { padding: 40px 0 10px 0 }
 
 		li {
 			width: 360px;
