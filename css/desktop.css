@@ -60,6 +60,7 @@
         width: 26px;
         height: 26px;
         margin: 2px 0;
+        padding: 2px;
         cursor: pointer;
         -webkit-transition: border-color 0.4s;
         -moztransition: border-color 0.4s;
