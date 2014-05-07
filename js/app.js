@@ -383,14 +383,14 @@
 					PARTIAL_TEMPLATES.links,
 				picasa:
 					// '<div class="top-over"><h2><%= title %></h2></div>'+
-					'<embed type="application/x-shockwave-flash"'+
+					'<object type="application/x-shockwave-flash"'+
 						'bgcolor="#000000"'+
-						'src="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf"'+
+						'data="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf"'+
 						'width="100%" height="100%"'+
 						'flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F113241056971667725100%2Falbumid%2F<%= album.id %>%3Falt%3Drss%26kind%3Dphoto%26authkey%<%= album.key %>%26hl%3Den_US"'+
 						'pluginspage="http://www.macromedia.com/go/getflashplayer">'+
-						// '<p>Flash is not installed. Click <a href="https://plus.google.com/photos/113241056971667725100/albums/<%= album.id %>?authkey=<%= album.key %>">here</a> to see the album.'+
-					'</embed>',
+						'<p>Flash is not installed. Click <a href="https://plus.google.com/photos/113241056971667725100/albums/<%= album.id %>?authkey=<%= album.key %>">here</a> to see the album.'+
+					'</object>',
 				music:
 					'<div class="top">'+
 						'<div class="icon <%= iconClass %>"></div>'+
