@@ -389,7 +389,8 @@
 						'width="100%" height="100%"'+
 						'flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F113241056971667725100%2Falbumid%2F<%= album.id %>%3Falt%3Drss%26kind%3Dphoto%26authkey%<%= album.key %>%26hl%3Den_US"'+
 						'pluginspage="http://www.macromedia.com/go/getflashplayer">'+
-						'<p>Flash is not installed. Click <a href="https://plus.google.com/photos/113241056971667725100/albums/<%= album.id %>?authkey=<%= album.key %>">here</a> to see the album.'+
+							'<p>Flash Player is not installed. Get it <a href="http://get.adobe.com/flashplayer/" target="_blank">here</a>.<br><br>'+
+							'The album can be viewed at <a href="https://plus.google.com/photos/113241056971667725100/albums/<%= album.id %>?authkey=<%= album.key %>" target="_blank">google plus</a>.</p>'+
 					'</object>',
 				music:
 					'<div class="top">'+
