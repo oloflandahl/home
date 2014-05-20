@@ -12,7 +12,7 @@
 		],
 		"unsupported": {
 			"mobile": true,
-			"browsers": ["IE9"]
+			"browsers": ["IE8"]
 		},
 		"demoUrl": "demo/spotify"
 	}
