@@ -185,7 +185,7 @@ $menuHeight: $imgSize + $textHeight + $textTopPadding + 2*$linkPadding + 2*$menu
 			&.image-small-content {
 				width: 180px;
 				&:hover {
-					.content.alt { top: 70% }
+					.content.alt { top: 75% }
 					.content.image { opacity: 1 }
 				}
 			}

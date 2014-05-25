@@ -573,3 +573,13 @@ body.theme-light #footer .icon {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
+
+.icon-mobile:before {
+  font-family: "FontAwesome";
+  content: "\f10b";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }

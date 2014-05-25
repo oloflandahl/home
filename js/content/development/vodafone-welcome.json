@@ -1,0 +1,12 @@
+{
+	"type": "employment",
+	"title": "Vodafone - Welcome Hub",
+	"project": {
+		"tech": ["AngularJS", "CSS3", "Fatwire CMS"],
+		"date": "May 2014",
+		"description": "One of the modules/components I created for the internal responsive framework at Vodafone was the decision tree. It allowed the producers to build a journey that will take the user through anything that they need to know to get started with their new device and mobile plan.",
+		"links": [ 
+			{"text": "Go to page", "url": "http://www.vodafone.com.au/personal/welcome-hub", "description": "(external link)"}
+		]
+	}
+}
