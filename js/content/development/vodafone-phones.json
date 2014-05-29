@@ -2,7 +2,7 @@
 	"type": "employment",
 	"title": "Vodafone - Phones",
 	"project": {
-		"tech": ["BackboneJS", "jQuery", "RequireJS", "Ajax", "HTML5", "CSS3", "Fatwire CMS"],
+		"tech": ["BackboneJS", "jQuery", "RequireJS", "Ajax", "HTML5", "CSS3", "SASS", "Fatwire CMS"],
 		"date": "May 2014",
 		"description": "I was involved in creating a page to enable potential customers to find a mobile plan by selecting a device first. The implementation use asynchronous loading of scripts, a Model-View structure and API requests to fetch data.",
 		"links": [ 
