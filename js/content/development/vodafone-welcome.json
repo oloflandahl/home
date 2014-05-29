@@ -6,7 +6,7 @@
 		"date": "May 2014",
 		"description": "One of the modules/components I created for the internal responsive framework at Vodafone was the decision tree. It allows the website producers to build a journey that will take the user through anything that they need to know to get started with their new device and mobile plan. The module features automatic scrolling, changing background and progress bar. I also implemented the responsive top navigation menu that's used on all new Vodafone pages.",
 		"links": [ 
-			{"text": "Get Started", "url": "http://www.vodafone.com.au/personal/getstarted", "description": "(external link)"}
+			{"text": "Get Started", "url": "http://www.vodafone.com.au/personal/getstarted", "description": "(external link)"},
 			{"text": "Welcome Hub", "url": "http://www.vodafone.com.au/personal/welcome-hub", "description": "(external link)"}
 		]
 	}
