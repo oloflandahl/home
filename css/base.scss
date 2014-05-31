@@ -37,7 +37,7 @@ html, body {
 body {
 	min-width: 270px;
 	font-family: 'Segoe UI', 'Arial', sans-serif;
-	font-size: 16px;
+	font-size: 16px;	
 	color: #fff;
 
 	@include transition-double(background-color 1s, color 1s);
@@ -322,9 +322,11 @@ body {
 	.content {
 		position: absolute;
 		width: 96%;
+		max-width: 800px;
 		height: 96%;
 		margin: 2%;
 		padding: 40px;
+		line-height: 22px;
 		z-index: 502;
 		overflow-y: scroll;
 
