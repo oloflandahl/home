@@ -198,9 +198,8 @@ body {
           -ms-transition: opacity 1s;
           transition: opacity 1s; }
           #container ul.group li.image-small-content .content .image img {
-            height: 100%;
-            max-width: 360px;
-            max-height: 180px; }
+            width: 100%;
+            height: 100%; }
 
 #footer {
   position: absolute;
