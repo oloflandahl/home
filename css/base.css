@@ -294,7 +294,6 @@ body {
   #overlay .content {
     position: absolute;
     width: 96%;
-    max-width: 800px;
     height: 96%;
     margin: 2%;
     padding: 40px;
