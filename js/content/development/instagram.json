@@ -10,7 +10,7 @@
 			{"text": "Instagram API", "url": "https://instagram.com/developer/", "description": "(external link)"}
 		],
 		"unsupported": {
-			"mobile": true,
+			"mobile": false,
 			"browsers": []
 		},
 		"demoUrl": "demo/instagram"
