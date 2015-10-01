@@ -1,0 +1,18 @@
+{
+	"type": "project",
+	"title": "Instagram Search",
+	"project": {
+		"type": "Employment",
+		"tech": ["AngularJS", "Instagram API", "HTML5", "CSS3"],
+		"date": "September 2015",
+		"description": "Part of being a consultant and getting assignments sometimes mean you have to create a sample project to show up. This is a simple web app for searching tags and images on Instagram. The latest search queries and added favorites are saved.",
+		"links": [ 
+			{"text": "Instagram API", "url": "https://instagram.com/developer/", "description": "(external link)"}
+		],
+		"unsupported": {
+			"mobile": true,
+			"browsers": []
+		},
+		"demoUrl": "demo/instagram"
+	}
+}

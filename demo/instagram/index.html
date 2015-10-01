@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Search App</title>
+  <link rel="stylesheet" type="text/css" href="dist/styles.css">
+</head>
+<body ng-app="InstagramSearchApp" ng-cloak>
+
+  <h1>Instagram Search App</h1>
+  <div class="main-container">
+    <div class="search-container" ng-controller="SearchController">
+      <h3>Search for tags</h3>
+      <form ng-submit='search(query)'>
+        <input class="search-field" name="search" type="text" placeholder="Type in query..." ng-model="query" />
+      </form>
+      <div ng-show="recentSearchEntries.length > 0">
+        <h3>Recent searches</h3>
+        <ul class="history-list">
+          <li class="history-item" ng-repeat="entry in recentSearchEntries track by $index">
+            <a href="" ng-click="search(entry)" ng-bind="entry"></a>
+          </li>
+        </ul>
+      </div>
+      <div ng-show="isLoading">Fetching tags...</div>
+    </div>
+    <div class="result-container">
+      <div class="tags-container" ng-controller="TagsController" ng-show="tagFavorites.length > 0 || tags.length > 0">
+        <h3>Tags</h3>
+        <ul class="tags-list">
+          <li class="tags-item" ng-class="{active: item.isActive}" ng-repeat="item in tagFavorites track by $index" ng-show="tagFavorites.length > 0">
+            <a href="" ng-click="selectTag(item)" ng-bind="item.name"></a>
+          </li>
+        </ul>
+        <ul class="tags-list" ng-show="tags.length > 0">
+          <li class="tags-item" ng-class="{active: item.isActive}" ng-repeat="item in tags">
+            <a href="" ng-click="selectTag(item)" ng-bind="item.name"></a>
+            <span class="tag-favorite" title="Add to favorites" ng-click="addFavorite(item)" ng-show="item.isActive">+</span>
+          </li>
+        </ul>
+        <div ng-show="isLoading">Fetching images...</div>
+      </div>
+      <div class="images-container" ng-controller="ImagesController" ng-show="images.length > 0">
+        <h3>Images</h3>
+        <ul class="images-list">
+          <li class="images-item" ng-repeat="item in images">
+            <a ng-href="{{item.link}}" target="_blank">
+              <img ng-src="{{item.images.thumbnail.url}}">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="vendor/angular.min.js"></script>
+<script src="dist/scripts.js"></script>
+
+</html>
