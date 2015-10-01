@@ -1,0 +1,10 @@
+{
+	"type": "employment",
+	"title": "Telia",
+	"project": {
+		"tech": ["AngularJS", "HTML5", "CSS3", "LESS", "Magnolia CMS"],
+		"date": "2014 - 2015",
+		"description": "During my 10 months at Telia I was part of the team responsible for Mina Sidor (My Pages)",
+		"links": [{"text": "Mina Sidor", "url": "https://www.telia.se/privat/minasidor", "description": "(external link)"}]
+	}
+}
